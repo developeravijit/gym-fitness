@@ -14,9 +14,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- Font Link -->
+    <!-- Caslsh Display Font Link -->
     <link href="https://api.fontshare.com/v2/css?f[]=clash-display@200,300,400,500,600,700,1&display=swap"
         rel="stylesheet">
+
+    <!-- Akira Font Link -->
+    <link href="https://fonts.cdnfonts.com/css/akira-expanded" rel="stylesheet">
+
     <!-- Bootstrap Css -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
@@ -54,7 +58,7 @@
                             <a class="nav-link" aria-current="page" href="./index.html">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="./about.html">About Us</a>
+                            <a class="nav-link active" href="./about.html">About </a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -95,9 +99,15 @@
                         </li>
                     </ul>
                     <div class="login-link">
-                        <a href="" class="login">login / create account
-                            <div class="login-click">
-                                <img src="./assets/login-click.png" alt="">
+                        <a href="" class="login-io-button">
+                            Login/Create Account
+                            <div class="login-icon">
+                                <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 0h24v24H0z" fill="none"></path>
+                                    <path
+                                        d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                                        fill="currentColor"></path>
+                                </svg>
                             </div>
                         </a>
 
@@ -116,14 +126,18 @@
                         <span class="title1-span">About</span>
                         Us
                     </h1>
-                    <nav class="breadcrumb-nav"
-                        style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);"
-                        aria-label="breadcrumb">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a class="breadcrumb-link" href="./index.html">Home</a></li>
-                            <li class="breadcrumb-item active breadcrumb-link" aria-current="page">About Us</li>
-                        </ol>
-                    </nav>
+                    <div class="breadcrumb">
+                        <ul class="breadcrumb-item">
+                            <li class="list-items">
+                                <a href="./index.html" class="breadcrumb-link">Home</a>
+                            </li>
+                            <li class="square">
+                                <span></span>
+                            </li>
+                            <li class="breadcrumb-link breadcrumb-active">About Us</li>
+                        </ul>
+
+                    </div>
                     <div class="hero-line">
                         <span class="yellow-line"></span>
                         <span class="yellow-line"></span>
@@ -132,9 +146,397 @@
                 </div>
             </div>
         </section>
+        <!-- About Section -->
+        <section class="abt-sec">
+            <div class="container abt-container">
+                <div class="row abt-row">
+                    <div class="col">
+                        <div class="abt-hdr">
+                            <h2 class="title-3">Who We Are
+
+                                <div class="frame-line abt-line">
+                                    <img src="./assets/Frame line.png" alt="">
+                                </div>
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="abtHdr-para">
+                            <p class="para abt-para">
+                                Empowering Every Body to Move Stronger, Live Better, and Go Further
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row bottomAbt-row">
+
+                    <div class="col">
+                        <div class="abt-cntn">
+                            <h3 class="title-4">
+                                Nunc vivamus quisque laoreet a porta risus volutpat sit nibh sociosqu cubilia. At
+                                adipiscing auctor ultricies velit libero ligula imperdiet sodales tellus aliquam urna.
+                            </h3>
+                            <div class="abtPara-box">
+                                <div class="row">
+                                    <div class="col">
+                                        <ul class="left-list">
+                                            <li class="list-category">
+                                                <i class="fa-regular fa-circle-check check-list"></i>
+                                                Himenaeos pellentesque
+                                            </li>
+                                            <li class="list-category">
+                                                <i class="fa-regular fa-circle-check check-list"></i>
+                                                Elementum ridiculus
+                                            </li>
+                                            <li class="list-category">
+                                                <i class="fa-regular fa-circle-check check-list"></i>
+                                                Rutrum convallis
+                                            </li>
+                                            <li class="list-category">
+                                                <i class="fa-regular fa-circle-check check-list"></i>
+                                                Pellentesque maecenas
+                                            </li>
+                                            <li class="list-category">
+                                                <i class="fa-regular fa-circle-check check-list"></i>
+                                                Cubilia tincidunt
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col">
+                                        <ul class="right-list">
+                                            <li class="list-category">
+                                                <i class="fa-regular fa-circle-check check-list"></i>
+                                                Himenaeos pellentesque
+                                            </li>
+                                            <li class="list-category">
+                                                <i class="fa-regular fa-circle-check check-list"></i>
+                                                Elementum ridiculus
+                                            </li>
+                                            <li class="list-category">
+                                                <i class="fa-regular fa-circle-check check-list"></i>
+                                                Rutrum convallis
+                                            </li>
+                                            <li class="list-category">
+                                                <i class="fa-regular fa-circle-check check-list"></i>
+                                                Pellentesque maecenas
+                                            </li>
+                                            <li class="list-category">
+                                                <i class="fa-regular fa-circle-check check-list"></i>
+                                                Cubilia tincidunt
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="customer-care">
+                                <a href="" class="cst-icon">
+                                    <img src="./assets/customer-care.png" alt="">
+                                </a>
+                                <div class="cst-para">
+                                    <p class="support cst-support">CUSTOMER SUPPORT</p>
+                                    <p class="support cst-number">(888)4000-2424</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <figure class="abt-img">
+                            <img src="./assets/abt-builder.png" alt="">
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Service Section -->
+        <section class="srvc-sec">
+            <div class="container abt-container">
+                <div class="row">
+                    <div class="col">
+                        <div class="abt-hdr srvc-hdr">
+                            <h2 class="title-3">Services
+                                <div class="frame-line abt-line">
+                                    <img src="./assets/Frame line.png" alt="">
+                                </div>
+                            </h2>
+
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="swiper mySwiper3">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="swiper-cntn">
+                                        <h2 class="title-trnsfrm">
+                                            Personal Training
+                                        </h2>
+                                        <p class="slider-para">
+                                            Ultrices quam mattis posuere porttitor tellus rhoncus tristique. Primis
+                                            aliquam dignissim interdum vel suscipit sodales.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="swiper-cntn">
+                                        <h2 class="title-trnsfrm">
+                                            Personal Training
+                                        </h2>
+                                        <p class="slider-para">
+                                            Ultrices quam mattis posuere porttitor tellus rhoncus tristique. Primis
+                                            aliquam dignissim interdum vel suscipit sodales.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="swiper-cntn">
+                                        <h2 class="title-trnsfrm">
+                                            Personal Training
+                                        </h2>
+                                        <p class="slider-para">
+                                            Ultrices quam mattis posuere porttitor tellus rhoncus tristique. Primis
+                                            aliquam dignissim interdum vel suscipit sodales.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="swiper-cntn">
+                                        <h2 class="title-trnsfrm">
+                                            Personal Training
+                                        </h2>
+                                        <p class="slider-para">
+                                            Ultrices quam mattis posuere porttitor tellus rhoncus tristique. Primis
+                                            aliquam dignissim interdum vel suscipit sodales.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination pagination-2"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Workout Section -->
+        <section class="location-sec">
+            <div class="container abt-container">
+                <div class="abt-hdr location-hdr">
+                    <h2 class="title-3">Our Location
+                        <div class="frame-line abt-line">
+                            <img src="./assets/Frame line.png" alt="">
+                        </div>
+                    </h2>
+                </div>
+                <div class="location-para">
+
+                    <p class="cmn-para">Your <span class="yellow-para">Fitness </span>
+                    </p>
+                    <p class="para3 cmn-para">&nbsp;Journey Starts Here:</p>
+                    <p class="cmn-para">Select a <span class="yellow-para">Category</span></p>
+                </div>
+                <div class="row location-row">
+                    <div class="col-2 ">
+                        <div class="location-para2 devider">
+                            <p class="contry-nmbr">
+                                25
+                                <span>+</span>
+                            </p>
+                            <span class="cntry">Country</span>
+                        </div>
+                    </div>
+
+                    <div class="col-10">
+                        <div class="loaction-cntn">
+                            <p class="para2">
+                                Our presence stretches across continents, connecting a worldwide community of fitness
+                                enthusiasts. From bustling metropolitan hubs to growing local neighborhoods, our fitness
+                                centers deliver the same trusted quality and results-driven training. Each location is
+                                equipped with expert coaches, modern facilities, and a motivating environment tailored
+                                to your goals. Whether you are traveling, relocating, or joining us for the first time,
+                                you’ll always find a home for your fitness journey with us. Together, we’re building a
+                                stronger, healthier world—one city at a time.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper mySwiper4">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide btn-slideWidth">
+                            <button data-filter=".strength" class="button-slider strngth">
+                                <p class="btn-cntn">
+                                    Transformation
+                                </p>
+                            </button>
+                        </div>
+                        <div class="swiper-slide btn-slideWidth">
+                            <button class="button-slider">
+                                <p class="btn-cntn">
+                                    Personal
+                                </p>
+                            </button>
+                        </div>
+                        <div class="swiper-slide btn-slideWidth">
+                            <button class="button-slider">
+                                <p class="btn-cntn">
+                                    Functional
+                                </p>
+                            </button>
+                        </div>
+                        <div class="swiper-slide btn-slideWidth">
+                            <button class="button-slider">
+                                <p class="btn-cntn">
+                                    Endurance
+                                </p>
+                            </button>
+                        </div>
+                        <div class="swiper-slide btn-slideWidth">
+                            <button class="button-slider">
+                                <p class="btn-cntn">
+                                    Power
+                                </p>
+                            </button>
+                        </div>
+                        <div class="swiper-slide btn-slideWidth">
+                            <button class="button-slider">
+                                <p class="btn-cntn">
+                                    Mobility
+                                </p>
+                            </button>
+                        </div>
+                        <div class="swiper-slide btn-slideWidth">
+                            <button class="button-slider">
+                                <p class="btn-cntn">
+                                    Agility
+                                </p>
+                            </button>
+                        </div>
+                        <div class="swiper-slide btn-slideWidth">
+                            <button class="button-slider">
+                                <p class="btn-cntn">
+                                    Recovery
+                                </p>
+                            </button>
+                        </div>
+                        <div class="swiper-slide btn-slideWidth">
+                            <button class="button-slider">
+                                <p class="btn-cntn">
+                                    Dance
+                                </p>
+                            </button>
+                        </div>
+                        <div class="swiper-slide btn-slideWidth">
+                            <button class="button-slider">
+                                <p class="btn-cntn">
+                                    Combat
+                                </p>
+                            </button>
+                        </div>
+                        <div class="swiper-slide btn-slideWidth">
+                            <button class="button-slider">
+                                <p class="btn-cntn">
+                                    Cardio
+                                </p>
+                            </button>
+                        </div>
+                        <div class="swiper-slide btn-slideWidth">
+                            <button class="button-slider">
+                                <p class="btn-cntn">
+                                    Cardio
+                                </p>
+                            </button>
+                        </div>
+                        <div class="swiper-slide btn-slideWidth">
+                            <button class="button-slider">
+                                <p class="btn-cntn">
+                                    Cardio
+                                </p>
+                            </button>
+                        </div>
+
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+                <div class="row enrollment-row">
+                    <div class="col">
+                        <div class="enrollment-card">
+                            <div class="card-bg">
+                                <div class="topCard-cntn">
+                                    <p class="target-line strength">
+                                        Strength
+                                    </p>
+                                    <div class="trnsfrm-line">
+                                        <span class="line-2"></span>
+                                        <span class="line-2"></span>
+                                        <span class="line-2"></span>
+                                    </div>
+                                    <p class="author">by Ethan Cross</p>
+                                </div>
+                                <figure class="cardImg-1">
+                                    <img src="./assets/abtPage-cardImg1.png" alt="">
+                                </figure>
+                            </div>
+                            <div class="card-bottom">
+                                <div class="leftBottom-cntn">
+                                    <p class="nmbr">01</p>
+                                    <p class="bottom-para">
+                                        Power Build Program
+                                    </p>
+                                    <p class="bottom-para2">
+                                        Focus on muscle growth and compound lifts.
+                                    </p>
+                                </div>
+                                <a class="bottom-btn"> Button
+                                    <i class="fa-solid fa-arrow-right rgt-arw"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="enrollment-card ms-auto">
+                            <div class="card-bg">
+                                <div class="topCard-cntn">
+                                    <p class="target-line Wellness">
+                                        Wellness
+                                    </p>
+                                    <div class="trnsfrm-line">
+                                        <span class="line-2"></span>
+                                        <span class="line-2"></span>
+                                        <span class="line-2"></span>
+                                    </div>
+                                    <p class="author">by trent morgan</p>
+                                </div>
+                                <figure class="cardImg-1">
+                                    <img src="./assets/abtPage-cardImg2.png" alt="">
+                                </figure>
+                            </div>
+                            <div class="card-bottom">
+                                <div class="leftBottom-cntn">
+                                    <p class="nmbr">02</p>
+                                    <p class="bottom-para">
+                                        Yoga Flow
+                                    </p>
+                                    <p class="bottom-para2">
+                                        Improve flexibility and mindfulness.
+                                    </p>
+                                </div>
+                                <a class="bottom-btn"> Button
+                                    <i class="fa-solid fa-arrow-right rgt-arw"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
 
+    <!-- Isotope CDN -->
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+
+    <!-- JQuery CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- Swipper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <!-- Bootstrap JS -->

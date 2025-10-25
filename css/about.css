@@ -1,8 +1,3 @@
-@font-face {
-    font-family: "Akira-font", sans-serif;
-    src: url(../assets/fonts/Akira\ Expanded\ Super\ Bold.ttf);
-}
-
 :root {
     --transparent-white: rgba(255, 255, 255, 0.16);
     --transparent-white-border: rgba(255, 255, 255, 0.26);
@@ -13,15 +8,51 @@
     --text-color-50: #ffffff80;
 }
 
+
+
+
 /* Banner Section */
 
 .bnr-sec {
     background: url(../assets/1.\ Hero\ Section.png) no-repeat center/cover;
-
+    background-attachment: fixed;
 }
 
 .title-1 {
     text-align: center;
+}
+
+.breadcrumb {
+    margin: 40px auto;
+    justify-content: center;
+}
+
+.breadcrumb-item {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.21);
+    backdrop-filter: blur(60px);
+    padding: 8px 16px !important;
+}
+
+.breadcrumb-link {
+    color: var(--white-color);
+    font-size: 16px;
+    font-family: 'Akira Expanded', sans-serif;
+    font-weight: 900;
+}
+
+.breadcrumb-active {
+    color: var(--yellow-color);
+}
+
+
+
+.square {
+    width: 6px;
+    height: 6px;
+    background-color: var(--yellow-color);
+    margin: 0 12px;
 }
 
 .hero-line {
@@ -44,30 +75,330 @@
     margin-right: 0;
 }
 
-.breadcrumb {
-    margin: 40px;
-    justify-content: center;
+
+/* About Section */
+
+.bottomAbt-row {
+    align-items: end;
+}
+
+.title-4,
+.abtPara-box {
+    border-bottom: 1px solid var(--transparent-white-border);
+    padding-bottom: 31px;
+}
+
+
+
+.list-category {
+    color: var(--white-color);
+    font-size: 23px;
+    margin-bottom: 28px;
+}
+
+.list-category:last-child {
+    margin-bottom: 0;
+}
+
+.check-list {
+    color: var(--yellow-color);
+}
+
+
+
+/* Service Section */
+.srvc-sec {
+    background: url(../assets/abt-pageServices.png) no-repeat center/cover;
+}
+
+.abtPg-swiper {
+    max-width: 855px;
+
+}
+
+.title-trnsfrm {
+    font-size: 36px;
+}
+
+
+.swiper-cntn {
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+}
+
+.slider-para {
+    font-size: 18px;
+    color: rgba(255, 255, 255, .5);
+
+}
+
+.mySwiper3 {
+    overflow: hidden;
+    max-width: 600px;
+    cursor: pointer;
+    padding-bottom: 45px;
+}
+
+
+.swiper-pagination {
+    bottom: 0 !important;
+    left: -41% !important;
+}
+
+
+/* Workout Section */
+
+.location-sec {
+    background: var(--black-color);
+}
+
+.location-row {
+    margin: 30px 0 80px;
+}
+
+
+
+.button-slider {
+    border: 1px solid rgba(255, 255, 255, .5);
+    padding: 12px;
+    display: inline-block;
+    outline: none;
+    background: transparent;
+}
+
+.btn-cntn {
+    background: transparent;
+    color: var(--white-color);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 18px;
+    font-weight: 500;
+    padding: 6px 12px !important;
+    text-transform: capitalize;
+}
+
+.button-slider.active {
+    border: 1px solid var(--yellow-color);
+    background-color: var(--yellow-color);
+    color: var(--black-color);
+}
+
+.btn-slideWidth {
+    width: fit-content !important;
+}
+
+
+.enrollment-card {
+    padding: 24px;
+    border: 1px solid rgba(255, 255, 255, .2);
+    margin: 130px 0 120px;
+    max-width: 854px;
+}
+
+.card-bg {
+    background: url(../assets/abtPage-filterCard.png) no-repeat center/cover;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 24px;
+    position: relative;
+}
+
+.cardImg-1 {
+    position: absolute;
+    bottom: 0;
+}
+
+
+.target-line {
+    padding: 6px 12px !important;
+    background-color: var(--yellow-color);
+    color: var(--black-color);
+    font-size: 15px;
+    font-weight: 700;
+    display: inline-block;
+    margin-left: auto;
+}
+
+.trnsfrm-line {
+    position: static;
+    inset: 0;
+    margin: 281px 0 10px;
+}
+
+.line-2 {
+    width: 6.36px;
+    height: 15.17px;
+    margin-left: 5px;
+}
+
+.author {
+    font-family: 'Akira Expanded', sans-serif;
+    font-weight: 900;
+    font-size: 16px;
+    color: var(--white-color);
+}
+
+.card-bottom {
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.topCard-cntn {
+    text-align: end;
+}
+
+
+.nmbr {
+    background-color: var(--yellow-color);
+    display: inline-block;
+    padding: 12px !important;
+    font-weight: bold;
+    font-size: 13px;
+    margin-bottom: 12px !important;
+}
+
+
+.bottom-para {
+    font-size: 25px;
+    font-weight: 600;
+    color: var(--white-color);
+}
+
+.bottom-para2 {
+    font-size: 15px;
+    color: rgba(255, 255, 255, .5);
+}
+
+.card-bottomRow {
     align-items: center;
 }
 
+.bottom-btn {
+    background: var(--yellow-color);
+    color: var(--black-color);
+    border: none;
+    font-size: 27px;
+    font-weight: 600;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    padding: 16.5px 104.5px;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s linear;
 
-.breadcrumb-link {
+}
+
+.rgt-arw {
+    margin-left: 10px;
+    font-size: 24px;
+    transition: 0.3s linear;
+}
+
+.bottom-btn:hover>.rgt-arw {
+    transform: rotate(-30deg);
+}
+
+
+.bottom-btn:hover {
     color: var(--white-color);
-    font-family: "Akira-font", sans-serif;
-    font-size: 16px;
-    font-weight: 900;
+    background: transparent;
 }
 
-.breadcrumb-item+.breadcrumb-item::before {
-    width: 8px;
-    height: 8px;
-    background-color: var(--yellow-color);
+.bottom-btn:after {
     content: "";
-    display: inline-block;
-    float: none;
-    margin-right: 5px;
+    background: rgba(255, 255, 255, .5);
+    position: absolute;
+    z-index: -1;
+    left: -20%;
+    right: -20%;
+    top: 0;
+    bottom: 0;
+    transform: skewX(-45deg) scale(0, 1);
+    transition: all 0.5s;
 }
 
-.breadcrumb-item.active {
-    color: var(--yellow-color);
+.bottom-btn:hover:after {
+    transform: skewX(-45deg) scale(1, 1);
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+
+
+
+
+
+
+/* Responsive Section */
+
+
+@media screen and (max-width:1200px) {
+
+    /* Banner Section */
+    .list-category:last-child {
+        margin-bottom: 28px;
+    }
+
+    /* Service Section */
+    .abtPara-box {
+        justify-content: center;
+        padding-bottom: 0;
+    }
+
+    .srvc-hdr {
+        margin-bottom: 30px;
+    }
+
+    .swiper-pagination {
+        left: 0 !important;
+    }
+
+    .title-trnsfrm {
+        font-size: 30px;
+    }
+
+    .swiper-cntn {
+        text-align: center;
+    }
+
+    .enrollment-card{
+        margin: 130px 0 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    /* Service Section */
+    .title-trnsfrm {
+        font-size: 21px;
+    }
+}
+
+@media screen and (max-width:576px) {
+
+    /* Banner Section */
+    .bnr-sec {
+        padding: 495.13px 0 50px;
+    }
+
+    .breadcrumb-list {
+        font-size: 13px;
+    }
+
+    .yellow-line {
+        width: 15px;
+        height: 45px;
+    }
+
+    /* Service Section */
+    .slider-para {
+        font-size: 13px;
+    }
+
+    .title-trnsfrm {
+        font-size: 16px;
+    }
+
 }

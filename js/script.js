@@ -4,10 +4,10 @@ let swiper = new Swiper(".swiper1", {
   loop: true,
   slidesPerView: 3,
   spaceBetween: 1,
-  // autoplay: {
-  //   delay: 2000,
-  //   disableOnInteraction: false,
-  // },
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
 
   breakpoints: {
     1250: {
@@ -29,7 +29,7 @@ let swiper2 = new Swiper(".mySwiper", {
   slidesPerView: 3,
   spaceBetween: 1,
   autoplay: {
-    delay: 2000,
+    delay: 2500,
     disableOnInteraction: false,
   },
   breakpoints: {
@@ -56,7 +56,10 @@ let swiper3 = new Swiper(".mySwiper2", {
   loop: true,
   slidesPerView: 3,
   spaceBetween: 1,
-
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
   breakpoints: {
     1250: {
       slidesPerView: 3,
@@ -70,3 +73,42 @@ let swiper3 = new Swiper(".mySwiper2", {
     },
   },
 });
+
+// About Page
+// first Swiper
+
+let swiper4 = new Swiper(".mySwiper3", {
+  loop: true,
+  slidesPerView: 1,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+
+  pagination: {
+    el: ".pagination-2",
+    clickable: true,
+  },
+});
+
+// Second Swiper
+
+let swiper5 = new Swiper(".mySwiper4", {
+  slidesPerView: 8,
+  spaceBetween: 0,
+  loop: false,
+});
+
+// Isotope Jquery
+
+// var elem = document.querySelector(".enrollment-row");
+// let strength = document.querySelector(".strngth");
+
+// var iso = new Isotope(elem, {
+//   itemSelector: ".target-line",
+//   layoutMode: "fitRows",
+// });
+
+// strength.addEventListener("click", () => {
+//   iso.arrange({ filter: ".strngth" });
+// });
