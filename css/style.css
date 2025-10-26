@@ -1252,9 +1252,7 @@ h3 {
 }
 
 .trnsfrm-line {
-    bottom: 162px;
-    left: 46%;
-    position: absolute;
+    margin: 50px 0;
 
 }
 
@@ -1264,7 +1262,7 @@ h3 {
     height: 26px;
     background-color: var(--yellow-color);
     transform: skew(-45deg);
-    margin-left: 20px;
+    margin-left: 10px;
 }
 
 .line-2:first-child {
@@ -1282,13 +1280,9 @@ h3 {
 }
 
 
-
-
-
 .trnsfrm-box {
     max-width: 1000px;
-    margin: 150px auto 0;
-
+    margin: 0 auto;
 }
 
 /* Footer Section */
@@ -1803,9 +1797,12 @@ h3 {
     }
 
     /* Transformation Section */
+    .trnsfrm-sec {
+        padding-top: 142px;
+    }
 
-    .line-2 {
-        bottom: 213px;
+    .title-trnsfrm2 {
+        font-size: 43px;
     }
 
 
@@ -1878,9 +1875,7 @@ h3 {
         font-size: 21px;
     }
 
-    .trnsfrm-line {
-        bottom: 79px;
-    }
+
 
     /* Footer Section */
     .ftr-brandLogo {
@@ -2105,7 +2100,8 @@ h3 {
     }
 
     .title-trnsfrm2 {
-        font-size: 25px;
+        font-size: 23px;
+        backdrop-filter: blur(40px);
     }
 
     .title-trnsfrm {
@@ -2119,16 +2115,6 @@ h3 {
         -webkit-text-fill-color: transparent;
         color: transparent;
     }
-
-    .line-2 {
-        bottom: 135px;
-        left: 43%;
-        width: 8px;
-        height: 19px;
-    }
-
-
-
 
 
     /* Footer Section */
@@ -2179,12 +2165,7 @@ h3 {
         font-size: 19px;
     }
 
-    .line-2 {
-        bottom: 135px;
-        left: 43%;
-        width: 8px;
-        height: 19px;
-    }
+   
 
     .trnsfrm-box {
         margin: 71px auto 0;
