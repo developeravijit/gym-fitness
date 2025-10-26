@@ -94,7 +94,7 @@ let swiper4 = new Swiper(".mySwiper3", {
 // Second Swiper
 
 let swiper5 = new Swiper(".mySwiper4", {
-  slidesPerView: 8,
+  slidesPerView: 6,
   spaceBetween: 0,
   loop: false,
 });
@@ -102,13 +102,20 @@ let swiper5 = new Swiper(".mySwiper4", {
 // Isotope Jquery
 
 var elem = document.querySelector(".grid-card");
-let btn1 = document.querySelector(".grid-item");
 
 var iso = new Isotope(elem, {
   itemSelector: ".enrollment-card",
   layoutMode: "fitRows",
 });
 
-btn1.addEventListener("click", () => {
-  iso.arrange({ filter: ".grid-item" });
+// btn1.addEventListener("click", () => {
+//   iso.arrange({ filter: ".grid-item1" });
+// });
+
+document.querySelectorAll(".button-slider").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const filterValue = btn.getAttribute("data-filter");
+    iso.arrange({ filter: filterValue });
+    // btn.classList.toggle("active-btn");
+  });
 });
