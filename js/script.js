@@ -94,9 +94,20 @@ let swiper4 = new Swiper(".mySwiper3", {
 // Second Swiper
 
 let swiper5 = new Swiper(".mySwiper4", {
-  slidesPerView: 6,
+  slidesPerView: 3,
   spaceBetween: 0,
-  loop: false,
+  breakpoints: {
+    1250: {
+      slidesPerView: 3,
+    },
+
+    768: {
+      slidesPerView: 2,
+    },
+    320: {
+      slidesPerView: 1,
+    },
+  },
 });
 
 // Isotope Jquery
