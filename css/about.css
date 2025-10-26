@@ -270,9 +270,7 @@
     color: rgba(255, 255, 255, .5);
 }
 
-.card-bottomRow {
-    align-items: center;
-}
+
 
 .bottom-btn {
     background: var(--yellow-color);
@@ -325,9 +323,15 @@
     transition: all 0.5s;
 }
 
+.grid-item {
+    margin-right: 10px;
+}
 
+.grid-card {
+    display: flex;
+    align-items: center;
 
-
+}
 
 
 
@@ -363,7 +367,7 @@
         text-align: center;
     }
 
-    .enrollment-card{
+    .enrollment-card {
         margin: 130px 0 0;
     }
 }

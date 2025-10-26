@@ -101,14 +101,14 @@ let swiper5 = new Swiper(".mySwiper4", {
 
 // Isotope Jquery
 
-// var elem = document.querySelector(".enrollment-row");
-// let strength = document.querySelector(".strngth");
+var elem = document.querySelector(".grid-card");
+let btn1 = document.querySelector(".grid-item");
 
-// var iso = new Isotope(elem, {
-//   itemSelector: ".target-line",
-//   layoutMode: "fitRows",
-// });
+var iso = new Isotope(elem, {
+  itemSelector: ".enrollment-card",
+  layoutMode: "fitRows",
+});
 
-// strength.addEventListener("click", () => {
-//   iso.arrange({ filter: ".strngth" });
-// });
+btn1.addEventListener("click", () => {
+  iso.arrange({ filter: ".grid-item" });
+});
