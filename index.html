@@ -98,7 +98,7 @@
                         </li>
                     </ul>
                     <div class="login-link">
-                        <a href="" class="login-io-button">
+                        <a href="" class="login-io-button" data-bs-toggle="modal" data-bs-target="#exampleModal">
                             Login/Create Account
                             <div class="login-icon">
                                 <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -116,6 +116,85 @@
             </div>
         </nav>
     </header>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="login-box">
+                <div class="logBox-cntn">
+                    <div class="row">
+                        <div class="col">
+                            <div class="left-modal">
+                                <div class="modal-line">
+                                    <span class="line-2"></span>
+                                    <span class="line-2"></span>
+                                    <span class="line-2"></span>
+                                </div>
+                                <h2 class="modal-title">
+                                    create account
+                                </h2>
+                                <p class="para2">
+                                    Lorem ipsum dolor sit amet consectetur. Enim et in tellus at. Blandit etiam.
+                                </p>
+                                <form action="" class="modal-form">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="modal-inputBox">
+                                                <label for="modal-name" class="all-icon">
+                                                    <span class="user-icon">
+                                                        <i class="fa-solid fa-circle-user"></i>
+                                                    </span>
+                                                    <span class="form-name">First Name <sup>*</sup> </span>
+                                                </label>
+                                                <input type="text" id="modal-name" class="modal-input">
+
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <label for="recipient-name" class="col-form-label">Recipient:</label>
+                                            <input type="text" class="form-control" id="recipient-name">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="right-modal">
+                                <div class="modal-logo text-end">
+                                    <img src="./assets/modalLogo.png" alt="">
+                                </div>
+                                <div class="rightModal-bottom">
+                                    <p class="para2 modal-para">Lorem ipsum dolor sit amet consectetur. Volutpat
+                                        sittortor. Tempus
+                                        congue adipiscing aliquam cursus turpis ultricies.</p>
+                                    <div class="modalBottom-para">
+                                        <div class="row">
+                                            <div class="col">
+                                                <p class="modal-para2">
+                                                    firstname lastname
+                                                </p>
+                                                <p class="para2 modal-para text-capitalize">
+                                                    designation
+                                                </p>
+                                            </div>
+                                            <div class="col">
+                                                <div class="modalPara-box">
+                                                    <span class="modal-circle"></span>
+                                                    <p class="modal-para2">
+                                                        open ventures
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 
     <main>
         <!-- Banner Section -->
@@ -894,25 +973,22 @@
             </div>
         </section>
 
-
-
         <!-- Transformation Section -->
         <section class="trnsfrm-sec">
             <div class="container abt-container">
                 <div class="trnsfrm-cntn">
-                    <h2 class="title-trnsfrm"
-                    data-aos="fade-down-right" data-aos-duration="1000">
+                    <h2 class="title-trnsfrm" data-aos="fade-down-right" data-aos-duration="1000">
                         Real Stories. Real People.
                     </h2>
                     <h2 class="title-trnsfrm2" data-aos="fade-up-left" data-aos-duration="1000">
                         Real Transformation.
                     </h2>
-                    <div class="trnsfrm-line">
+                    <div class="trnsfrm-line" data-aos="zoom-in" data-aos-duration="1000">
                         <span class="line-2"></span>
                         <span class="line-2"></span>
                         <span class="line-2"></span>
                     </div>
-                    <div class="trnsfrm-box">
+                    <div class="trnsfrm-box" data-aos="zoom-in" data-aos-duration="1000">
                         <p class="abt-para trnsfrm-para">
                             Join a community that supports your goals with expert coaching, flexible programs and real
                             results.
@@ -927,7 +1003,6 @@
     </main>
 
     <!-- Footer Section -->
-
     <footer class="ftr-sec">
         <div class="ftr-top">
             <div class="container abt-container">

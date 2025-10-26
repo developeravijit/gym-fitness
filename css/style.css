@@ -20,7 +20,6 @@ ul {
     margin: 0 !important;
 }
 
-
 body,
 html {
     font-family: "Clash Display", sans-serif;
@@ -36,10 +35,124 @@ figure {
 h1,
 h2,
 h3 {
-    font-family: 'Akira Expanded', sans-serif;
+    font-family: "Akira Expanded", sans-serif;
     font-weight: 900;
     font-style: normal;
 }
+
+/* Modal Section */
+
+.login-box {
+    background: linear-gradient(to bottom, rgba(242, 255, 0, 0.75) 0%, rgba(0, 0, 0, 0.75) 100%);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+
+.left-modal {
+    padding: 50px 50px 0;
+}
+
+
+.modal-line {
+    margin-left: 10px;
+}
+
+
+.modal-title {
+    font-size: 27px;
+    color: var(--white-color);
+    margin: 10px 0;
+}
+
+.modal-inputBox {
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 15px 20px;
+}
+
+.all-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    align-items: center;
+    display: flex;
+}
+
+.user-icon {
+    color: var(--yellow-color);
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.form-name {
+    font-size: 15px;
+    color: var(--white-color);
+}
+
+.modal-input {
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+
+
+
+
+.right-modal {
+    background: url(../assets/modal-rightBG.png) no-repeat center/cover;
+    border-radius: 10px;
+}
+
+.modal-logo {
+    max-width: 90px;
+    margin-left: auto;
+    margin-right: 50px;
+    padding-top: 50px;
+}
+
+.modal-logo>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.rightModal-bottom {
+    /* max-width: 455px; */
+    padding: 551px 50px 50px;
+}
+
+.modal-para {
+    color: var(--white-color);
+
+}
+
+.modalBottom-para {
+    margin-top: 30px;
+}
+
+.modal-para2 {
+    color: var(--white-color);
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.modalPara-box {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.modal-circle {
+    width: 19px;
+    height: 19px;
+    border-radius: 50%;
+    border: 3px solid var(--white-color);
+    margin-right: 10px;
+}
+
 
 /* Header Section */
 .hdr-sec {
@@ -128,7 +241,6 @@ h3 {
 
 .cart-link {
     max-width: 64px;
-
 }
 
 .cart-link>img {
@@ -139,12 +251,7 @@ h3 {
 
 .login-link {
     margin-left: 12px;
-
 }
-
-
-
-
 
 .login-io-button {
     background: transparent;
@@ -199,33 +306,6 @@ h3 {
     transform: scale(0.95);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .navbar-toggler-icon {
     font-size: 20px;
     border-radius: 20%;
@@ -255,9 +335,10 @@ h3 {
     color: var(--tertiary-color);
 }
 
-
 .dropdown-menu {
-    background: linear-gradient(to top, rgba(255, 251, 0, 0.9) 50%, rgba(0, 0, 0, 0.9) 100%);
+    background: linear-gradient(to top,
+            rgba(255, 251, 0, 0.9) 50%,
+            rgba(0, 0, 0, 0.9) 100%);
     padding: 5px 19px 5px 5px !important;
 }
 
@@ -265,11 +346,9 @@ h3 {
     margin-bottom: 5px;
 }
 
-
 .dropdown-menu>li:last-child {
     margin-bottom: 0;
 }
-
 
 .dropdown-item {
     padding: 10px 20px;
@@ -290,7 +369,6 @@ h3 {
     display: flex;
     align-items: end;
     background-attachment: fixed;
-
 }
 
 .bnr-row {
@@ -328,22 +406,16 @@ h3 {
     animation: logo 4s alternate infinite linear;
 }
 
-
-
-
 .gym-logo:nth-child(2) {
     animation-delay: 1s;
-
 }
 
 .gym-logo:nth-child(3) {
     animation-delay: 2s;
-
 }
 
 .gym-logo:nth-child(4) {
     animation-delay: 3s;
-
 }
 
 @keyframes logo {
@@ -364,20 +436,11 @@ h3 {
     75% {
         transform: translateY(6px);
     }
-
-
 }
-
-
-
 
 .gym-logo:first-child {
     margin-left: 0;
 }
-
-
-
-
 
 .para-box {
     max-width: 300px;
@@ -386,7 +449,6 @@ h3 {
 .para-hdr {
     -webkit-text-fill-color: var(--yellow-color);
 }
-
 
 .scroll {
     display: flex;
@@ -406,9 +468,6 @@ h3 {
     color: var(--white-color);
 }
 
-
-
-
 .bnr-hdr {
     max-width: 1220px;
 }
@@ -418,7 +477,6 @@ h3 {
     text-transform: uppercase;
     color: var(--white-color);
     position: relative;
-
 }
 
 .title1-span {
@@ -537,13 +595,11 @@ h3 {
 
 .fitnessCard-sec {
     background: var(--black-color);
-
 }
 
 .swiper {
     overflow: visible;
 }
-
 
 .card-container {
     max-width: 1940px;
@@ -556,7 +612,6 @@ h3 {
 }
 
 .swiper-slideCntn {
-
     max-width: 592px;
 }
 
@@ -568,7 +623,6 @@ h3 {
 .card-swipe1 {
     background: url(../assets/card-bg1.png) no-repeat center/cover;
     padding: 50px;
-
 }
 
 .card-swipe2 {
@@ -580,7 +634,6 @@ h3 {
 .card-swipe3 {
     padding: 50px;
     background: url(../assets/card-bg3.png) no-repeat center/cover;
-
 }
 
 .frame-line {
@@ -601,14 +654,11 @@ h3 {
 }
 
 .number {
-    font-family: 'Akira Expanded', sans-serif;
+    font-family: "Akira Expanded", sans-serif;
     font-size: 139px;
     color: transparent;
     -webkit-text-stroke: 2px var(--text-color-50);
-
-
 }
-
 
 .card-img,
 .card-img2,
@@ -622,9 +672,7 @@ h3 {
     right: 10px;
     bottom: 35px;
     transform: scale(1.18);
-
 }
-
 
 .card-img2 {
     max-width: 211px;
@@ -632,16 +680,13 @@ h3 {
     right: 0px;
     bottom: 35px;
     transform: scale(1.18);
-
 }
-
 
 .card-img3 {
     max-width: 480px;
     position: absolute;
     right: 0;
     bottom: 0;
-
 }
 
 .card-img>img,
@@ -651,7 +696,6 @@ h3 {
     height: 100%;
     object-fit: contain;
 }
-
 
 /* About Section */
 .abt-sec {
@@ -663,11 +707,9 @@ h3 {
     max-width: 1740px;
 }
 
-
 .abt-row {
     padding-bottom: 80px;
 }
-
 
 .abt-hdr {
     display: flex;
@@ -687,9 +729,7 @@ h3 {
     display: flex;
     align-items: center;
     padding-left: 36px;
-
 }
-
 
 .title-3::before {
     content: "";
@@ -702,7 +742,6 @@ h3 {
     background: transparent;
     border: 5px solid var(--yellow-color);
 }
-
 
 .abt-para {
     font-size: 35px;
@@ -721,7 +760,6 @@ h3 {
     height: 100%;
     object-fit: contain;
 }
-
 
 .title-4 {
     font-size: 35px;
@@ -748,7 +786,6 @@ h3 {
     background-color: var(--yellow-color);
     max-width: 99.28px;
     height: 99.28px;
-
 }
 
 .cst-icon>img {
@@ -756,7 +793,6 @@ h3 {
     height: 100%;
     object-fit: cover;
 }
-
 
 .customer-care {
     display: flex;
@@ -782,13 +818,11 @@ h3 {
     font-size: 31px;
 }
 
-
 /* Service Section */
 
 .srvc-sec {
     background-color: var(--black-color);
     padding: 80px 0;
-
 }
 
 .srvc-trng {
@@ -798,7 +832,6 @@ h3 {
 }
 
 .trng-link {
-
     display: flex;
     align-items: center;
     position: relative;
@@ -832,9 +865,7 @@ h3 {
     width: 100%;
     height: 100%;
     object-fit: contain;
-
 }
-
 
 .right-arrow {
     transition: 0.3s ease;
@@ -861,7 +892,6 @@ h3 {
     transform-origin: bottom left;
 }
 
-
 .trng-link:hover .trng-img {
     transform: rotate(-7deg);
 }
@@ -870,23 +900,16 @@ h3 {
     transform: rotate(-30deg);
 }
 
-
-
-
-
 /* Gym About Section */
 
 .gymAbt-sec {
     background: url(../assets/gymAbtCard-bg.png) no-repeat center/cover;
     background-attachment: fixed;
     padding: 80px 0;
-
-
 }
 
 .gym-abtimg {
     max-width: 698px;
-
 }
 
 .gym-abtimg>img {
@@ -897,7 +920,6 @@ h3 {
 
 .gym-grid {
     display: flex;
-
 }
 
 .gymAbt-cntn {
@@ -909,13 +931,11 @@ h3 {
     margin-bottom: 24px;
 }
 
-
-
 .gymAbt-cntn::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(to bottom, #F2FF00 0%, #F2FF00 100%);
+    background: linear-gradient(to bottom, #f2ff00 0%, #f2ff00 100%);
     opacity: 0.3;
     z-index: -1;
 }
@@ -940,7 +960,6 @@ h3 {
 .coach-sec {
     background: var(--black-color);
     padding: 80px 0 160px;
-
 }
 
 .swiper-slide2 {
@@ -952,24 +971,19 @@ h3 {
     max-width: 592px;
     padding: 317px 24px 24px;
     position: relative;
-
 }
 
 .coach-swipe1 {
     background: url(../assets/coachBg1.png) no-repeat center/cover;
-
 }
 
 .coach-swipe2 {
-
     background: url(../assets/coachBg2.png) no-repeat center/cover;
 }
 
 .coach-swipe3 {
     background: url(../assets/coachBg3.png) no-repeat center/cover;
-
 }
-
 
 .coach-title {
     font-size: 16px;
@@ -984,8 +998,6 @@ h3 {
     text-transform: capitalize;
 }
 
-
-
 .coach-img {
     max-width: 570px;
     position: absolute;
@@ -999,8 +1011,6 @@ h3 {
     height: 100%;
     object-fit: contain;
 }
-
-
 
 .swiper-pagination {
     bottom: -80px !important;
@@ -1018,15 +1028,12 @@ h3 {
     background: var(--yellow-color);
 }
 
-
 /* Plan Section */
 
 .plan-sec {
     background-color: var(--black-color);
     padding: 80px 0;
 }
-
-
 
 .rate-card {
     background: url(../assets/rate-cardBG.png) no-repeat center/cover;
@@ -1051,7 +1058,6 @@ h3 {
     transform: skew(45deg);
     z-index: -1;
 }
-
 
 .rateCard-title {
     font-size: 16px;
@@ -1086,8 +1092,6 @@ h3 {
     margin-bottom: 10px;
 }
 
-
-
 .membership-btn {
     width: 100%;
     padding: 20px 0;
@@ -1103,7 +1107,6 @@ h3 {
     border: 8px ridge var(--yellow-color);
     border-radius: 0.3em;
 }
-
 
 .membership-btn::after {
     content: "";
@@ -1127,12 +1130,11 @@ h3 {
     height: 22%;
     background: url(../assets/rate-cardBG.png) no-repeat center/cover;
     transition: 0.5s;
-
 }
 
 .membership-btn:hover::before,
 .membership-btn:hover::after {
-    transform: scale(0)
+    transform: scale(0);
 }
 
 .membership-btn:hover {
@@ -1175,7 +1177,6 @@ h3 {
 
 .para4 {
     color: var(--yellow-color);
-
 }
 
 .para4>span {
@@ -1196,7 +1197,6 @@ h3 {
     font-size: 32px;
     font-weight: normal;
     color: rgba(255, 255, 255, 0.5);
-
 }
 
 .loaction-cntn {
@@ -1205,14 +1205,11 @@ h3 {
 
 .devider {
     border-right: 1px solid hsla(0, 0%, 100%, 0.5);
-
 }
-
 
 .map {
     max-width: 1400px;
     margin: 80px auto 0 !important;
-
 }
 
 .map>img {
@@ -1220,7 +1217,6 @@ h3 {
     height: 100%;
     object-fit: contain;
 }
-
 
 /* Transformation Section */
 .trnsfrm-sec {
@@ -1245,7 +1241,6 @@ h3 {
     object-fit: contain;
 }
 
-
 .trnsfrm-cntn {
     text-align: center;
     position: relative;
@@ -1253,9 +1248,7 @@ h3 {
 
 .trnsfrm-line {
     margin: 50px 0;
-
 }
-
 
 .line-2 {
     width: 10px;
@@ -1279,7 +1272,6 @@ h3 {
     color: var(--yellow-color);
 }
 
-
 .trnsfrm-box {
     max-width: 1000px;
     margin: 0 auto;
@@ -1291,18 +1283,15 @@ h3 {
     background: var(--black-color);
 }
 
-
-
 .ftr-row {
     align-items: center;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
     padding-bottom: 80px;
 }
 
 .ftr-row2 {
     align-items: center;
 }
-
 
 .ftrCntn-hdr {
     font-size: 42px;
@@ -1317,12 +1306,11 @@ h3 {
 }
 
 .ftrCntn-hdr>span {
-    font-size: 39px
+    font-size: 39px;
 }
 
 .ftr-social {
     margin: 50px 0 34px !important;
-
 }
 
 .ftr-socialLink {
@@ -1444,7 +1432,6 @@ h3 {
     color: rgba(255, 255, 255, 0.5);
 }
 
-
 .ftrInput-container {
     position: relative;
     max-width: 860px;
@@ -1502,8 +1489,6 @@ h3 {
     color: grey;
 }
 
-
-
 .cssbuttons-io-button {
     background: var(--yellow-color);
     color: var(--black-color);
@@ -1559,16 +1544,7 @@ h3 {
     transform: scale(0.95);
 }
 
-
-
-
-
-
-
-
-
 /* Responsive Section */
-
 
 @media screen and (max-width: 1200px) {
 
@@ -1610,13 +1586,10 @@ h3 {
         flex: none;
     }
 
-
     .bnr-hdr {
         margin: 30px 0;
         max-width: 1000px;
     }
-
-
 
     .bnr-line {
         width: 109px;
@@ -1708,7 +1681,6 @@ h3 {
     .loaction-cntn,
     .location-para {
         text-align: center;
-
     }
 
     .loaction-cntn {
@@ -1747,13 +1719,11 @@ h3 {
 
     .ftrBtm-cntn {
         text-align: center;
-
     }
 
     .btm-para {
         max-width: 100%;
     }
-
 
     .ftrInput-container {
         margin: 30px auto 0;
@@ -1770,15 +1740,12 @@ h3 {
     }
 }
 
-@media screen and (max-width:992px) {
-
+@media screen and (max-width: 992px) {
     /* Fitness Section */
 
     .card-img3 {
         max-width: 406px;
     }
-
-
 
     /* Service Section */
 
@@ -1804,8 +1771,6 @@ h3 {
     .title-trnsfrm2 {
         font-size: 43px;
     }
-
-
 }
 
 @media screen and (max-width: 768px) {
@@ -1829,8 +1794,6 @@ h3 {
     .card-img3 {
         max-width: 375px;
     }
-
-
 
     /* About Section */
     .title-4 {
@@ -1875,8 +1838,6 @@ h3 {
         font-size: 21px;
     }
 
-
-
     /* Footer Section */
     .ftr-brandLogo {
         max-width: 300px;
@@ -1912,8 +1873,6 @@ h3 {
     .para {
         font-size: 18px;
     }
-
-
 
     .bnr-hdr {
         max-width: 290px;
@@ -1985,7 +1944,6 @@ h3 {
         height: 20px;
         border: 3px solid var(--yellow-color);
         top: -1px;
-
     }
 
     .para2 {
@@ -2054,7 +2012,6 @@ h3 {
 
     .rateCard-line {
         top: 122px;
-
     }
 
     .rateItem-list {
@@ -2076,7 +2033,6 @@ h3 {
     }
 
     /* Locaton Section */
-
 
     .cmn-para {
         font-size: 25px;
@@ -2116,7 +2072,6 @@ h3 {
         color: transparent;
     }
 
-
     /* Footer Section */
     .ftr-brandLogo {
         max-width: 150px;
@@ -2145,7 +2100,7 @@ h3 {
     }
 }
 
-@media screen and (max-width:431px) {
+@media screen and (max-width: 431px) {
 
     /* Fitness Section */
     .card-img3 {
@@ -2160,12 +2115,9 @@ h3 {
 
     /* Transformation Section */
 
-
     .trnsfrm-para {
         font-size: 19px;
     }
-
-   
 
     .trnsfrm-box {
         margin: 71px auto 0;
@@ -2174,5 +2126,4 @@ h3 {
     .body-builder {
         transform: translateX(50%) scale(1.6);
     }
-
 }
