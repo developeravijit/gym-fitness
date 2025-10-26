@@ -116,7 +116,7 @@ var elem = document.querySelector(".grid-card");
 
 var iso = new Isotope(elem, {
   itemSelector: ".enrollment-card",
-  layoutMode: "fitRows",
+  // layoutMode: "fitRows",
 });
 
 // btn1.addEventListener("click", () => {
@@ -130,3 +130,4 @@ document.querySelectorAll(".button-slider").forEach((btn) => {
     // btn.classList.toggle("active-btn");
   });
 });
+

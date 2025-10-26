@@ -5,6 +5,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>FitIn</title>
+    <!-- AOS CDN -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Bootstrap Icon CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
 
@@ -318,9 +320,9 @@
         <!-- Workout Section -->
         <section class="location-sec">
             <div class="container abt-container">
-                <div class="abt-hdr location-hdr">
+                <div class="abt-hdr">
                     <h2 class="title-3">
-                        Our Location
+                        Workouts
                         <div class="frame-line abt-line">
                             <img src="./assets/Frame line.png" alt="" />
                         </div>
@@ -404,236 +406,323 @@
                     </div>
                 </div>
                 <div class="grid-card">
-                    <div class="enrollment-card strength">
-                        <div class="card-bg">
-                            <div class="topCard-cntn">
-                                <p class="target-line">Strength</p>
-                                <div class="trnsfrm-line">
-                                    <span class="line-2"></span>
-                                    <span class="line-2"></span>
-                                    <span class="line-2"></span>
+                    <div class="row">
+                        <div class="col-12 col-md-6">
+                            <div class="enrollment-card strength">
+                                <div class="card-bg">
+                                    <div class="topCard-cntn">
+                                        <p class="target-line">Strength</p>
+                                        <div class="trnsfrm-line">
+                                            <span class="line-2"></span>
+                                            <span class="line-2"></span>
+                                            <span class="line-2"></span>
+                                        </div>
+                                        <p class="author">by Ethan Cross</p>
+                                    </div>
+                                    <figure class="cardImg-1 cardImg">
+                                        <img src="./assets/abtPage-cardImg1.png" alt="" />
+                                    </figure>
                                 </div>
-                                <p class="author">by Ethan Cross</p>
-                            </div>
-                            <figure class="cardImg-1 cardImg">
-                                <img src="./assets/abtPage-cardImg1.png" alt="" />
-                            </figure>
-                        </div>
-                        <div class="card-bottom">
-                            <div class="leftBottom-cntn">
-                                <p class="nmbr">01</p>
-                                <p class="bottom-para">Power Build Program</p>
-                                <p class="bottom-para2">
-                                    Focus on muscle growth and compound lifts.
-                                </p>
-                            </div>
-                            <a class="bottom-btn">
-                                Enroll Now
-                                <i class="fa-solid fa-arrow-right rgt-arw"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="enrollment-card wellness">
-                        <div class="card-bg">
-                            <div class="topCard-cntn">
-                                <p class="target-line">Wellness</p>
-                                <div class="trnsfrm-line">
-                                    <span class="line-2"></span>
-                                    <span class="line-2"></span>
-                                    <span class="line-2"></span>
+                                <div class="card-bottom">
+                                    <div class="row btn-row">
+                                        <div class="col">
+                                            <div class="leftBottom-cntn">
+                                                <p class="nmbr">01</p>
+                                                <p class="bottom-para">Power Build Program</p>
+                                                <p class="bottom-para2">
+                                                    Focus on muscle growth and compound lifts.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="bottom-button">
+                                                <a class="bottom-btn">
+                                                    Enroll Now
+                                                    <i class="fa-solid fa-arrow-right rgt-arw"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
                                 </div>
-                                <p class="author">by trent morgan</p>
                             </div>
-                            <figure class="cardImg-2 cardImg">
-                                <img src="./assets/abtPage-cardImg2.png" alt="" />
-                            </figure>
                         </div>
-                        <div class="card-bottom">
-                            <div class="leftBottom-cntn">
-                                <p class="nmbr">02</p>
-                                <p class="bottom-para">Yoga Flow</p>
-                                <p class="bottom-para2">
-                                    Improve flexibility and mindfulness.
-                                </p>
-                            </div>
-                            <a class="bottom-btn">
-                                Enroll Now
-                                <i class="fa-solid fa-arrow-right rgt-arw"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="enrollment-card cardio">
-                        <div class="card-bg">
-                            <div class="topCard-cntn">
-                                <p class="target-line strength">Cardio</p>
-                                <div class="trnsfrm-line">
-                                    <span class="line-2"></span>
-                                    <span class="line-2"></span>
-                                    <span class="line-2"></span>
+                        <div class="col-12 col-md-6">
+                            <div class="enrollment-card wellness">
+                                <div class="card-bg">
+                                    <div class="topCard-cntn">
+                                        <p class="target-line">Wellness</p>
+                                        <div class="trnsfrm-line">
+                                            <span class="line-2"></span>
+                                            <span class="line-2"></span>
+                                            <span class="line-2"></span>
+                                        </div>
+                                        <p class="author">by trent morgan</p>
+                                    </div>
+                                    <figure class="cardImg-2 cardImg">
+                                        <img src="./assets/abtPage-cardImg2.png" alt="" />
+                                    </figure>
                                 </div>
-                                <p class="author">by marcus cole</p>
-                            </div>
-                            <figure class="cardImg-3 cardImg">
-                                <img src="./assets/abtPage-cardImg3.png" alt="" />
-                            </figure>
-                        </div>
-                        <div class="card-bottom">
-                            <div class="leftBottom-cntn">
-                                <p class="nmbr">03</p>
-                                <p class="bottom-para">Cardio Blast</p>
-                                <p class="bottom-para2">
-                                    Treadmill, cycling, and jump rope sessions.
-                                </p>
-                            </div>
-                            <a class="bottom-btn">
-                                Enroll Now
-                                <i class="fa-solid fa-arrow-right rgt-arw"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="enrollment-card strength">
-                        <div class="card-bg">
-                            <div class="topCard-cntn">
-                                <p class="target-line">Strength</p>
-                                <div class="trnsfrm-line">
-                                    <span class="line-2"></span>
-                                    <span class="line-2"></span>
-                                    <span class="line-2"></span>
+                                <div class="card-bottom">
+                                    <div class="row btn-row">
+                                        <div class="col">
+                                            <div class="leftBottom-cntn">
+                                                <p class="nmbr">02</p>
+                                                <p class="bottom-para">Yoga Flow</p>
+                                                <p class="bottom-para2">
+                                                    Improve flexibility and mindfulness.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="bottom-button">
+                                                <a class="bottom-btn">
+                                                    Enroll Now
+                                                    <i class="fa-solid fa-arrow-right rgt-arw"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <p class="author">by Ethan Cross</p>
                             </div>
-                            <figure class="cardImg-4 cardImg">
-                                <img src="./assets/abtPage-cardImg4.png" alt="" />
-                            </figure>
                         </div>
-                        <div class="card-bottom">
-                            <div class="leftBottom-cntn">
-                                <p class="nmbr">04</p>
-                                <p class="bottom-para">Weightlifting 101</p>
-                                <p class="bottom-para2">
-                                    Learn Olympic and free weight techniques.
-                                </p>
-                            </div>
-                            <a class="bottom-btn">
-                                enroll now
-                                <i class="fa-solid fa-arrow-right rgt-arw"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="enrollment-card combat">
-                        <div class="card-bg">
-                            <div class="topCard-cntn">
-                                <p class="target-line">combat</p>
-                                <div class="trnsfrm-line">
-                                    <span class="line-2"></span>
-                                    <span class="line-2"></span>
-                                    <span class="line-2"></span>
+                        <div class="col-12 col-md-6">
+                            <div class="enrollment-card cardio">
+                                <div class="card-bg">
+                                    <div class="topCard-cntn">
+                                        <p class="target-line strength">Cardio</p>
+                                        <div class="trnsfrm-line">
+                                            <span class="line-2"></span>
+                                            <span class="line-2"></span>
+                                            <span class="line-2"></span>
+                                        </div>
+                                        <p class="author">by marcus cole</p>
+                                    </div>
+                                    <figure class="cardImg-3 cardImg">
+                                        <img src="./assets/abtPage-cardImg3.png" alt="" />
+                                    </figure>
                                 </div>
-                                <p class="author">by Damian Brooks</p>
-                            </div>
-                            <figure class="cardImg-5 cardImg">
-                                <img src="./assets/abtPage-cardImg5.png" alt="" />
-                            </figure>
-                        </div>
-                        <div class="card-bottom">
-                            <div class="leftBottom-cntn">
-                                <p class="nmbr">05</p>
-                                <p class="bottom-para">BoxFit Training</p>
-                                <p class="bottom-para2">
-                                    Boxing drills for strength and agility.
-                                </p>
-                            </div>
-                            <a class="bottom-btn">
-                                enroll now
-                                <i class="fa-solid fa-arrow-right rgt-arw"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="enrollment-card strength">
-                        <div class="card-bg">
-                            <div class="topCard-cntn">
-                                <p class="target-line">Strength</p>
-                                <div class="trnsfrm-line">
-                                    <span class="line-2"></span>
-                                    <span class="line-2"></span>
-                                    <span class="line-2"></span>
+                                <div class="card-bottom">
+                                    <div class="row btn-row">
+                                        <div class="col">
+                                            <div class="leftBottom-cntn">
+                                                <p class="nmbr">03</p>
+                                                <p class="bottom-para">Cardio Blast</p>
+                                                <p class="bottom-para2">
+                                                    Treadmill, cycling, and jump rope sessions.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="bottom-button">
+                                                <a class="bottom-btn">
+                                                    Enroll Now
+                                                    <i class="fa-solid fa-arrow-right rgt-arw"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+
                                 </div>
-                                <p class="author">by Ethan Cross</p>
                             </div>
-                            <figure class="cardImg-1 cardImg">
-                                <img src="./assets/abtPage-cardImg1.png" alt="" />
-                            </figure>
                         </div>
-                        <div class="card-bottom">
-                            <div class="leftBottom-cntn">
-                                <p class="nmbr">06</p>
-                                <p class="bottom-para">Power Build Program</p>
-                                <p class="bottom-para2">
-                                    Focus on muscle growth and compound lifts.
-                                </p>
-                            </div>
-                            <a class="bottom-btn">
-                                Enroll Now
-                                <i class="fa-solid fa-arrow-right rgt-arw"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="enrollment-card calisthenics">
-                        <div class="card-bg">
-                            <div class="topCard-cntn">
-                                <p class="target-line">calisthenics</p>
-                                <div class="trnsfrm-line">
-                                    <span class="line-2"></span>
-                                    <span class="line-2"></span>
-                                    <span class="line-2"></span>
+                        <div class="col-12 col-md-6">
+                            <div class="enrollment-card strength">
+                                <div class="card-bg">
+                                    <div class="topCard-cntn">
+                                        <p class="target-line">Strength</p>
+                                        <div class="trnsfrm-line">
+                                            <span class="line-2"></span>
+                                            <span class="line-2"></span>
+                                            <span class="line-2"></span>
+                                        </div>
+                                        <p class="author">by Ethan Cross</p>
+                                    </div>
+                                    <figure class="cardImg-4 cardImg">
+                                        <img src="./assets/abtPage-cardImg4.png" alt="" />
+                                    </figure>
                                 </div>
-                                <p class="author">by samantha blaze</p>
-                            </div>
-                            <figure class="cardImg-7 cardImg">
-                                <img src="./assets/abtPage-cardImg7.png" alt="" />
-                            </figure>
-                        </div>
-                        <div class="card-bottom">
-                            <div class="leftBottom-cntn">
-                                <p class="nmbr">07</p>
-                                <p class="bottom-para">Core Stability</p>
-                                <p class="bottom-para2">
-                                    Build a stronger, balanced core.
-                                </p>
-                            </div>
-                            <a class="bottom-btn">
-                                enroll now
-                                <i class="fa-solid fa-arrow-right rgt-arw"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="enrollment-card calisthenics">
-                        <div class="card-bg">
-                            <div class="topCard-cntn">
-                                <p class="target-line">calisthenics</p>
-                                <div class="trnsfrm-line">
-                                    <span class="line-2"></span>
-                                    <span class="line-2"></span>
-                                    <span class="line-2"></span>
+                                <div class="card-bottom">
+                                    <div class="row btn-row">
+                                        <div class="col">
+                                            <div class="leftBottom-cntn">
+                                                <p class="nmbr">04</p>
+                                                <p class="bottom-para">Weightlifting 101</p>
+                                                <p class="bottom-para2">
+                                                    Learn Olympic and free weight techniques.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="bottom-button">
+                                                <a class="bottom-btn">
+                                                    Enroll Now
+                                                    <i class="fa-solid fa-arrow-right rgt-arw"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <p class="author">by samantha blaze</p>
                             </div>
-                            <figure class="cardImg-8 cardImg">
-                                <img src="./assets/abtPage-cardImg8.png" alt="" />
-                            </figure>
                         </div>
-                        <div class="card-bottom">
-                            <div class="leftBottom-cntn">
-                                <p class="nmbr">08</p>
-                                <p class="bottom-para">Handstand Training</p>
-                                <p class="bottom-para2">
-                                    Master balance and shoulder strength.
-                                </p>
+                        <div class="col-12 col-md-6">
+                            <div class="enrollment-card combat">
+                                <div class="card-bg">
+                                    <div class="topCard-cntn">
+                                        <p class="target-line">combat</p>
+                                        <div class="trnsfrm-line">
+                                            <span class="line-2"></span>
+                                            <span class="line-2"></span>
+                                            <span class="line-2"></span>
+                                        </div>
+                                        <p class="author">by Damian Brooks</p>
+                                    </div>
+                                    <figure class="cardImg-5 cardImg">
+                                        <img src="./assets/abtPage-cardImg5.png" alt="" />
+                                    </figure>
+                                </div>
+                                <div class="card-bottom">
+                                    <div class="row btn-row">
+                                        <div class="col">
+                                            <div class="leftBottom-cntn">
+                                                <p class="nmbr">05</p>
+                                                <p class="bottom-para">BoxFit Training</p>
+                                                <p class="bottom-para2">
+                                                    Boxing drills for strength and agility.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="bottom-button">
+                                                <a class="bottom-btn">
+                                                    Enroll Now
+                                                    <i class="fa-solid fa-arrow-right rgt-arw"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <a class="bottom-btn">
-                                enroll now
-                                <i class="fa-solid fa-arrow-right rgt-arw"></i>
-                            </a>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="enrollment-card strength">
+                                <div class="card-bg">
+                                    <div class="topCard-cntn">
+                                        <p class="target-line">Strength</p>
+                                        <div class="trnsfrm-line">
+                                            <span class="line-2"></span>
+                                            <span class="line-2"></span>
+                                            <span class="line-2"></span>
+                                        </div>
+                                        <p class="author">by Ethan Cross</p>
+                                    </div>
+                                    <figure class="cardImg-1 cardImg">
+                                        <img src="./assets/abtPage-cardImg1.png" alt="" />
+                                    </figure>
+                                </div>
+                                <div class="card-bottom">
+                                    <div class="row btn-row">
+                                        <div class="col">
+                                            <div class="leftBottom-cntn">
+                                                <p class="nmbr">06</p>
+                                                <p class="bottom-para">Power Build Program</p>
+                                                <p class="bottom-para2">
+                                                    Focus on muscle growth and compound lifts.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="bottom-button">
+                                                <a class="bottom-btn">
+                                                    Enroll Now
+                                                    <i class="fa-solid fa-arrow-right rgt-arw"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="enrollment-card calisthenics">
+                                <div class="card-bg">
+                                    <div class="topCard-cntn">
+                                        <p class="target-line">Calisthenics</p>
+                                        <div class="trnsfrm-line">
+                                            <span class="line-2"></span>
+                                            <span class="line-2"></span>
+                                            <span class="line-2"></span>
+                                        </div>
+                                        <p class="author">by samantha blaze</p>
+                                    </div>
+                                    <figure class="cardImg-7 cardImg">
+                                        <img src="./assets/abtPage-cardImg7.png" alt="" />
+                                    </figure>
+                                </div>
+                                <div class="card-bottom">
+                                    <div class="row btn-row">
+                                        <div class="col">
+                                            <div class="leftBottom-cntn">
+                                                <p class="nmbr">07</p>
+                                                <p class="bottom-para">Core Stability</p>
+                                                <p class="bottom-para2">
+                                                    Focus on muscle growth and compound lifts.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="bottom-button">
+                                                <a class="bottom-btn">
+                                                    Enroll Now
+                                                    <i class="fa-solid fa-arrow-right rgt-arw"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="enrollment-card calisthenics">
+                                <div class="card-bg">
+                                    <div class="topCard-cntn">
+                                        <p class="target-line">calisthenics</p>
+                                        <div class="trnsfrm-line">
+                                            <span class="line-2"></span>
+                                            <span class="line-2"></span>
+                                            <span class="line-2"></span>
+                                        </div>
+                                        <p class="author">by samantha blaze</p>
+                                    </div>
+                                    <figure class="cardImg-8 cardImg">
+                                        <img src="./assets/abtPage-cardImg8.png" alt="" />
+                                    </figure>
+                                </div>
+                                <div class="card-bottom">
+                                    <div class="row btn-row">
+                                        <div class="col">
+                                            <div class="leftBottom-cntn">
+                                                <p class="nmbr">08</p>
+                                                <p class="bottom-para">Handstand Training</p>
+                                                <p class="bottom-para2">
+                                                    Master balance and shoulder strength.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="bottom-button">
+                                                <a class="bottom-btn">
+                                                    Enroll Now
+                                                    <i class="fa-solid fa-arrow-right rgt-arw"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -649,11 +738,186 @@
 
         <section class="contact-sec">
             <div class="container abt-container">
+                <div class="row">
+                    <div class="col-12 col-xl-6 relative-col">
+                        <div class="intouch-cntn">
+                            <div class="abt-hdr">
+                                <h2 class="title-3 get-title">
+                                    Our Location
+                                    <div class="frame-line abt-line">
+                                        <img src="./assets/Frame line.png" alt="" />
+                                    </div>
+                                </h2>
+                            </div>
+                            <div class="mdl-cntn">
+                                <h3 class="title-5">
+                                    Ready to Transform Your Body?
+                                </h3>
+                                <p class="para2 mdl-para">
+                                    Start your fitness journey today with expert-led programs built for real results —
+                                    from
+                                    strength to wellness.
+                                </p>
+                                <ul class="kit-item">
+                                    <li class="kit-list">
+                                        <i class="fa-regular fa-circle-check check-list"></i>
+                                        Complimentary gym kit
+                                    </li>
+                                    <li class="kit-list">
+                                        <i class="fa-regular fa-circle-check check-list"></i>
+                                        Free session with certified trainer
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="bottom-cntn">
+                                <div class="amnt-box">
+                                    <span class="rs">rs</span>
+                                    <span class="amnt">19,999</span>
+                                </div>
+                                <p class="plan">OFF your membership plan.</p>
+                            </div>
+                            <div class="bottom-end ">
+                                <a href="" class="membership-btn get-btn btn-2">
+                                    get started today
+                                </a>
+                                <p class="para2 tndc">T&C: Offer valid for new enrollments only. Cannot be combined with
+                                    other discounts. Limited-time promotion subject to availability.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-xl-6">
+                        <form action="" class="getInTouch-form">
+                            <div class="row">
+                                <div class="col-12 col-md-6">
+                                    <div class="input-container">
+                                        <label for="name" class="label-cntn">
+                                            <div class="black-lineBox">
+                                                <span class="line-2 blackLine"></span>
+                                                <span class="line-2 blackLine"></span>
+                                                <span class="line-2 blackLine"></span>
+                                            </div>
+                                            <span class="label-span">Your Full Name</span>
+                                        </label>
+                                        <input type="text" name="name" id="name" class="input-text">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="input-container">
+                                        <label for="email" class="label-cntn">
+                                            <div class="black-lineBox">
+                                                <span class="line-2 blackLine"></span>
+                                                <span class="line-2 blackLine"></span>
+                                                <span class="line-2 blackLine"></span>
+                                            </div>
+                                            <span class="label-span">Email Address</span>
+                                        </label>
+                                        <input type="email" name="email" id="email" class="input-text">
+                                    </div>
+                                </div>
+                                <div class="col-12 mt-4">
+                                    <div class="input-container">
+                                        <label for="message" class="label-cntn">
+                                            <div class="black-lineBox">
+                                                <span class="line-2 blackLine"></span>
+                                                <span class="line-2 blackLine"></span>
+                                                <span class="line-2 blackLine"></span>
+                                            </div>
+                                            <span class="label-span">message</span>
+                                        </label>
+                                        <textarea name="message" id="message" class="input-text msg-text"></textarea>
+                                    </div>
+                                    <div class="rate-btn ">
+                                        <a href="" class="membership-btn get-btn">
+                                            get started today
+                                        </a>
+                                    </div>
+                                </div>
 
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- goal section -->
+        <section class="goal-sec">
+            <div class="container abt-container">
+                <div class="row abt-row">
+                    <div class="col">
+                        <div class="abt-hdr">
+                            <h2 class="title-3">
+                                How it works
+
+                                <div class="frame-line abt-line">
+                                    <img src="./assets/Frame line.png" alt="" />
+                                </div>
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="abtHdr-para">
+                            <p class="para abt-para">
+                                Real Stories. Real people. Real Transformations.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6 col-xl-4 border-col">
+                        <div class="goal-cntn">
+                            <p class="nmbr goal-nmbr">01</p>
+                            <div class="bullseye">
+                                <img src="./assets/bullseye.png" alt="">
+                            </div>
+                            <p class="goal-hdr">Goal Setting</p>
+                            <div class="ylw-line">
+                                <span class="line-2"></span>
+                                <span class="line-2"></span>
+                                <span class="line-2"></span>
+                            </div>
+                            <p class="para2">Define clear fitness goals tailored to your needs.</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-xl-4 border-col">
+                        <div class="goal-cntn">
+                            <p class="nmbr goal-nmbr">02</p>
+                            <div class="bullseye">
+                                <img src="./assets/bullseye.png" alt="">
+                            </div>
+                            <p class="goal-hdr">Structured Training</p>
+                            <div class="ylw-line">
+                                <span class="line-2"></span>
+                                <span class="line-2"></span>
+                                <span class="line-2"></span>
+                            </div>
+                            <p class="para2">Follow guided workouts built for steady progress.</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-xl-4 border-col col-last">
+                        <div class="goal-cntn">
+                            <p class="nmbr goal-nmbr">03</p>
+                            <div class="bullseye">
+                                <img src="./assets/bullseye.png" alt="">
+                            </div>
+                            <p class="goal-hdr">Goal Setting</p>
+                            <div class="ylw-line">
+                                <span class="line-2"></span>
+                                <span class="line-2"></span>
+                                <span class="line-2"></span>
+                            </div>
+                            <p class="para2">Define clear fitness goals tailored to your needs.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
 
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- Isotope CDN -->
     <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
 
