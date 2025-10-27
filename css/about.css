@@ -6,6 +6,8 @@
     --white-color: #ffffff;
     --login-bg-color: rgba(255, 247, 0, 0.1);
     --text-color-50: #ffffff80;
+    --animation-duration: 24s;
+    --services-totalItems: 6;
 }
 
 /* Banner Section */
@@ -522,6 +524,129 @@
     margin: 10px 0;
 }
 
+/* BMI Calculator Section */
+.calc-sec {
+    padding: 80px 0;
+    position: relative;
+}
+
+.calc-sec::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url(../assets/fire.jpg) no-repeat center/cover;
+    filter: grayscale(100%);
+    z-index: -1;
+    background-attachment: fixed;
+}
+
+.calc-sec>* {
+    position: relative;
+    z-index: 1;
+}
+
+
+.bmi-line {
+    margin-left: 10px;
+}
+
+.bmi-label {
+    color: var(--white-color);
+}
+
+.bmi-container {
+    margin-bottom: 24px;
+}
+
+.bmi-btn {
+    max-width: 234px;
+}
+
+.bmi-img-wrpr {
+    max-width: 720px;
+    height: 573px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.bmi-img-wrpr>img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.bmi-img-bg {
+    width: 100%;
+    /* ✅ add this */
+    max-width: 500px;
+    background: linear-gradient(to bottom,
+            rgba(30, 30, 30, 1) 0%,
+            rgba(30, 30, 30, 0) 100%);
+    backdrop-filter: blur(54px);
+    position: absolute;
+    left: 40%;
+    transform: scale(1.1);
+    top: 0;
+    bottom: 0;
+}
+
+.bmi-img {
+    width: 100%;
+    /* ✅ add this */
+    max-width: 1103px;
+    position: absolute;
+    bottom: 0;
+    right: 163px;
+    top: -160px;
+    scale: 1.7;
+}
+
+.bmi-img>img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Sponsorship Section */
+
+.spsh-sec {
+    background: var(--black-color);
+    padding: 80px 0;
+}
+
+.sponsorhip-animation {
+    padding-block: 80px;
+    position: relative;
+    overflow: hidden;
+    margin-top: 80px;
+}
+
+.autoScroll-item {
+    max-width: 150px;
+    position: absolute;
+    animation: slideRight linear infinite;
+    animation-duration: var(--animation-duration);
+    animation-delay: calc(var(--animation-duration) / var(--services-totalItems) * ((var(--services-totalItems) - var(--i)) * -1));
+}
+
+@keyframes slideRight {
+    0% {
+        right: -10%;
+    }
+
+    100% {
+        right: 110%;
+    }
+}
+
+
+
+.autoScroll-item>img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
 /* Responsive Section */
 
 @media screen and (max-width: 1200px) {
@@ -581,6 +706,29 @@
     .goal-cntn {
         padding: 34px 0px 10px;
     }
+
+    /* BMI Calculator Section */
+    .bmi-img-wrpr {
+        margin-top: 80px;
+    }
+}
+
+@media screen and (max-width:992px) {
+
+    /* BMI Calculator Section */
+    .bmi-img-bg {
+        left: 28%;
+        transform: scale(1.1);
+        top: 0px;
+        bottom: 0;
+    }
+
+    .bmi-img {
+        right: 118px;
+        top: -121px;
+        scale: 1.6;
+    }
+
 }
 
 @media screen and (max-width: 768px) {
@@ -596,7 +744,14 @@
         padding: 16.5px 52.5px;
     }
 
-    
+    /* BMI Calculator Section */
+    .bmi-img-bg {
+        left: 13%;
+        transform: scale(1);
+        top: 0px;
+        bottom: 0;
+    }
+
 }
 
 @media screen and (max-width: 576px) {
@@ -688,6 +843,20 @@
         font-size: 16px;
     }
 
+    /* BMI Calculator Section */
+    .bmi-img-wrpr {
+        margin-top: 30px;
+    }
 
+    .bmi-img-bg {
+        left: 16%;
+        transform: scale(0.7);
+    }
+
+    .bmi-img {
+        right: 87px;
+        top: -234px;
+        scale: 2.3;
+    }
 
 }
