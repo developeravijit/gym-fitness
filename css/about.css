@@ -125,7 +125,6 @@
 .mySwiper3 {
     overflow: hidden;
     max-width: 600px;
-    cursor: pointer;
     padding-bottom: 45px;
 }
 
@@ -619,10 +618,12 @@
     position: relative;
     overflow: hidden;
     margin-top: 80px;
+    transform: rotate(2deg) translateY(20px);
+    cursor: pointer;
 }
 
 .autoScroll-item {
-    max-width: 150px;
+    width: 150px;
     position: absolute;
     animation: slideRight linear infinite;
     animation-duration: var(--animation-duration);
@@ -639,13 +640,22 @@
     }
 }
 
-
+.nike {
+    width: 173.96px;
+}
 
 .autoScroll-item>img {
     width: 100%;
     height: 100%;
     object-fit: contain;
 }
+
+.sponsorhip-animation:hover>.autoScroll-item {
+    animation-play-state: paused;
+
+
+}
+
 
 /* Responsive Section */
 
@@ -711,6 +721,17 @@
     .bmi-img-wrpr {
         margin-top: 80px;
     }
+
+    /* Sponsorship Section */
+    @keyframes slideRight {
+        0% {
+            right: -20%;
+        }
+
+        100% {
+            right: 150%;
+        }
+    }
 }
 
 @media screen and (max-width:992px) {
@@ -750,6 +771,15 @@
         transform: scale(1);
         top: 0px;
         bottom: 0;
+    }
+
+    /* Sponsorship Section */
+    .nike {
+        width: 130.96px;
+    }
+
+    .autoScroll-item {
+        width: 120px;
     }
 
 }
@@ -857,6 +887,21 @@
         right: 87px;
         top: -234px;
         scale: 2.3;
+    }
+
+    /* Sponsorship Section */
+    .autoScroll-item {
+        width: 90px;
+    }
+
+    @keyframes slideRight {
+        0% {
+            right: -40%;
+        }
+
+        100% {
+            right: 190%;
+        }
     }
 
 }

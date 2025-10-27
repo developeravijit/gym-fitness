@@ -1,133 +1,172 @@
-// First Slide
+document.addEventListener("DOMContentLoaded", () => {
+  AOS.init();
+  // First Slide
 
-let swiper = new Swiper(".swiper1", {
-  loop: true,
-  slidesPerView: 3,
-  spaceBetween: 1,
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: false,
-  },
-
-  breakpoints: {
-    1250: {
-      slidesPerView: 3,
+  let swiper = new Swiper(".swiper1", {
+    loop: true,
+    slidesPerView: 3,
+    spaceBetween: 1,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
     },
 
-    768: {
-      slidesPerView: 2,
+    breakpoints: {
+      1250: {
+        slidesPerView: 3,
+      },
+
+      768: {
+        slidesPerView: 2,
+      },
+      320: {
+        slidesPerView: 1,
+      },
     },
-    320: {
-      slidesPerView: 1,
+  });
+  // Second Slide
+
+  let swiper2 = new Swiper(".mySwiper", {
+    loop: true,
+    slidesPerView: 3,
+    spaceBetween: 1,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
     },
-  },
+    breakpoints: {
+      1250: {
+        slidesPerView: 3,
+      },
+
+      768: {
+        slidesPerView: 2,
+      },
+      320: {
+        slidesPerView: 1,
+      },
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
+
+  // Third Slide
+
+  let swiper3 = new Swiper(".mySwiper2", {
+    loop: true,
+    slidesPerView: 3,
+    spaceBetween: 1,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    breakpoints: {
+      1250: {
+        slidesPerView: 3,
+      },
+
+      768: {
+        slidesPerView: 2,
+      },
+      320: {
+        slidesPerView: 1,
+      },
+    },
+  });
+
+  // About Page
+  // first Swiper
+
+  let swiper4 = new Swiper(".mySwiper3", {
+    loop: true,
+    slidesPerView: 1,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+
+    pagination: {
+      el: ".pagination-2",
+      clickable: true,
+    },
+  });
+
+  // Second Swiper
+
+  let swiper5 = new Swiper(".mySwiper4", {
+    slidesPerView: 3,
+    spaceBetween: 0,
+    breakpoints: {
+      1250: {
+        slidesPerView: 3,
+      },
+
+      768: {
+        slidesPerView: 2,
+      },
+      320: {
+        slidesPerView: 1,
+      },
+    },
+  });
+
+  // Isotope Jquery
+
+  var elem = document.querySelector(".grid-card");
+
+  var iso = new Isotope(elem, {
+    itemSelector: ".enrollment-card",
+    // layoutMode: "fitRows",
+  });
+
+  // btn1.addEventListener("click", () => {
+  //   iso.arrange({ filter: ".grid-item1" });
+  // });
+
+  document.querySelectorAll(".button-slider").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const filterValue = btn.getAttribute("data-filter");
+      iso.arrange({ filter: filterValue });
+      // btn.classList.toggle("active-btn");
+    });
+  });
 });
-// Second Slide
+// Cursor Initialization
 
-let swiper2 = new Swiper(".mySwiper", {
-  loop: true,
-  slidesPerView: 3,
-  spaceBetween: 1,
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: false,
-  },
-  breakpoints: {
-    1250: {
-      slidesPerView: 3,
-    },
+const cursor = document.querySelector(".cursor");
+const anchor = document.querySelectorAll("a");
+const cursorBtn = document.querySelectorAll("button");
 
-    768: {
-      slidesPerView: 2,
-    },
-    320: {
-      slidesPerView: 1,
-    },
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
+document.addEventListener("mousemove", function (e) {
+  var x = e.clientX;
+  var y = e.clientY;
+  cursor.style.transform = `translate3d(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%), 0)`;
 });
 
-// Third Slide
-
-let swiper3 = new Swiper(".mySwiper2", {
-  loop: true,
-  slidesPerView: 3,
-  spaceBetween: 1,
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: false,
-  },
-  breakpoints: {
-    1250: {
-      slidesPerView: 3,
-    },
-
-    768: {
-      slidesPerView: 2,
-    },
-    320: {
-      slidesPerView: 1,
-    },
-  },
+document.addEventListener("mousedown", function () {
+  cursor.classList.add("click");
 });
 
-// About Page
-// first Swiper
-
-let swiper4 = new Swiper(".mySwiper3", {
-  loop: true,
-  slidesPerView: 1,
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: false,
-  },
-
-  pagination: {
-    el: ".pagination-2",
-    clickable: true,
-  },
+document.addEventListener("mouseup", function () {
+  cursor.classList.remove("click");
 });
 
-// Second Swiper
-
-let swiper5 = new Swiper(".mySwiper4", {
-  slidesPerView: 3,
-  spaceBetween: 0,
-  breakpoints: {
-    1250: {
-      slidesPerView: 3,
-    },
-
-    768: {
-      slidesPerView: 2,
-    },
-    320: {
-      slidesPerView: 1,
-    },
-  },
-});
-
-// Isotope Jquery
-
-var elem = document.querySelector(".grid-card");
-
-var iso = new Isotope(elem, {
-  itemSelector: ".enrollment-card",
-  // layoutMode: "fitRows",
-});
-
-// btn1.addEventListener("click", () => {
-//   iso.arrange({ filter: ".grid-item1" });
-// });
-
-document.querySelectorAll(".button-slider").forEach((btn) => {
-  btn.addEventListener("click", () => {
-    const filterValue = btn.getAttribute("data-filter");
-    iso.arrange({ filter: filterValue });
-    // btn.classList.toggle("active-btn");
+anchor.forEach((item) => {
+  item.addEventListener("mouseover", () => {
+    cursor.classList.add("hover");
+  });
+  item.addEventListener("mouseleave", () => {
+    cursor.classList.remove("hover");
   });
 });
 
+cursorBtn.forEach((item) => {
+  item.addEventListener("mouseover", () => {
+    cursor.classList.add("hover");
+  });
+  item.addEventListener("mouseleave", () => {
+    cursor.classList.remove("hover");
+  });
+});

@@ -40,6 +40,18 @@ h3 {
     font-style: normal;
 }
 
+
+.swiper1,
+.mySwiper,
+.mySwiper2,
+.mySwiper3,
+.mySwiper4 {
+    cursor: grabbing;
+}
+
+
+
+
 /* Modal Section */
 
 .login-box {
@@ -153,6 +165,24 @@ h3 {
     margin-right: 10px;
 }
 
+/* Custom Cursor */
+.cursor {
+    width: 5px;
+    height: 5px;
+    border-radius: 100%;
+    border: 10px solid var(--yellow-color);
+    transition: all 200ms ease-out;
+    position: fixed;
+    pointer-events: none;
+    left: 0;
+    top: 0;
+    transform: translate(calc(-50% + 15px), -50%);
+    z-index: 999;
+}
+
+.hover {
+    border: 10px solid blueviolet;
+}
 
 /* Header Section */
 .hdr-sec {
@@ -1223,7 +1253,7 @@ h3 {
     padding: 468px 0 0;
     background: url(../assets/body-builderBg.png);
     position: relative;
-    z-index: 999;
+    z-index: 1;
 }
 
 .body-builder {
