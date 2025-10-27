@@ -183,7 +183,7 @@
     border: 1px solid rgba(255, 255, 255, 0.1);
     padding: 24px;
     position: relative;
-    z-index: 999;
+    z-index: 1;
 }
 
 .cardImg {
@@ -305,6 +305,7 @@
     align-items: center;
     transition: all 0.3s linear;
     text-transform: capitalize;
+    cursor: pointer;
 }
 
 .btn-row {
