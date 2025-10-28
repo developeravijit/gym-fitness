@@ -6,6 +6,8 @@
     --white-color: #ffffff;
     --login-bg-color: rgba(255, 247, 0, 0.1);
     --text-color-50: #ffffff80;
+    --grey-color: #4E4E4E;
+
 }
 
 a,
@@ -241,6 +243,60 @@ h3 {
     margin-right: 10px;
 }
 
+.form-check {
+    margin: 24px 0;
+}
+
+.form-check-input {
+    border-radius: 50% !important;
+    width: 24px;
+    height: 24px;
+    background: transparent;
+    margin-right: 10px;
+    cursor: pointer;
+
+}
+
+.form-check-input:checked {
+    background-color: transparent;
+    border-color: var(--yellow-color);
+    color: var(--yellow-color);
+    background: url(../assets/checkModal.svg) no-repeat center/contain;
+    background-size: 15px;
+}
+
+.form-check-label {
+    font-size: 17px;
+    color: var(--grey-color);
+
+}
+
+.condition {
+    color: var(--white-color);
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.modal-btn {
+    margin-bottom: 12px;
+}
+
+.modal-login {
+    font-size: 17px;
+    color: var(--grey-color);
+
+}
+
+.alrdy-acc {
+    color: var(--white-color);
+
+    &:hover {
+        color: var(--yellow-color);
+    }
+}
+
 /* Custom Cursor */
 .cursor {
     width: 5px;
@@ -253,7 +309,7 @@ h3 {
     left: 0;
     top: 0;
     transform: translate(calc(-50% + 15px), -50%);
-    z-index: 999;
+    z-index: 9999;
 }
 
 .hover {
@@ -1964,8 +2020,6 @@ h3 {
         margin-top: 25px;
     }
 
-
-
     .line-2 {
         width: 10px;
         height: 22px;
@@ -1989,12 +2043,6 @@ h3 {
     }
 
 
-
-
-
-
-
-
     .rightModal-bottom {
         text-align: center;
     }
@@ -2004,7 +2052,14 @@ h3 {
         margin-top: 10px;
     }
 
+    .form-check-label {
+        font-size: 16px;
+    }
 
+    .form-check-input {
+        width: 20px;
+        height: 20px;
+    }
 
     /* Custom Cursor */
     .cursor {
