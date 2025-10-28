@@ -775,6 +775,10 @@
         bottom: 0;
     }
 
+    .location-para {
+        margin-top: 30px;
+    }
+
     /* Sponsorship Section */
     .nike {
         width: 130.96px;
@@ -880,6 +884,10 @@
     }
 
     /* BMI Calculator Section */
+    .calc-sec {
+        padding: 40px 0;
+    }
+
     .bmi-img-wrpr {
         margin-top: 30px;
     }
@@ -894,6 +902,7 @@
         top: -234px;
         scale: 2.3;
     }
+
 
     /* Sponsorship Section */
     .autoScroll-item {
