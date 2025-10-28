@@ -105,7 +105,7 @@
                         </li>
                     </ul>
                     <div class="login-link">
-                        <a href="" class="login-io-button">
+                        <a href="" class="login-io-button" data-bs-toggle="modal" data-bs-target="#exampleModal">
                             Login/Create Account
                             <div class="login-icon">
                                 <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -116,11 +116,200 @@
                                 </svg>
                             </div>
                         </a>
+
                     </div>
                 </div>
             </div>
         </nav>
     </header>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl ">
+            <div class="modal-content">
+
+                <div class="login-box">
+                    <button type="button" class="modal-close ms-auto
+                     d-md-none" data-bs-dismiss="modal" aria-label="Close">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                    <div class="logBox-cntn">
+                        <div class="row">
+                            <div class="col-12 col-xl-6">
+                                <div class="left-modal">
+                                    <div class="modal-line">
+                                        <span class="line-2"></span>
+                                        <span class="line-2"></span>
+                                        <span class="line-2"></span>
+                                    </div>
+                                    <h2 class="modal-title">
+                                        create account
+                                    </h2>
+                                    <p class="para2">
+                                        Lorem ipsum dolor sit amet consectetur. Enim et in tellus at. Blandit etiam.
+                                    </p>
+                                    <form action="" class="modal-form">
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <div class="modal-inputBox">
+                                                    <label for="first-name" class="all-icon">
+                                                        <span class="user-icon">
+                                                            <i class="fa-solid fa-circle-user"></i>
+                                                        </span>
+                                                        <span class="form-name">First Name <sup>*</sup> </span>
+                                                    </label>
+                                                    <input type="text" id="first-name" class="modal-input">
+
+                                                </div>
+                                            </div>
+                                            <div class="col-6 mb-3">
+                                                <div class="modal-inputBox">
+                                                    <label for="last-name" class="all-icon">
+                                                        <span class="user-icon">
+                                                            <i class="fa-solid fa-circle-user"></i>
+                                                        </span>
+                                                        <span class="form-name">last Name <sup>*</sup> </span>
+                                                    </label>
+                                                    <input type="text" id="last-name" class="modal-input">
+
+                                                </div>
+                                            </div>
+                                            <div class="col-12 mb-3">
+                                                <div class="modal-inputBox">
+                                                    <label for="modal-email" class="all-icon">
+                                                        <span class="user-icon">
+                                                            <i class="fa-solid fa-circle-user"></i>
+                                                        </span>
+                                                        <span class="form-name">email address <sup>*</sup> </span>
+                                                    </label>
+                                                    <input type="email" id="modal-email" class="modal-input">
+
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4 col-6 mb-3">
+                                                <div class="modal-inputBox">
+                                                    <label for="modal-gender" class="all-icon">
+                                                        <span class="user-icon">
+                                                            <i class="fa-solid fa-circle-user"></i>
+                                                        </span>
+                                                        <span class="form-name">gender <sup>*</sup> </span>
+                                                    </label>
+                                                    <input type="text" id="modal-gender" class="modal-input">
+                                                    <ul class="gender-dropdown">
+                                                        <li data-value="Male">Male</li>
+                                                        <li data-value="Female">Female</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4 col-6 mb-3">
+                                                <div class="modal-inputBox">
+                                                    <label for="modal-age" class="all-icon">
+                                                        <span class="user-icon">
+                                                            <i class="fa-solid fa-circle-user"></i>
+                                                        </span>
+                                                        <span class="form-name">age <sup>*</sup> </span>
+                                                    </label>
+                                                    <input type="number" id="modal-age" class="modal-input">
+
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4 col-12 mb-3">
+                                                <div class="modal-inputBox">
+                                                    <label for="modal-phone" class="all-icon">
+                                                        <span class="user-icon">
+                                                            <i class="fa-solid fa-circle-user"></i>
+                                                        </span>
+                                                        <span class="form-name">phone <sup>*</sup> </span>
+                                                    </label>
+                                                    <input type="number" id="modal-phone" class="modal-input">
+
+                                                </div>
+                                            </div>
+                                            <div class="col-5 mb-3">
+                                                <div class="modal-inputBox">
+                                                    <label for="modal-weight" class="all-icon">
+                                                        <span class="user-icon">
+                                                            <i class="fa-solid fa-circle-user"></i>
+                                                        </span>
+                                                        <span class="form-name">weight <sup>*</sup> </span>
+                                                    </label>
+                                                    <input type="number" id="modal-weight" class="modal-input">
+                                                </div>
+                                            </div>
+                                            <div class="col-7 mb-3">
+                                                <div class="modal-inputBox">
+                                                    <label for="modal-goal" class="all-icon">
+                                                        <span class="user-icon">
+                                                            <i class="fa-solid fa-circle-user"></i>
+                                                        </span>
+                                                        <span class="form-name">Goal <sup>*</sup> </span>
+                                                    </label>
+                                                    <input type="text" id="modal-goal" class="modal-input">
+
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="modal-inputBox">
+                                                    <label for="modal-password" class="all-icon">
+                                                        <span class="user-icon">
+                                                            <i class="fa-solid fa-circle-user"></i>
+                                                        </span>
+                                                        <span class="form-name">password <sup>*</sup> </span>
+                                                    </label>
+                                                    <div class="password-wrapper">
+                                                        <input type="password" id="modal-password" class="modal-input"
+                                                            placeholder="">
+                                                        <button type="button" class="toggle-password">
+                                                            <i class="fa-solid fa-eye"></i>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="col-12 col-xl-6">
+                                <div class="right-modal">
+                                    <div class="modal-logo text-end">
+                                        <img src="./assets/modalLogo.png" alt="">
+                                    </div>
+                                    <div class="rightModal-bottom">
+                                        <p class="para2 modal-para">Lorem ipsum dolor sit amet consectetur. Volutpat
+                                            sittortor. Tempus
+                                            congue adipiscing aliquam cursus turpis ultricies.</p>
+                                        <div class="modalBottom-para">
+                                            <div class="row">
+                                                <div class="col-sm-12 col-md-6">
+                                                    <p class="modal-para2">
+                                                        firstname lastname
+                                                    </p>
+                                                    <p class="para2 modal-para text-capitalize">
+                                                        designation
+                                                    </p>
+                                                </div>
+                                                <div class="col-sm-12 col-md-6">
+                                                    <div class="modalPara-box">
+                                                        <span class="modal-circle"></span>
+                                                        <p class="modal-para2">
+                                                            open ventures
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
 
     <main>
         <!-- Banner Section -->
@@ -157,7 +346,7 @@
         <div class="ftr-top">
             <div class="container abt-container">
                 <div class="row ftr-row">
-                    <div class="col-4">
+                    <div class="col-xl-4 col-12">
                         <div class="ftr-cntn">
                             <a href="" class="ftrCntn-hdr">
                                 <i class="bi bi-c-circle"></i> 2025 Fitin.
@@ -186,7 +375,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-8">
+                    <div class="col-xl-8 col-12">
                         <div class="ftr-nav">
                             <div class="ftr-logo">
                                 <a href="" class="ftr-brandLogo">
@@ -236,7 +425,7 @@
         <div class="ftr-bottom">
             <div class="container abt-container">
                 <div class="row ftr-row2">
-                    <div class="col">
+                    <div class="col-xl-6 col-12">
                         <div class="ftrBtm-cntn">
                             <div class="btm-hdr">Stay Updated</div>
                             <p class="btm-para">
@@ -244,7 +433,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="col">
+                    <div class="col-xl-6 col-12">
                         <form class="ftrInput-container">
                             <input type="text" class="styled_input_bar" placeholder="" />
                             <label class="ftrInput-label" for="styled_input_bar">Type your email</label>
@@ -265,7 +454,6 @@
             </div>
         </div>
     </footer>
-
 
 
 

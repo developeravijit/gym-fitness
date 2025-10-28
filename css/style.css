@@ -1697,10 +1697,6 @@ h3 {
 
     /* Banner Section */
 
-    .col {
-        width: 100%;
-        flex: none;
-    }
 
     .bnr-hdr {
         margin: 30px 0;
@@ -1783,10 +1779,6 @@ h3 {
         flex-direction: column;
     }
 
-    .col-2,
-    .col-10 {
-        width: 100%;
-    }
 
     .location-para2,
     .loaction-cntn,
