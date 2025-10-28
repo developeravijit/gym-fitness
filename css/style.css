@@ -54,6 +54,12 @@ h3 {
 
 /* Modal Section */
 
+.modal-content {
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+}
+
 .login-box {
     background: linear-gradient(to bottom, rgba(242, 255, 0, 0.75) 0%, rgba(0, 0, 0, 0.75) 100%);
     padding: 10px;
@@ -89,6 +95,12 @@ h3 {
     transform: translateY(-50%);
     align-items: center;
     display: flex;
+    text-transform: capitalize;
+
+}
+
+.modal-form {
+    margin-top: 50px;
 }
 
 .user-icon {
@@ -100,17 +112,72 @@ h3 {
 .form-name {
     font-size: 15px;
     color: var(--white-color);
+    transition: opacity 0.3s linear;
 }
 
 .modal-input {
     background: transparent;
     border: none;
     outline: none;
+    width: 100%;
+    color: white;
+    font-size: 15px;
+    padding-left: 40px;
+    position: relative;
+}
+
+.password-wrapper {
+    position: relative;
+}
+
+
+.toggle-password {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 20px;
+    transition: color 0.2s;
+}
+
+.toggle-password:hover {
+    color: var(--yellow-color);
 }
 
 
 
+.form-name.hide-label {
+    opacity: 0;
+    visibility: hidden;
+}
 
+.gender-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    border: 1px solid var(--yellow-color);
+    background: transparent;
+    margin: 5px 0 0;
+    color: var(--white-color);
+    padding: 0;
+    z-index: 10;
+    border-radius: 4px;
+}
+
+.gender-dropdown li {
+    padding: 8px 10px;
+    cursor: pointer;
+}
+
+.gender-dropdown li:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
 
 .right-modal {
     background: url(../assets/modal-rightBG.png) no-repeat center/cover;
@@ -131,7 +198,6 @@ h3 {
 }
 
 .rightModal-bottom {
-    /* max-width: 455px; */
     padding: 551px 50px 50px;
 }
 
@@ -1579,6 +1645,11 @@ h3 {
 
 @media screen and (max-width: 1200px) {
 
+    /* Modal Section */
+    .right-modal {
+        margin-top: 50px;
+    }
+
     /* Header Section */
     .offcanvas {
         background: transparent;
@@ -1806,6 +1877,11 @@ h3 {
 
 @media screen and (max-width: 768px) {
 
+    /* Modal Section */
+    .modal-para2 {
+        font-size: 16px;
+    }
+
     /* Header Section */
     .navbar-brand {
         max-width: 124px;
@@ -1880,6 +1956,21 @@ h3 {
 }
 
 @media screen and (max-width: 576px) {
+
+    /* MOdal Section */
+    .rightModal-bottom {
+        text-align: center;
+    }
+
+    .modalPara-box {
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    /* Custom Cursor */
+    .cursor {
+        display: none;
+    }
 
     /* Header Section */
     .navbar-nav {

@@ -1,0 +1,27 @@
+:root {
+    --transparent-white: rgba(255, 255, 255, 0.16);
+    --transparent-white-border: rgba(255, 255, 255, 0.26);
+    --yellow-color: #f2ff00;
+    --black-color: #000000;
+    --white-color: #ffffff;
+    --login-bg-color: rgba(255, 247, 0, 0.1);
+    --text-color-50: #ffffff80;
+}
+
+
+/* Banner Section */
+.bnr-sec {
+    background: url(../assets/workout-bg.png) no-repeat center/cover;
+    background-attachment: fixed;
+    padding: 490px 0 60px;
+}
+
+.ylw-title {
+    color: var(--yellow-color);
+}
+
+@media screen and (max-width:576px) {
+    .bnr-sec {
+        padding: 400px 0 30px;
+    }
+}

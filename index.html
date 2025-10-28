@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>FitIn</title>
-    
+
     <!-- AOS CDN -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Bootstrap Icon CDN -->
@@ -80,7 +80,7 @@
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Workouts</a>
+                            <a class="nav-link" href="./workout.html">Workouts</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Trainers</a>
@@ -121,69 +121,170 @@
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-xl ">
-            <div class="login-box">
-                <div class="logBox-cntn">
-                    <div class="row">
-                        <div class="col">
-                            <div class="left-modal">
-                                <div class="modal-line">
-                                    <span class="line-2"></span>
-                                    <span class="line-2"></span>
-                                    <span class="line-2"></span>
-                                </div>
-                                <h2 class="modal-title">
-                                    create account
-                                </h2>
-                                <p class="para2">
-                                    Lorem ipsum dolor sit amet consectetur. Enim et in tellus at. Blandit etiam.
-                                </p>
-                                <form action="" class="modal-form">
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <div class="modal-inputBox">
-                                                <label for="modal-name" class="all-icon">
-                                                    <span class="user-icon">
-                                                        <i class="fa-solid fa-circle-user"></i>
-                                                    </span>
-                                                    <span class="form-name">First Name <sup>*</sup> </span>
-                                                </label>
-                                                <input type="text" id="modal-name" class="modal-input">
-
-                                            </div>
-                                        </div>
-                                        <div class="col-6">
-                                            <label for="recipient-name" class="col-form-label">Recipient:</label>
-                                            <input type="text" class="form-control" id="recipient-name">
-                                        </div>
+            <div class="modal-content">
+                <div class="login-box">
+                    <div class="logBox-cntn">
+                        <div class="row">
+                            <div class="col-12 col-xl-6">
+                                <div class="left-modal">
+                                    <div class="modal-line">
+                                        <span class="line-2"></span>
+                                        <span class="line-2"></span>
+                                        <span class="line-2"></span>
                                     </div>
-                                </form>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="right-modal">
-                                <div class="modal-logo text-end">
-                                    <img src="./assets/modalLogo.png" alt="">
-                                </div>
-                                <div class="rightModal-bottom">
-                                    <p class="para2 modal-para">Lorem ipsum dolor sit amet consectetur. Volutpat
-                                        sittortor. Tempus
-                                        congue adipiscing aliquam cursus turpis ultricies.</p>
-                                    <div class="modalBottom-para">
+                                    <h2 class="modal-title">
+                                        create account
+                                    </h2>
+                                    <p class="para2">
+                                        Lorem ipsum dolor sit amet consectetur. Enim et in tellus at. Blandit etiam.
+                                    </p>
+                                    <form action="" class="modal-form">
                                         <div class="row">
-                                            <div class="col">
-                                                <p class="modal-para2">
-                                                    firstname lastname
-                                                </p>
-                                                <p class="para2 modal-para text-capitalize">
-                                                    designation
-                                                </p>
+                                            <div class="col-6">
+                                                <div class="modal-inputBox">
+                                                    <label for="first-name" class="all-icon">
+                                                        <span class="user-icon">
+                                                            <i class="fa-solid fa-circle-user"></i>
+                                                        </span>
+                                                        <span class="form-name">First Name <sup>*</sup> </span>
+                                                    </label>
+                                                    <input type="text" id="first-name" class="modal-input">
+
+                                                </div>
                                             </div>
-                                            <div class="col">
-                                                <div class="modalPara-box">
-                                                    <span class="modal-circle"></span>
+                                            <div class="col-6 mb-3">
+                                                <div class="modal-inputBox">
+                                                    <label for="last-name" class="all-icon">
+                                                        <span class="user-icon">
+                                                            <i class="fa-solid fa-circle-user"></i>
+                                                        </span>
+                                                        <span class="form-name">last Name <sup>*</sup> </span>
+                                                    </label>
+                                                    <input type="text" id="last-name" class="modal-input">
+
+                                                </div>
+                                            </div>
+                                            <div class="col-12 mb-3">
+                                                <div class="modal-inputBox">
+                                                    <label for="modal-email" class="all-icon">
+                                                        <span class="user-icon">
+                                                            <i class="fa-solid fa-circle-user"></i>
+                                                        </span>
+                                                        <span class="form-name">email address <sup>*</sup> </span>
+                                                    </label>
+                                                    <input type="email" id="modal-email" class="modal-input">
+
+                                                </div>
+                                            </div>
+                                            <div class="col-4 mb-3">
+                                                <div class="modal-inputBox">
+                                                    <label for="modal-gender" class="all-icon">
+                                                        <span class="user-icon">
+                                                            <i class="fa-solid fa-circle-user"></i>
+                                                        </span>
+                                                        <span class="form-name">gender <sup>*</sup> </span>
+                                                    </label>
+                                                    <input type="text" id="modal-gender" class="modal-input">
+                                                    <ul class="gender-dropdown">
+                                                        <li data-value="Male">Male</li>
+                                                        <li data-value="Female">Female</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-4 mb-3">
+                                                <div class="modal-inputBox">
+                                                    <label for="modal-age" class="all-icon">
+                                                        <span class="user-icon">
+                                                            <i class="fa-solid fa-circle-user"></i>
+                                                        </span>
+                                                        <span class="form-name">age <sup>*</sup> </span>
+                                                    </label>
+                                                    <input type="number" id="modal-age" class="modal-input">
+
+                                                </div>
+                                            </div>
+                                            <div class="col-4 mb-3">
+                                                <div class="modal-inputBox">
+                                                    <label for="modal-phone" class="all-icon">
+                                                        <span class="user-icon">
+                                                            <i class="fa-solid fa-circle-user"></i>
+                                                        </span>
+                                                        <span class="form-name">phone <sup>*</sup> </span>
+                                                    </label>
+                                                    <input type="number" id="modal-phone" class="modal-input">
+
+                                                </div>
+                                            </div>
+                                            <div class="col-5 mb-3">
+                                                <div class="modal-inputBox">
+                                                    <label for="modal-weight" class="all-icon">
+                                                        <span class="user-icon">
+                                                            <i class="fa-solid fa-circle-user"></i>
+                                                        </span>
+                                                        <span class="form-name">weight <sup>*</sup> </span>
+                                                    </label>
+                                                    <input type="number" id="modal-weight" class="modal-input">
+                                                </div>
+                                            </div>
+                                            <div class="col-7 mb-3">
+                                                <div class="modal-inputBox">
+                                                    <label for="modal-goal" class="all-icon">
+                                                        <span class="user-icon">
+                                                            <i class="fa-solid fa-circle-user"></i>
+                                                        </span>
+                                                        <span class="form-name">Goal <sup>*</sup> </span>
+                                                    </label>
+                                                    <input type="text" id="modal-goal" class="modal-input">
+
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="modal-inputBox">
+                                                    <label for="modal-password" class="all-icon">
+                                                        <span class="user-icon">
+                                                            <i class="fa-solid fa-circle-user"></i>
+                                                        </span>
+                                                        <span class="form-name">password <sup>*</sup> </span>
+                                                    </label>
+                                                    <div class="password-wrapper">
+                                                        <input type="password" id="modal-password" class="modal-input"
+                                                            placeholder="">
+                                                        <button type="button" class="toggle-password">
+                                                            <i class="fa-solid fa-eye"></i>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="col-12 col-xl-6">
+                                <div class="right-modal">
+                                    <div class="modal-logo text-end">
+                                        <img src="./assets/modalLogo.png" alt="">
+                                    </div>
+                                    <div class="rightModal-bottom">
+                                        <p class="para2 modal-para">Lorem ipsum dolor sit amet consectetur. Volutpat
+                                            sittortor. Tempus
+                                            congue adipiscing aliquam cursus turpis ultricies.</p>
+                                        <div class="modalBottom-para">
+                                            <div class="row">
+                                                <div class="col-sm-12 col-md-6">
                                                     <p class="modal-para2">
-                                                        open ventures
+                                                        firstname lastname
                                                     </p>
+                                                    <p class="para2 modal-para text-capitalize">
+                                                        designation
+                                                    </p>
+                                                </div>
+                                                <div class="col-sm-12 col-md-6">
+                                                    <div class="modalPara-box">
+                                                        <span class="modal-circle"></span>
+                                                        <p class="modal-para2">
+                                                            open ventures
+                                                        </p>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -1120,7 +1221,7 @@
         </div>
     </footer>
 
-   
+
     <!-- Swipper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <!-- Bootstrap JS -->
@@ -1132,7 +1233,7 @@
     <!-- AOS JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-   
+
 </body>
 
 </html>

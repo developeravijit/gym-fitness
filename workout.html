@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FitIn</title>
+    <!-- AOS CDN -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Bootstrap Icon CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+
+    <!-- Swipper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Caslsh Display Font Link -->
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@200,300,400,500,600,700,1&display=swap"
+        rel="stylesheet" />
+
+    <!-- Akira Font Link -->
+    <link href="https://fonts.cdnfonts.com/css/akira-expanded" rel="stylesheet" />
+
+    <!-- Bootstrap Css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+    <!-- Custom Css -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- About Custom CSS -->
+    <link rel="stylesheet" href="./css/about.css" />
+    <!-- Workout Custom CSS -->
+    <link rel="stylesheet" href="./css/workout.css">
+</head>
+
+
+
+<body>
+    <!-- Header Section -->
+    <header class="hdr-sec">
+        <nav class="navbar navbar-expand-xl">
+            <div class="container hdr-container">
+                <div class="nav-logo">
+                    <a class="navbar-brand" href="./index.html">
+                        <img src="./assets/Logo.png" alt="" />
+                    </a>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                    <span class="navbar-toggler-icon">
+                        <i class="fa-solid fa-bars"></i>
+                    </span>
+                </button>
+                <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+                    id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                    <div class="offcanvas-header me-auto">
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                    </div>
+                    <ul class="navbar-nav align-items-center m-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="./index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./about.html">About </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Features
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">activity</a></li>
+                                <li><a class="dropdown-item" href="#">workouts</a></li>
+                                <li>
+                                    <a class="dropdown-item" href="#">progress tracking</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Workout History</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Rest & Recovery Logs</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="./workout.html">Workouts</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Trainers</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Testimonials</a>
+                        </li>
+                        <form class="search-group">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input placeholder="Search" type="search" class="input" />
+                        </form>
+                        <li class="cart-item">
+                            <a class="cart-link" href="#">
+                                <img src="./assets/Cart.png" alt="" />
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="login-link">
+                        <a href="" class="login-io-button">
+                            Login/Create Account
+                            <div class="login-icon">
+                                <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 0h24v24H0z" fill="none"></path>
+                                    <path
+                                        d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                                        fill="currentColor"></path>
+                                </svg>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Banner Section -->
+        <section class="bnr-sec">
+            <div class="container">
+                <div class="hero-cntn">
+                    <h1 class="title-1 ylw-title">
+                        Workout
+                    </h1>
+                    <div class="breadcrumb">
+                        <ul class="breadcrumb-item">
+                            <li class="list-items">
+                                <a href="./index.html" class="breadcrumb-link">Home</a>
+                            </li>
+                            <li class="square">
+                                <span></span>
+                            </li>
+                            <li class="breadcrumb-link breadcrumb-active">Workout</li>
+                        </ul>
+                    </div>
+                    <div class="hero-line">
+                        <span class="yellow-line"></span>
+                        <span class="yellow-line"></span>
+                        <span class="yellow-line"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="ftr-sec">
+        <div class="ftr-top">
+            <div class="container abt-container">
+                <div class="row ftr-row">
+                    <div class="col-4">
+                        <div class="ftr-cntn">
+                            <a href="" class="ftrCntn-hdr">
+                                <i class="bi bi-c-circle"></i> 2025 Fitin.
+                                <br>
+                                <span>All rights reserved.</span>
+                            </a>
+                            <ul class="ftr-social">
+                                <li class="ftr-socialLink">
+                                    <a href="" class="social-media">
+                                        <span>Instagram</span>
+                                        <span class="ftrRight-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+                                    </a>
+                                </li>
+                                <li class="ftr-socialLink">
+                                    <a href="" class="social-media">
+                                        <span>Facebook</span>
+                                        <span class="ftrRight-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+                                    </a>
+                                </li>
+                                <li class="ftr-socialLink">
+                                    <a href="" class="social-media">
+                                        <span>Youtube</span>
+                                        <span class="ftrRight-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-8">
+                        <div class="ftr-nav">
+                            <div class="ftr-logo">
+                                <a href="" class="ftr-brandLogo">
+                                    <img src="./assets/ftr-logo.png" alt="">
+                                </a>
+                            </div>
+                            <ul class="ftrNav-bar">
+                                <li class="ftr-navLi">
+                                    <a href="./index.html" class="ftr-navLink">Home</a>
+                                </li>
+                                <li class="ftr-navLi">
+                                    <hr>
+                                </li>
+                                <li class="ftr-navLi">
+                                    <a href="./about.html" class="ftr-navLink">About Us</a>
+                                </li>
+                                <li class="ftr-navLi">
+                                    <hr>
+                                </li>
+                                <li class="ftr-navLi">
+                                    <a href="" class="ftr-navLink">Features</a>
+                                </li>
+                                <li class="ftr-navLi">
+                                    <hr>
+                                </li>
+                                <li class="ftr-navLi">
+                                    <a href="" class="ftr-navLink">Workouts</a>
+                                </li>
+                                <li class="ftr-navLi">
+                                    <hr>
+                                </li>
+                                <li class="ftr-navLi">
+                                    <a href="" class="ftr-navLink">Trainer</a>
+                                </li>
+                                <li class="ftr-navLi">
+                                    <hr>
+                                </li>
+                                <li class="ftr-navLi">
+                                    <a href="" class="ftr-navLink">Testimonials</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ftr-bottom">
+            <div class="container abt-container">
+                <div class="row ftr-row2">
+                    <div class="col">
+                        <div class="ftrBtm-cntn">
+                            <div class="btm-hdr">Stay Updated</div>
+                            <p class="btm-para">
+                                event info straight to your inbox. Subscribe to get this tips, offers, and
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <form class="ftrInput-container">
+                            <input type="text" class="styled_input_bar" placeholder="" />
+                            <label class="ftrInput-label" for="styled_input_bar">Type your email</label>
+                            <button class="cssbuttons-io-button">
+                                Subscribe
+                                <div class="icon">
+                                    <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0 0h24v24H0z" fill="none"></path>
+                                        <path
+                                            d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                                            fill="currentColor"></path>
+                                    </svg>
+                                </div>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <!-- Isotope CDN -->
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+
+    <!-- JQuery CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Swipper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <!-- Custom JS -->
+    <script src="./js/script.js"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</body>
+
+</html>

@@ -615,12 +615,13 @@
 }
 
 .sponsorhip-animation {
-    padding-block: 80px;
+    padding-block: 50px;
     position: relative;
     overflow: hidden;
     margin-top: 80px;
-    transform: rotate(2deg) translateY(20px);
+    transform: rotate(1deg) translateY(20px);
     cursor: pointer;
+    box-shadow: 0px 7px 14px 7px rgb(171 243 3 / 12%);
 }
 
 .autoScroll-item {
@@ -783,6 +784,10 @@
         width: 120px;
     }
 
+    .sponsorhip-animation {
+        padding-block: 43px;
+    }
+
 }
 
 @media screen and (max-width: 576px) {
@@ -893,6 +898,10 @@
     /* Sponsorship Section */
     .autoScroll-item {
         width: 90px;
+    }
+
+    .sponsorhip-animation {
+        padding-block: 35px;
     }
 
     @keyframes slideRight {

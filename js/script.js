@@ -170,3 +170,58 @@ cursorBtn.forEach((item) => {
     cursor.classList.remove("hover");
   });
 });
+
+// Modal Input Label behaviour
+
+document.querySelectorAll(".modal-input").forEach((input) => {
+  const formName = input.closest(".modal-inputBox").querySelector(".form-name");
+
+  input.addEventListener("focus", () => {
+    formName.classList.add("hide-label");
+  });
+
+  input.addEventListener("blur", () => {
+    if (!input.value.trim()) {
+      formName.classList.remove("hide-label");
+    }
+  });
+});
+
+// Modal Gender Selection
+const input = document.getElementById("modal-gender");
+const dropdown = document.querySelector(".gender-dropdown");
+
+input.addEventListener("click", () => {
+  dropdown.style.display =
+    dropdown.style.display === "block" ? "none" : "block";
+});
+
+dropdown.querySelectorAll("li").forEach((item) => {
+  item.addEventListener("click", () => {
+    input.value = item.dataset.value;
+    dropdown.style.display = "none";
+  });
+});
+
+document.addEventListener("click", (e) => {
+  if (!e.target.closest(".modal-inputBox")) {
+    dropdown.style.display = "none";
+  }
+});
+
+document.querySelectorAll(".toggle-password").forEach((button) => {
+  button.addEventListener("click", () => {
+    const input = button.closest(".password-wrapper").querySelector("input");
+    const icon = button.querySelector("i");
+
+    if (input.type === "password") {
+      input.type = "text";
+      icon.classList.remove("fa-eye");
+      icon.classList.add("fa-eye-slash");
+    } else {
+      input.type = "password";
+      icon.classList.remove("fa-eye-slash");
+      icon.classList.add("fa-eye");
+    }
+  });
+});
