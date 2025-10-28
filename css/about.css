@@ -171,11 +171,18 @@
     width: fit-content !important;
 }
 
+.grid-card .row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
 .enrollment-card {
+    width: 48%;
+    margin: 1%;
     padding: 24px;
     border: 1px solid rgba(255, 255, 255, 0.2);
     margin-top: 130px;
-    max-width: 854px;
 }
 
 .card-bg {
@@ -265,6 +272,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
 }
 
 .topCard-cntn {
@@ -308,9 +316,6 @@
     cursor: pointer;
 }
 
-.btn-row {
-    align-items: center;
-}
 
 .rgt-arw {
     margin-left: 10px;
@@ -691,12 +696,8 @@
     }
 
     /* Workout Section */
-    .leftBottom-cntn {
-        text-align: center;
-    }
 
     .bottom-button {
-        text-align: center;
         margin: 20px 0 0;
     }
 
@@ -739,6 +740,14 @@
 @media screen and (max-width:992px) {
 
     /* BMI Calculator Section */
+    .calc-sec {
+        padding: 40px 0;
+    }
+
+    .location-para {
+        margin-top: 30px;
+    }
+
     .bmi-img-bg {
         left: 28%;
         transform: scale(1.1);
@@ -767,6 +776,11 @@
         padding: 16.5px 52.5px;
     }
 
+    .enrollment-card {
+        width: 100%;
+        margin: 100px 0 0;
+    }
+
     /* BMI Calculator Section */
     .bmi-img-bg {
         left: 13%;
@@ -775,9 +789,7 @@
         bottom: 0;
     }
 
-    .location-para {
-        margin-top: 30px;
-    }
+
 
     /* Sponsorship Section */
     .nike {
@@ -843,9 +855,7 @@
         font-size: 15px;
     }
 
-    .enrollment-card {
-        margin-top: 100px;
-    }
+
 
     /* Contact Us Section */
     .amnt {
@@ -884,9 +894,7 @@
     }
 
     /* BMI Calculator Section */
-    .calc-sec {
-        padding: 40px 0;
-    }
+
 
     .bmi-img-wrpr {
         margin-top: 30px;

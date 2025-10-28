@@ -114,25 +114,94 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Isotope Jquery
 
-  var elem = document.querySelector(".grid-card");
+  // var elem = document.querySelector(".grid-card");
+
+  // var iso = new Isotope(elem, {
+  //   itemSelector: ".enrollment-card",
+  //   layoutMode: "fitRows",
+  // });
+
+  // document.querySelectorAll(".button-slider").forEach((btn) => {
+  //   btn.addEventListener("click", () => {
+  //     const filterValue = btn.getAttribute("data-filter");
+  //     iso.arrange({ filter: filterValue });
+  //     btn.classList.toggle("active-btn");
+  //   });
+  // });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Now Isotope runs only after images are fully loaded
+window.addEventListener("load", function () {
+  var elem = document.querySelector(".grid-card .row");
 
   var iso = new Isotope(elem, {
     itemSelector: ".enrollment-card",
-    // layoutMode: "fitRows",
+    layoutMode: "fitRows",
   });
-
-  // btn1.addEventListener("click", () => {
-  //   iso.arrange({ filter: ".grid-item1" });
-  // });
 
   document.querySelectorAll(".button-slider").forEach((btn) => {
     btn.addEventListener("click", () => {
       const filterValue = btn.getAttribute("data-filter");
       iso.arrange({ filter: filterValue });
-      // btn.classList.toggle("active-btn");
+
+      document
+        .querySelectorAll(".button-slider")
+        .forEach((b) => b.classList.remove("active-btn"));
+      btn.classList.add("active-btn");
     });
   });
+
+  window.addEventListener("resize", () => {
+    iso.layout();
+  });
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Cursor Initialization
 
 const cursor = document.querySelector(".cursor");
