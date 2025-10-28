@@ -267,11 +267,13 @@
     color: var(--white-color);
 }
 
+.bottom-button {
+    text-align: end;
+}
+
 .card-bottom {
     margin-top: 24px;
-    display: flex;
     align-items: center;
-    justify-content: space-between;
 
 }
 
@@ -699,6 +701,7 @@
 
     .bottom-button {
         margin: 20px 0 0;
+        text-align: start;
     }
 
     /* Contact Us Section */

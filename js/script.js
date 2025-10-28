@@ -130,7 +130,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // });
 });
 
-// Now Isotope runs only after images are fully loaded
+// Isotope JS Initialize
 window.addEventListener("load", function () {
   var elem = document.querySelector(".grid-card .row");
 
@@ -231,6 +231,9 @@ document.addEventListener("click", (e) => {
     dropdown.style.display = "none";
   }
 });
+
+
+// Modal password Hide/Show
 
 document.querySelectorAll(".toggle-password").forEach((button) => {
   button.addEventListener("click", () => {
