@@ -130,29 +130,6 @@ document.addEventListener("DOMContentLoaded", () => {
   // });
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Now Isotope runs only after images are fully loaded
 window.addEventListener("load", function () {
   var elem = document.querySelector(".grid-card .row");
@@ -178,29 +155,6 @@ window.addEventListener("load", function () {
     iso.layout();
   });
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // Cursor Initialization
 
