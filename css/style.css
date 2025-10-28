@@ -1744,12 +1744,7 @@ h3 {
 
     /* Service Section */
 
-    .col-3,
-    .col-9,
-    .col-4,
-    .col-8 {
-        width: 100%;
-    }
+   
 
     .srvc-hdr {
         margin-bottom: 200px;
@@ -1958,6 +1953,44 @@ h3 {
 @media screen and (max-width: 576px) {
 
     /* MOdal Section */
+
+    .modal-form {
+        margin-top: 25px;
+    }
+
+    .left-modal {
+        padding: 25px 5px 0;
+    }
+
+    .line-2 {
+        width: 10px;
+        height: 22px;
+    }
+
+    .modal-title {
+        font-size: 22px;
+    }
+
+    .modal-inputBox {
+        padding: 12px 5px;
+    }
+
+    .user-icon,
+    .toggle-password {
+        font-size: 16px;
+    }
+
+    .form-name {
+        font-size: 14px;
+    }
+
+
+
+
+
+
+
+
     .rightModal-bottom {
         text-align: center;
     }
@@ -1966,6 +1999,8 @@ h3 {
         justify-content: center;
         margin-top: 10px;
     }
+
+
 
     /* Custom Cursor */
     .cursor {
