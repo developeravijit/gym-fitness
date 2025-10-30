@@ -157,9 +157,166 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // Workout Page dropdown list
+
+
+
+  // Trainer Button
+  const trainerButton = document.querySelector(".trainer-btn");
+  const trainerList = document.querySelector(".trainer-list");
+
+  trainerButton.addEventListener("click", () => {
+    trainerList.classList.toggle("active");
+  });
+
+  // Training Button
+  const trainingButton = document.querySelector(".training-btn");
+  const trainingList = document.querySelector(".training-list");
+
+  trainingButton.addEventListener("click", () => {
+    trainingList.classList.toggle("active");
+  });
+  // Membership Button
+  const membershipButton = document.querySelector(".member-btn");
+  const membershipList = document.querySelector(".membership-list");
+
+  membershipButton.addEventListener("click", () => {
+    membershipList.classList.toggle("active");
+  });
+
+// Workout Page Card Filteration 
+// Isotope JS Initialize
+
+let iso;
+
+window.addEventListener("load", function () {
+  var elem = document.querySelector(".grid-card .row");
+
+  iso = new Isotope(elem, {
+    itemSelector: ".enrollment-card",
+    layoutMode: "fitRows"
+  });
+
+  // Filter on dropdown radio change
+  document.querySelectorAll("input[name='category-radio']").forEach((radio) => {
+    radio.addEventListener("change", function () {
+      const value = this.id; // expects classes like .strength, .wellness on cards
+      iso.arrange({ filter: "." + value });
+
+      
+
+      // close dropdown (if you want it closed after choose)
+      document.querySelector(".category-list").classList.remove("active");
+      // reset arrow rotation
+      document.querySelector(".slc-icon").classList.remove("rotated");
+    });
+  });
+
+  // If you have other filter buttons, keep their active state logic
+  document.querySelectorAll(".button-slider").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const filterValue = btn.getAttribute("data-filter");
+      iso.arrange({ filter: filterValue });
+
+      document
+        .querySelectorAll(".button-slider")
+        .forEach((b) => b.classList.remove("active-btn"));
+      btn.classList.add("active-btn");
+    });
+  });
+
+  // Re-layout on resize
+  window.addEventListener("resize", () => {
+    iso.layout();
+  });
+});
+
+// Category button toggle and reset filter (now can safely reference iso)
+const categoryButton = document.querySelector(".category-btn");
+const categoryList = document.querySelector(".category-list");
+const categoryIcon = document.querySelector(".slc-icon");
+
+categoryButton.addEventListener("click", () => {
+  categoryList.classList.toggle("active");
+
+  // Reset isotope filter to show all cards if iso is ready
+  if (typeof iso !== "undefined") {
+    iso.arrange({ filter: "*" });
+  }
+
+  // remove active from other filter buttons if used
+  document.querySelectorAll(".button-slider").forEach((b) =>
+    b.classList.remove("active-btn")
+  );
+
+  // toggle icon rotation
+  categoryIcon.classList.toggle("rotated");
+});
+
+
+
+// close dropdown when clicking outside
+document.addEventListener("click", (e) => {
+  const isClickInside = categoryButton.contains(e.target) || categoryList.contains(e.target);
+  
+  if (!isClickInside) {
+    categoryList.classList.remove("active");
+    categoryIcon.classList.remove("rotated");
+  }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   // Refresh AOS to remove animation delays
   AOS.refresh();
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Cursor Initialization
 

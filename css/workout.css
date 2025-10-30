@@ -20,8 +20,180 @@
     color: var(--yellow-color);
 }
 
+
+/* Project Section */
+.prjct-sec {
+    padding: 104px 0;
+    background: var(--black-color);
+}
+
+.prjct-cntn {
+    padding: 4px 24px;
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.prjct-line {
+    margin-left: 10px;
+
+}
+
+.prjct-nmbr {
+    font-size: 16px;
+    color: var(--white-color);
+    margin: 10px 0 24px;
+    text-transform: uppercase;
+}
+
+.prjct-card>p {
+    font-size: 33px;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: var(--white-color);
+}
+
+/* Workout Section */
+.abt-hdr {
+    margin-bottom: 80px;
+}
+
+.selection-btn {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    outline: none;
+    background: transparent;
+    padding: 24px 49px;
+    width: 100%;
+    justify-content: center;
+}
+
+.selection-title {
+    font-size: 13px;
+    color: var(--white-color);
+    margin-right: 20px;
+}
+
+.slc-icon {
+    color: var(--white-color);
+    font-size: 13px;
+    transition: transform 200ms ease;
+    transform-origin: center;
+}
+
+.slc-icon.rotated {
+    transform: rotate(-90deg) translateX(4px);
+
+}
+
+.dowpdown-list {
+    width: 100%;
+    position: absolute;
+    opacity: 0;
+    background: var(--white-color);
+    left: 0;
+    top: 100%;
+    transition: 0.3s linear;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.dowpdown-list.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+
+.selection-list {
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    padding: 12px;
+    width: 100%;
+    text-transform: capitalize;
+    display: flex;
+}
+
+.selection-list>label {
+    width: 100%;
+    cursor: pointer;
+    color: var(--black-color);
+    font-size: 18px;
+
+}
+
+.workout-input {
+    width: 14px;
+    height: 14px;
+    border-radius: 1px !important;
+}
+
+.workout-input:checked {
+    background: var(--yellow-color);
+
+}
+
+.workout-input:focus {
+    box-shadow: none;
+}
+
+.dropdown-selection {
+    position: relative;
+    max-width: 430px;
+}
+
+
+
+
+/* Responsive Section */
+
+@media screen and (max-width:1200px) {
+
+    /* Project Section */
+    .prjct-col {
+        margin: 30px auto 0;
+    }
+
+    /* Workout Section */
+    .dropdown-selection:nth-child(1),
+    .dropdown-selection:nth-child(2) {
+        margin-bottom: 30px;
+    }
+}
+
+
+@media screen and (max-width:992px) {
+
+    /* Project Section */
+    .prjct-card>p {
+        font-size: 31px;
+    }
+
+}
+
+@media screen and (max-width:768px) {
+
+    /* Project section */
+    .cntn-3 {
+        margin-top: 30px;
+    }
+
+
+}
+
 @media screen and (max-width:576px) {
     .bnr-sec {
         padding: 400px 0 30px;
+    }
+
+    /* Project Section */
+    .prjct-card>p {
+        font-size: 18px;
+    }
+
+    /* Workout Section */
+    .selection-btn {
+        padding: 24px 10px;
+    }
+
+    .selection-list>label {
+        font-size: 15px;
     }
 }
