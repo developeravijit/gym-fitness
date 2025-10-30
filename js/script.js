@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
-  AOS.init();
+  AOS.init({
+    duration: 1000,
+  });
   // First Slide
 
   let swiper = new Swiper(".swiper1", {
@@ -128,32 +130,35 @@ document.addEventListener("DOMContentLoaded", () => {
   //     btn.classList.toggle("active-btn");
   //   });
   // });
-});
 
-// Isotope JS Initialize
-window.addEventListener("load", function () {
-  var elem = document.querySelector(".grid-card .row");
+  // Isotope JS Initialize
+  window.addEventListener("load", function () {
+    var elem = document.querySelector(".grid-card .row");
 
-  var iso = new Isotope(elem, {
-    itemSelector: ".enrollment-card",
-    layoutMode: "fitRows",
-  });
+    var iso = new Isotope(elem, {
+      itemSelector: ".enrollment-card",
+      layoutMode: "fitRows",
+    });
 
-  document.querySelectorAll(".button-slider").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const filterValue = btn.getAttribute("data-filter");
-      iso.arrange({ filter: filterValue });
+    document.querySelectorAll(".button-slider").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const filterValue = btn.getAttribute("data-filter");
+        iso.arrange({ filter: filterValue });
 
-      document
-        .querySelectorAll(".button-slider")
-        .forEach((b) => b.classList.remove("active-btn"));
-      btn.classList.add("active-btn");
+        document
+          .querySelectorAll(".button-slider")
+          .forEach((b) => b.classList.remove("active-btn"));
+        btn.classList.add("active-btn");
+      });
+    });
+
+    window.addEventListener("resize", () => {
+      iso.layout();
     });
   });
 
-  window.addEventListener("resize", () => {
-    iso.layout();
-  });
+  // Refresh AOS to remove animation delays
+  AOS.refresh();
 });
 
 // Cursor Initialization
@@ -231,7 +236,6 @@ document.addEventListener("click", (e) => {
     dropdown.style.display = "none";
   }
 });
-
 
 // Modal password Hide/Show
 
