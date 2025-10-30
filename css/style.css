@@ -2299,6 +2299,10 @@ h3 {
     .styled_input_bar {
         padding: 24px;
     }
+
+    .ftrCntn-hdr>span {
+        font-size: 32px;
+    }
 }
 
 @media screen and (max-width: 431px) {

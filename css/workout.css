@@ -139,8 +139,91 @@
     max-width: 430px;
 }
 
+/* Fitness Section */
+.fit-sec {
+    background: url(../assets/fitness-bnr.png) no-repeat center/cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.fit-wrpr {
+    display: flex;
+    justify-content: center;
+}
 
 
+.fit-cntn {
+    padding: 46px 65px;
+    max-width: 1464px;
+    background: rgba(255, 255, 255, 0.34);
+}
+
+
+.fit-cntn>p:nth-child(1) {
+    font-size: 47px;
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: bold;
+}
+
+.fit-cntn>p:nth-child(2) {
+    font-size: 37px;
+    color: rgba(255, 255, 255, .5);
+    font-weight: normal;
+    margin: 39px 0 !important;
+}
+
+
+.fit-btn {
+    background: rgba(245, 249, 0, 1);
+    opacity: 0.5;
+
+    &:hover {
+        color: var(--black-color);
+        opacity: 1;
+    }
+}
+
+/* Question Section */
+
+.question-sec {
+    padding: 146px 0;
+    background: var(--black-color);
+}
+
+.qstn-hdr {
+    margin: 144px 0 118px;
+}
+
+.qstn-hdr>p {
+    font-size: 51px;
+    font-weight: 500;
+    color: var(--white-color);
+}
+
+
+.accordion-button {
+    font-family: "Clash Display", sans-serif;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 9px;
+    backdrop-filter: blur(0);
+    padding: 20px 10px;
+    color: var(--black-color);
+    font-size: 24px;
+    font-weight: 500;
+
+}
+
+.accordion-button:not(.collapsed) {
+    background: var(--yellow-color);
+    backdrop-filter: none;
+    backdrop-filter: blur(10px);
+}
+
+.accordion {
+    margin-bottom: 86.25px;
+}
 
 /* Responsive Section */
 
@@ -156,6 +239,32 @@
     .dropdown-selection:nth-child(2) {
         margin-bottom: 30px;
     }
+
+    /* Fitness Section */
+    .fit-cntn {
+        padding: 15px 10px;
+    }
+
+    .fit-cntn>p:nth-child(1) {
+        font-size: 37px;
+    }
+
+    .fit-cntn>p:nth-child(2) {
+        font-size: 30px;
+    }
+
+    /* Question Section */
+    .question-sec {
+        padding: 80px 0 0;
+    }
+
+    .qstn-hdr {
+        margin: 80px 0 50px;
+    }
+
+    .qstn-hdr>p {
+        font-size: 39px;
+    }
 }
 
 
@@ -164,6 +273,15 @@
     /* Project Section */
     .prjct-card>p {
         font-size: 31px;
+    }
+
+    /* Fitness Section */
+    .fit-cntn>p:nth-child(2) {
+        font-size: 25px;
+    }
+
+    .fit-cntn>p:nth-child(1) {
+        font-size: 29px;
     }
 
 }
@@ -175,6 +293,18 @@
         margin-top: 30px;
     }
 
+    .prjct-card>p {
+        font-size: 25px;
+    }
+
+    /* Question Section */
+    .qstn-hdr>p {
+        font-size: 33px;
+    }
+
+    .accordion-button {
+        font-size: 18px;
+    }
 
 }
 
@@ -184,6 +314,10 @@
     }
 
     /* Project Section */
+    .prjct-sec {
+        padding: 80px 0 0;
+    }
+
     .prjct-card>p {
         font-size: 18px;
     }
@@ -195,5 +329,30 @@
 
     .selection-list>label {
         font-size: 15px;
+    }
+
+    /* Fitness Section */
+    .fit-cntn>p:nth-child(1) {
+        font-size: 18px;
+    }
+
+    .fit-cntn>p:nth-child(2) {
+        font-size: 13px;
+    }
+
+    .qstn-hdr>p {
+        font-size: 19px;
+    }
+
+    .accordion-button {
+        font-size: 13px;
+    }
+
+    .accordion {
+        margin-bottom: 30px;
+    }
+
+    .qstn-title {
+        font-size: 16px;
     }
 }
