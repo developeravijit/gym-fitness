@@ -2087,6 +2087,10 @@ h3 {
     }
 
     /* Banner Section */
+    .bnr-sec {
+        padding: 395.13px 0 80px;
+    }
+
     .para {
         font-size: 18px;
     }
