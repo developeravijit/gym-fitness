@@ -291,6 +291,7 @@ h3 {
 
 /* Custom Cursor */
 .cursor {
+    mix-blend-mode: difference;
     width: 5px;
     height: 5px;
     border-radius: 100%;
