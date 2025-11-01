@@ -221,7 +221,7 @@
     backdrop-filter: blur(10px);
 }
 
-.accordion {
+.accordion-item {
     margin-bottom: 86.25px;
 }
 
@@ -319,7 +319,7 @@
     }
 
     .prjct-card>p {
-        font-size: 18px;
+        font-size: 15px;
     }
 
     /* Workout Section */
@@ -348,7 +348,7 @@
         font-size: 13px;
     }
 
-    .accordion {
+    .accordion-item {
         margin-bottom: 30px;
     }
 

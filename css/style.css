@@ -479,6 +479,15 @@ body.modal-open::before {
     }
 }
 
+.Navsrch-link {
+    padding: 10px !important;
+
+}
+
+.srchIcon {
+    font-size: 18px !important;
+}
+
 .nav-item:last-child {
     margin-right: 20px;
 }
@@ -524,6 +533,13 @@ body.modal-open::before {
 
 .cart-link {
     max-width: 64px;
+    transition: 0.3s ease;
+
+    &:hover {
+        transform: rotate(-20deg) scale(1.06) translateY(6px);
+        box-shadow: -4px 10px 20px 0px var(--yellow-color);
+
+    }
 }
 
 .cart-link>img {
@@ -644,15 +660,21 @@ body.modal-open::before {
     top: 140%;
 }
 
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show {
+    color: var(--white-color);
+}
+
 /* Banner Section */
 
 .bnr-sec {
     background: url(../assets/bg-img.png) no-repeat center/cover;
-    padding: 495.13px 0 122px;
+    padding: 495.13px 0 0;
     display: flex;
     align-items: end;
-    background-attachment: fixed;
     position: relative;
+
 }
 
 .bnr-sec::before {
@@ -665,6 +687,19 @@ body.modal-open::before {
     position: absolute;
     bottom: 0;
     right: 0;
+
+}
+
+.bnr-sec::after {
+    content: "";
+    z-index: 2;
+    filter: blur(872px);
+    background: #000000;
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
 
 }
 
@@ -892,6 +927,7 @@ body.modal-open::before {
 
 .fitnessCard-sec {
     background: var(--black-color);
+    padding: 80px 0;
 }
 
 .swiper {
@@ -996,7 +1032,7 @@ body.modal-open::before {
 
 /* About Section */
 .abt-sec {
-    padding: 160px 0 80px;
+    padding: 80px 0;
     background-color: var(--black-color);
 }
 
@@ -1843,16 +1879,7 @@ body.modal-open::before {
 
 /* Responsive Section */
 
-@media screen and (max-width: 1200px) {
-
-    /* Modal Section */
-    .left-modal {
-        padding: 25px 5px 0;
-    }
-
-    .right-modal {
-        margin-top: 50px;
-    }
+@media screen and (max-width:1400px) {
 
     /* Header Section */
     .offcanvas {
@@ -1884,6 +1911,20 @@ body.modal-open::before {
     .navbar-toggler {
         padding: 0 15px;
     }
+}
+
+@media screen and (max-width: 1200px) {
+
+    /* Modal Section */
+    .left-modal {
+        padding: 25px 5px 0;
+    }
+
+    .right-modal {
+        margin-top: 50px;
+    }
+
+
 
     /* Banner Section */
 
@@ -2036,6 +2077,12 @@ body.modal-open::before {
         max-width: 406px;
     }
 
+    /* About Section */
+    .abt-img {
+        pointer-events: none;
+    }
+
+
     /* Service Section */
 
     .trng-title,
@@ -2063,6 +2110,11 @@ body.modal-open::before {
 }
 
 @media screen and (max-width: 768px) {
+
+    /* Custom Cursor */
+    .cursor {
+        display: none;
+    }
 
     /* Modal Section */
     .modal-para2 {
@@ -2189,10 +2241,7 @@ body.modal-open::before {
         height: 20px;
     }
 
-    /* Custom Cursor */
-    .cursor {
-        display: none;
-    }
+
 
     /* Header Section */
     .navbar-nav {
@@ -2247,6 +2296,8 @@ body.modal-open::before {
         width: 46px;
     }
 
+
+
     /* Fitness Card Section */
     .card-img3 {
         max-width: 310px;
@@ -2257,6 +2308,8 @@ body.modal-open::before {
         max-width: 72px;
         height: 72px;
     }
+
+
 
     .cst-support {
         font-size: 16px;

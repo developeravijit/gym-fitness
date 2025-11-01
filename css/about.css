@@ -17,6 +17,11 @@
     background-attachment: fixed;
 }
 
+.bnr-sec::before,
+.bnr-sec::after {
+    display: none;
+}
+
 .title-1 {
     text-align: center;
 }
