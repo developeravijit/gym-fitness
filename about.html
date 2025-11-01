@@ -33,1551 +33,166 @@
 </head>
 
 <body>
-    <!-- Header Section -->
-    <header class="hdr-sec">
-        <nav class="navbar navbar-expand-xl">
-            <div class="container hdr-container">
-                <div class="nav-logo">
-                    <a class="navbar-brand" href="./index.html">
-                        <img src="./assets/Logo.png" alt="" />
-                    </a>
-                </div>
-                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
-                    <span class="navbar-toggler-icon">
-                        <i class="fa-solid fa-bars"></i>
-                    </span>
-                </button>
-                <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
-                    id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
-                    <div class="offcanvas-header me-auto">
-                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
-                            <i class="fa-solid fa-xmark"></i>
-                        </button>
-                    </div>
-                    <ul class="navbar-nav align-items-center m-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="./index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="./about.html">About </a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Features
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">activity</a></li>
-                                <li><a class="dropdown-item" href="#">workouts</a></li>
-                                <li>
-                                    <a class="dropdown-item" href="#">progress tracking</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="#">Workout History</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="#">Rest & Recovery Logs</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./workout.html">Workouts</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Trainers</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Testimonials</a>
-                        </li>
-                        <form class="search-group">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                            <input placeholder="Search" type="search" class="input" />
-                        </form>
-                        <li class="cart-item">
-                            <a class="cart-link" href="#">
-                                <img src="./assets/Cart.png" alt="" />
-                            </a>
-                        </li>
-                    </ul>
-                    <div class="login-link">
-                        <a href="" class="login-io-button" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                            Login/Create Account
-                            <div class="login-icon">
-                                <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M0 0h24v24H0z" fill="none"></path>
-                                    <path
-                                        d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
-                                        fill="currentColor"></path>
-                                </svg>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </header>
 
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-xl">
-            <div class="modal-content">
-                <div class="login-box">
-                    <button type="button" class="modal-close ms-auto d-md-none" data-bs-dismiss="modal"
-                        aria-label="Close">
-                        <i class="fa-solid fa-xmark"></i>
-                    </button>
-                    <div class="logBox-cntn">
-                        <div class="row">
-                            <div class="col-12 col-xl-6">
-                                <div class="left-modal">
-                                    <div class="modal-line">
-                                        <span class="line-2"></span>
-                                        <span class="line-2"></span>
-                                        <span class="line-2"></span>
-                                    </div>
-                                    <h2 class="modal-title">create account</h2>
-                                    <p class="para2">
-                                        Lorem ipsum dolor sit amet consectetur. Enim et in tellus
-                                        at. Blandit etiam.
-                                    </p>
-                                    <form action="" class="modal-form">
-                                        <div class="row">
-                                            <div class="col-6">
-                                                <div class="modal-inputBox">
-                                                    <label for="first-name" class="all-icon">
-                                                        <span class="user-icon">
-                                                            <i class="fa-solid fa-circle-user"></i>
-                                                        </span>
-                                                        <span class="form-name">First Name <sup>*</sup>
-                                                        </span>
-                                                    </label>
-                                                    <input type="text" id="first-name" class="modal-input" />
-                                                </div>
-                                            </div>
-                                            <div class="col-6 mb-3">
-                                                <div class="modal-inputBox">
-                                                    <label for="last-name" class="all-icon">
-                                                        <span class="user-icon">
-                                                            <i class="fa-solid fa-circle-user"></i>
-                                                        </span>
-                                                        <span class="form-name">last Name <sup>*</sup>
-                                                        </span>
-                                                    </label>
-                                                    <input type="text" id="last-name" class="modal-input" />
-                                                </div>
-                                            </div>
-                                            <div class="col-12 mb-3">
-                                                <div class="modal-inputBox">
-                                                    <label for="modal-email" class="all-icon">
-                                                        <span class="user-icon">
-                                                            <i class="fa-solid fa-envelope"></i>
-                                                        </span>
-                                                        <span class="form-name">email address <sup>*</sup>
-                                                        </span>
-                                                    </label>
-                                                    <input type="email" id="modal-email" class="modal-input" />
-                                                </div>
-                                            </div>
-                                            <div class="col-xl-4 col-6 mb-3">
-                                                <div class="modal-inputBox">
-                                                    <label for="modal-gender" class="all-icon">
-                                                        <span class="user-icon">
-                                                            <i class="fa-solid fa-circle-user"></i>
-                                                        </span>
-                                                        <span class="form-name">gender <sup>*</sup>
-                                                        </span>
-                                                    </label>
-                                                    <input type="text" id="modal-gender" class="modal-input" />
-                                                    <ul class="gender-dropdown">
-                                                        <li data-value="Male">Male</li>
-                                                        <li data-value="Female">Female</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="col-xl-4 col-6 mb-3">
-                                                <div class="modal-inputBox">
-                                                    <label for="modal-age" class="all-icon">
-                                                        <span class="user-icon">
-                                                            <i class="fa-solid fa-cake-candles"></i>
-                                                        </span>
-                                                        <span class="form-name">age <sup>*</sup> </span>
-                                                    </label>
-                                                    <input type="number" id="modal-age" class="modal-input" />
-                                                </div>
-                                            </div>
-                                            <div class="col-xl-4 col-12 mb-3">
-                                                <div class="modal-inputBox">
-                                                    <label for="modal-phone" class="all-icon">
-                                                        <span class="user-icon">
-                                                            <i class="fa-solid fa-phone"></i>
-                                                        </span>
-                                                        <span class="form-name">phone <sup>*</sup> </span>
-                                                    </label>
-                                                    <input type="number" id="modal-phone" class="modal-input" />
-                                                </div>
-                                            </div>
-                                            <div class="col-5 mb-3">
-                                                <div class="modal-inputBox">
-                                                    <label for="modal-weight" class="all-icon">
-                                                        <span class="user-icon">
-                                                            <i class="fa-solid fa-clock"></i>
-                                                        </span>
-                                                        <span class="form-name">weight <sup>*</sup>
-                                                        </span>
-                                                    </label>
-                                                    <input type="number" id="modal-weight" class="modal-input" />
-                                                </div>
-                                            </div>
-                                            <div class="col-7 mb-3">
-                                                <div class="modal-inputBox">
-                                                    <label for="modal-goal" class="all-icon">
-                                                        <span class="user-icon">
-                                                            <i class="fa-solid fa-circle-user"></i>
-                                                        </span>
-                                                        <span class="form-name">Goal <sup>*</sup> </span>
-                                                    </label>
-                                                    <input type="text" id="modal-goal" class="modal-input" />
-                                                </div>
-                                            </div>
-                                            <div class="col-12">
-                                                <div class="modal-inputBox">
-                                                    <label for="modal-password" class="all-icon">
-                                                        <span class="user-icon">
-                                                            <i class="bi bi-shield-lock"></i>
-                                                        </span>
-                                                        <span class="form-name">password <sup>*</sup>
-                                                        </span>
-                                                    </label>
-                                                    <div class="password-wrapper">
-                                                        <input type="password" id="modal-password" class="modal-input"
-                                                            placeholder="" />
-                                                        <button type="button" class="toggle-password">
-                                                            <i class="fa-solid fa-eye"></i>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-12">
-                                                <div class="form-check d-flex align-items-center">
-                                                    <input class="form-check-input" type="checkbox" value=""
-                                                        id="checkIndeterminate" />
-                                                    <label class="form-check-label" for="checkIndeterminate">
-                                                        I agree to the
-                                                        <a href="" class="condition">Terms & Privacy</a>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                            <div class="col-12">
-                                                <div class="modal-btn">
-                                                    <a href="" class="membership-btn modal-btnLabel">
-                                                        Create account
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="col-12">
-                                                <p class="modal-login">
-                                                    Already have an account ?
-                                                    <a href="" class="alrdy-acc">Login</a>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                            <div class="col-12 col-xl-6">
-                                <div class="right-modal">
-                                    <div class="modal-logo text-end">
-                                        <img src="./assets/modalLogo.png" alt="" />
-                                    </div>
-                                    <div class="rightModal-bottom">
-                                        <p class="para2 modal-para">
-                                            Lorem ipsum dolor sit amet consectetur. Volutpat
-                                            sittortor. Tempus congue adipiscing aliquam cursus
-                                            turpis ultricies.
-                                        </p>
-                                        <div class="modalBottom-para">
-                                            <div class="row">
-                                                <div class="col-sm-12 col-md-6">
-                                                    <p class="modal-para2">firstname lastname</p>
-                                                    <p class="para2 modal-para text-capitalize">
-                                                        designation
-                                                    </p>
-                                                </div>
-                                                <div class="col-sm-12 col-md-6">
-                                                    <div class="modalPara-box">
-                                                        <span class="modal-circle"></span>
-                                                        <p class="modal-para2">open ventures</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <!-- Loader Section -->
+    <div id="onload-loader">
+        <div class="loadingMain-container">
+            <div class="loader-animation">
+                <svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="chipGradient" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0%" stop-color="#2d2d2d"></stop>
+                            <stop offset="100%" stop-color="#0f0f0f"></stop>
+                        </linearGradient>
+
+                        <linearGradient id="textGradient" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0%" stop-color="#eeeeee"></stop>
+                            <stop offset="100%" stop-color="#888888"></stop>
+                        </linearGradient>
+
+                        <linearGradient id="pinGradient" x1="1" y1="0" x2="0" y2="0">
+                            <stop offset="0%" stop-color="#bbbbbb"></stop>
+                            <stop offset="50%" stop-color="#888888"></stop>
+                            <stop offset="100%" stop-color="#555555"></stop>
+                        </linearGradient>
+                    </defs>
+
+                    <g id="traces">
+                        <path d="M100 100 H200 V210 H326" class="trace-bg"></path>
+                        <path d="M100 100 H200 V210 H326" class="trace-flow purple"></path>
+
+                        <path d="M80 180 H180 V230 H326" class="trace-bg"></path>
+                        <path d="M80 180 H180 V230 H326" class="trace-flow blue"></path>
+
+                        <path d="M60 260 H150 V250 H326" class="trace-bg"></path>
+                        <path d="M60 260 H150 V250 H326" class="trace-flow yellow"></path>
+
+                        <path d="M100 350 H200 V270 H326" class="trace-bg"></path>
+                        <path d="M100 350 H200 V270 H326" class="trace-flow green"></path>
+
+                        <path d="M700 90 H560 V210 H474" class="trace-bg"></path>
+                        <path d="M700 90 H560 V210 H474" class="trace-flow blue"></path>
+
+                        <path d="M740 160 H580 V230 H474" class="trace-bg"></path>
+                        <path d="M740 160 H580 V230 H474" class="trace-flow green"></path>
+
+                        <path d="M720 250 H590 V250 H474" class="trace-bg"></path>
+                        <path d="M720 250 H590 V250 H474" class="trace-flow red"></path>
+
+                        <path d="M680 340 H570 V270 H474" class="trace-bg"></path>
+                        <path d="M680 340 H570 V270 H474" class="trace-flow yellow"></path>
+                    </g>
+
+                    <rect x="330" y="190" width="140" height="100" rx="20" ry="20" fill="url(#chipGradient)"
+                        stroke="#222" stroke-width="3" filter="drop-shadow(0 0 6px rgba(0,0,0,0.8))"></rect>
+
+                    <g>
+                        <rect x="322" y="205" width="8" height="10" fill="url(#pinGradient)" rx="2"></rect>
+                        <rect x="322" y="225" width="8" height="10" fill="url(#pinGradient)" rx="2"></rect>
+                        <rect x="322" y="245" width="8" height="10" fill="url(#pinGradient)" rx="2"></rect>
+                        <rect x="322" y="265" width="8" height="10" fill="url(#pinGradient)" rx="2"></rect>
+                    </g>
+
+                    <g>
+                        <rect x="470" y="205" width="8" height="10" fill="url(#pinGradient)" rx="2"></rect>
+                        <rect x="470" y="225" width="8" height="10" fill="url(#pinGradient)" rx="2"></rect>
+                        <rect x="470" y="245" width="8" height="10" fill="url(#pinGradient)" rx="2"></rect>
+                        <rect x="470" y="265" width="8" height="10" fill="url(#pinGradient)" rx="2"></rect>
+                    </g>
+
+                    <text x="400" y="240" font-family="Arial, sans-serif" font-size="22" fill="url(#textGradient)"
+                        text-anchor="middle" alignment-baseline="middle">
+                        Loading
+                    </text>
+
+                    <circle cx="100" cy="100" r="5" fill="black"></circle>
+                    <circle cx="80" cy="180" r="5" fill="black"></circle>
+                    <circle cx="60" cy="260" r="5" fill="black"></circle>
+                    <circle cx="100" cy="350" r="5" fill="black"></circle>
+
+                    <circle cx="700" cy="90" r="5" fill="black"></circle>
+                    <circle cx="740" cy="160" r="5" fill="black"></circle>
+                    <circle cx="720" cy="250" r="5" fill="black"></circle>
+                    <circle cx="680" cy="340" r="5" fill="black"></circle>
+                </svg>
             </div>
         </div>
+
     </div>
 
-    <!-- Custom Cursor -->
-    <div class="cursor"></div>
+    <div id="onload-content" class="onload-hidden">
 
-    <main>
-        <!-- Banner Section -->
-        <section class="bnr-sec">
-            <div class="container">
-                <div class="hero-cntn">
-                    <h1 class="title-1">
-                        <span class="title1-span">About</span>
-                        Us
-                    </h1>
-                    <div class="breadcrumb">
-                        <ul class="breadcrumb-item">
-                            <li class="list-items">
-                                <a href="./index.html" class="breadcrumb-link">Home</a>
-                            </li>
-                            <li class="square">
-                                <span></span>
-                            </li>
-                            <li class="breadcrumb-link breadcrumb-active">About Us</li>
-                        </ul>
+        <!-- Header Section -->
+        <header class="hdr-sec">
+            <nav class="navbar navbar-expand-xl">
+                <div class="container hdr-container">
+                    <div class="nav-logo">
+                        <a class="navbar-brand" href="./index.html">
+                            <img src="./assets/Logo.png" alt="" />
+                        </a>
                     </div>
-                    <div class="hero-line">
-                        <span class="yellow-line"></span>
-                        <span class="yellow-line"></span>
-                        <span class="yellow-line"></span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- About Section -->
-        <section class="abt-sec">
-            <div class="container abt-container">
-                <div class="row abt-row">
-                    <div class="col-xl-6 col-12">
-                        <div class="abt-hdr" data-aos="fade-right">
-                            <h2 class="title-3">
-                                Who We Are
-
-                                <div class="frame-line abt-line">
-                                    <img src="./assets/Frame line.png" alt="" />
-                                </div>
-                            </h2>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                        <span class="navbar-toggler-icon">
+                            <i class="fa-solid fa-bars"></i>
+                        </span>
+                    </button>
+                    <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+                        id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                        <div class="offcanvas-header me-auto">
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
+                                <i class="fa-solid fa-xmark"></i>
+                            </button>
                         </div>
-                    </div>
-                    <div class="col-xl-6 col-12">
-                        <div class="abtHdr-para" data-aos="fade-left">
-                            <p class="para abt-para">
-                                Empowering Every Body to Move Stronger, Live Better, and Go
-                                Further
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row bottomAbt-row">
-                    <div class="col-xl-6 col-12">
-                        <div class="abt-cntn">
-                            <h3 class="title-4" data-aos="flip-left">
-                                Nunc vivamus quisque laoreet a porta risus volutpat sit nibh
-                                sociosqu cubilia. At adipiscing auctor ultricies velit libero
-                                ligula imperdiet sodales tellus aliquam urna.
-                            </h3>
-                            <div class="abtPara-box">
-                                <div class="row">
-                                    <div class="col-xl-6 col-12">
-                                        <ul class="left-list">
-                                            <li class="list-category" data-aos="fade-right" data-aos-offset="100">
-                                                <i class="fa-regular fa-circle-check check-list"></i>
-                                                Himenaeos pellentesque
-                                            </li>
-                                            <li class="list-category" data-aos="fade-right" data-aos-offset="100">
-                                                <i class="fa-regular fa-circle-check check-list"></i>
-                                                Elementum ridiculus
-                                            </li>
-                                            <li class="list-category" data-aos="fade-right" data-aos-offset="100">
-                                                <i class="fa-regular fa-circle-check check-list"></i>
-                                                Rutrum convallis
-                                            </li>
-                                            <li class="list-category" data-aos="fade-right" data-aos-offset="100">
-                                                <i class="fa-regular fa-circle-check check-list"></i>
-                                                Pellentesque maecenas
-                                            </li>
-                                            <li class="list-category" data-aos="fade-right" data-aos-offset="100">
-                                                <i class="fa-regular fa-circle-check check-list"></i>
-                                                Cubilia tincidunt
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-xl-6 col-12">
-                                        <ul class="right-list">
-                                            <li class="list-category" data-aos="fade-left" data-aos-offset="100">
-                                                <i class="fa-regular fa-circle-check check-list"></i>
-                                                Himenaeos pellentesque
-                                            </li>
-                                            <li class="list-category" data-aos="fade-left" data-aos-offset="100">
-                                                <i class="fa-regular fa-circle-check check-list"></i>
-                                                Elementum ridiculus
-                                            </li>
-                                            <li class="list-category" data-aos="fade-left" data-aos-offset="100">
-                                                <i class="fa-regular fa-circle-check check-list"></i>
-                                                Rutrum convallis
-                                            </li>
-                                            <li class="list-category" data-aos="fade-left" data-aos-offset="100">
-                                                <i class="fa-regular fa-circle-check check-list"></i>
-                                                Pellentesque maecenas
-                                            </li>
-                                            <li class="list-category" data-aos="fade-left" data-aos-offset="100">
-                                                <i class="fa-regular fa-circle-check check-list"></i>
-                                                Cubilia tincidunt
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="customer-care" data-aos="zoom-in-up">
-                                <a href="" class="cst-icon">
-                                    <img src="./assets/customer-care.png" alt="" />
+                        <ul class="navbar-nav align-items-center m-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="./index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="./about.html">About </a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Features
                                 </a>
-                                <div class="cst-para">
-                                    <p class="support cst-support">CUSTOMER SUPPORT</p>
-                                    <p class="support cst-number">(888)4000-2424</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-6 col-12">
-                        <figure class="abt-img" data-aos="zoom-out-up" data-tilt>
-                            <img src="./assets/abt-builder.png" alt="" />
-                        </figure>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Service Section -->
-        <section class="srvc-sec">
-            <div class="container abt-container">
-                <div class="row">
-                    <div class="col-xl-6 col-12">
-                        <div class="abt-hdr srvc-hdr" data-aos="fade-left">
-                            <h2 class="title-3">
-                                Services
-                                <div class="frame-line abt-line">
-                                    <img src="./assets/Frame line.png" alt="" />
-                                </div>
-                            </h2>
-                        </div>
-                    </div>
-                    <div class="col-xl-6 col-12">
-                        <div class="swiper mySwiper3" data-aos="fade-right">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="swiper-cntn">
-                                        <h2 class="title-trnsfrm">Personal Training</h2>
-                                        <p class="slider-para">
-                                            Ultrices quam mattis posuere porttitor tellus rhoncus
-                                            tristique. Primis aliquam dignissim interdum vel
-                                            suscipit sodales.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="swiper-cntn">
-                                        <h2 class="title-trnsfrm">Personal Training</h2>
-                                        <p class="slider-para">
-                                            Ultrices quam mattis posuere porttitor tellus rhoncus
-                                            tristique. Primis aliquam dignissim interdum vel
-                                            suscipit sodales.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="swiper-cntn">
-                                        <h2 class="title-trnsfrm">Personal Training</h2>
-                                        <p class="slider-para">
-                                            Ultrices quam mattis posuere porttitor tellus rhoncus
-                                            tristique. Primis aliquam dignissim interdum vel
-                                            suscipit sodales.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="swiper-cntn">
-                                        <h2 class="title-trnsfrm">Personal Training</h2>
-                                        <p class="slider-para">
-                                            Ultrices quam mattis posuere porttitor tellus rhoncus
-                                            tristique. Primis aliquam dignissim interdum vel
-                                            suscipit sodales.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-pagination pagination-2"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Workout Section -->
-        <section class="location-sec">
-            <div class="container abt-container">
-                <div class="abt-hdr" data-aos="zoom-out-down">
-                    <h2 class="title-3">
-                        Workouts
-                        <div class="frame-line abt-line">
-                            <img src="./assets/Frame line.png" alt="" />
-                        </div>
-                    </h2>
-                </div>
-                <div class="location-para" data-aos="fade-left" data-aos-duration="1500">
-                    <p class="cmn-para">
-                        Your <span class="yellow-para">Fitness </span>
-                    </p>
-                    <p class="para3 cmn-para">&nbsp;Journey Starts Here:</p>
-                    <p class="cmn-para">
-                        Select a <span class="yellow-para">Category</span>
-                    </p>
-                </div>
-                <div class="row location-row">
-                    <div class="col-12 col-xl-2">
-                        <div class="location-para2 devider">
-                            <p class="contry-nmbr" data-aos="fade-down-left">
-                                25
-                                <span>+</span>
-                            </p>
-                            <span class="cntry" data-aos="fade-down-left">Country</span>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-xl-10">
-                        <div class="loaction-cntn" data-aos="fade-up-right">
-                            <p class="para2">
-                                Our presence stretches across continents, connecting a
-                                worldwide community of fitness enthusiasts. From bustling
-                                metropolitan hubs to growing local neighborhoods, our fitness
-                                centers deliver the same trusted quality and results-driven
-                                training. Each location is equipped with expert coaches,
-                                modern facilities, and a motivating environment tailored to
-                                your goals. Whether you are traveling, relocating, or joining
-                                us for the first time, you’ll always find a home for your
-                                fitness journey with us. Together, we’re building a stronger,
-                                healthier world—one city at a time.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper mySwiper4">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide btn-slideWidth">
-                            <button data-filter="*" class="button-slider">
-                                <p class="btn-cntn">all</p>
-                            </button>
-                        </div>
-                        <div class="swiper-slide btn-slideWidth">
-                            <button data-filter=".strength" class="button-slider">
-                                <p class="btn-cntn">Strength</p>
-                            </button>
-                        </div>
-                        <div class="swiper-slide btn-slideWidth">
-                            <button data-filter=".wellness" class="button-slider">
-                                <p class="btn-cntn">Wellness</p>
-                            </button>
-                        </div>
-                        <div class="swiper-slide btn-slideWidth">
-                            <button data-filter=".cardio" class="button-slider">
-                                <p class="btn-cntn">Cardio</p>
-                            </button>
-                        </div>
-                        <div class="swiper-slide btn-slideWidth">
-                            <button data-filter=".combat" class="button-slider">
-                                <p class="btn-cntn">Combat</p>
-                            </button>
-                        </div>
-                        <div class="swiper-slide btn-slideWidth">
-                            <button data-filter=".calisthenics" class="button-slider">
-                                <p class="btn-cntn">calisthenics</p>
-                            </button>
-                        </div>
-                        <div class="swiper-slide btn-slideWidth">
-                            <button data-filter=".personal" class="button-slider">
-                                <p class="btn-cntn">personal</p>
-                            </button>
-                        </div>
-                        <div class="swiper-slide btn-slideWidth">
-                            <button data-filter=".functional" class="button-slider">
-                                <p class="btn-cntn">functional</p>
-                            </button>
-                        </div>
-                        <div class="swiper-slide btn-slideWidth">
-                            <button data-filter=".endurance" class="button-slider">
-                                <p class="btn-cntn">endurance</p>
-                            </button>
-                        </div>
-                        <div class="swiper-slide btn-slideWidth">
-                            <button data-filter=".power" class="button-slider">
-                                <p class="btn-cntn">power</p>
-                            </button>
-                        </div>
-                        <div class="swiper-slide btn-slideWidth">
-                            <button data-filter=".mobility" class="button-slider">
-                                <p class="btn-cntn">mobility</p>
-                            </button>
-                        </div>
-                        <div class="swiper-slide btn-slideWidth">
-                            <button data-filter=".agility" class="button-slider">
-                                <p class="btn-cntn">agility</p>
-                            </button>
-                        </div>
-                        <div class="swiper-slide btn-slideWidth">
-                            <button data-filter=".recovery" class="button-slider">
-                                <p class="btn-cntn">recovery</p>
-                            </button>
-                        </div>
-                        <div class="swiper-slide btn-slideWidth">
-                            <button data-filter=".dance" class="button-slider">
-                                <p class="btn-cntn">dance</p>
-                            </button>
-                        </div>
-                        <div class="swiper-slide btn-slideWidth">
-                            <button data-filter=".zumba" class="button-slider">
-                                <p class="btn-cntn">zumba</p>
-                            </button>
-                        </div>
-                        <div class="swiper-slide btn-slideWidth">
-                            <button data-filter=".detox" class="button-slider">
-                                <p class="btn-cntn">detox</p>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="grid-card">
-                    <div class="row">
-                        <div class="col-12 col-md-6">
-                            <div class="enrollment-card strength">
-                                <div class="card-bg">
-                                    <div class="topCard-cntn">
-                                        <p class="target-line">Strength</p>
-                                        <div class="trnsfrm-line">
-                                            <span class="line-2"></span>
-                                            <span class="line-2"></span>
-                                            <span class="line-2"></span>
-                                        </div>
-                                        <p class="author">by Ethan Cross</p>
-                                    </div>
-                                    <figure class="cardImg-1 cardImg">
-                                        <img src="./assets/abtPage-cardImg1.png" alt="" />
-                                    </figure>
-                                </div>
-                                <div class="card-bottom">
-                                    <div class="row align-items-center">
-                                        <div class="col-xl-6 col-12">
-                                            <div class="leftBottom-cntn">
-                                                <p class="nmbr">01</p>
-                                                <p class="bottom-para">Power Build Program</p>
-                                                <p class="bottom-para2">
-                                                    Focus on muscle growth and compound lifts.
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-6 col-12">
-                                            <div class="bottom-button">
-                                                <a class="bottom-btn">
-                                                    Enroll Now
-                                                    <i class="fa-solid fa-arrow-right rgt-arw"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <div class="enrollment-card wellness">
-                                <div class="card-bg">
-                                    <div class="topCard-cntn">
-                                        <p class="target-line">Wellness</p>
-                                        <div class="trnsfrm-line">
-                                            <span class="line-2"></span>
-                                            <span class="line-2"></span>
-                                            <span class="line-2"></span>
-                                        </div>
-                                        <p class="author">by trent morgan</p>
-                                    </div>
-                                    <figure class="cardImg-2 cardImg">
-                                        <img src="./assets/abtPage-cardImg2.png" alt="" />
-                                    </figure>
-                                </div>
-                                <div class="card-bottom">
-                                    <div class="row align-items-center">
-                                        <div class="col-xl-6 col-12">
-                                            <div class="leftBottom-cntn">
-                                                <p class="nmbr">02</p>
-                                                <p class="bottom-para">Yoga Flow</p>
-                                                <p class="bottom-para2">
-                                                    Improve flexibility and mindfulness.
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-6 col-12">
-                                            <div class="bottom-button">
-                                                <a class="bottom-btn">
-                                                    Enroll Now
-                                                    <i class="fa-solid fa-arrow-right rgt-arw"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <div class="enrollment-card cardio">
-                                <div class="card-bg">
-                                    <div class="topCard-cntn">
-                                        <p class="target-line strength">Cardio</p>
-                                        <div class="trnsfrm-line">
-                                            <span class="line-2"></span>
-                                            <span class="line-2"></span>
-                                            <span class="line-2"></span>
-                                        </div>
-                                        <p class="author">by marcus cole</p>
-                                    </div>
-                                    <figure class="cardImg-3 cardImg">
-                                        <img src="./assets/abtPage-cardImg3.png" alt="" />
-                                    </figure>
-                                </div>
-                                <div class="card-bottom">
-                                    <div class="row align-items-center">
-                                        <div class="col-xl-6 col-12">
-                                            <div class="leftBottom-cntn">
-                                                <p class="nmbr">03</p>
-                                                <p class="bottom-para">Cardio Blast</p>
-                                                <p class="bottom-para2">
-                                                    Treadmill, cycling, and jump rope sessions.
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-6 col-12">
-                                            <div class="bottom-button">
-                                                <a class="bottom-btn">
-                                                    Enroll Now
-                                                    <i class="fa-solid fa-arrow-right rgt-arw"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <div class="enrollment-card strength">
-                                <div class="card-bg">
-                                    <div class="topCard-cntn">
-                                        <p class="target-line">Strength</p>
-                                        <div class="trnsfrm-line">
-                                            <span class="line-2"></span>
-                                            <span class="line-2"></span>
-                                            <span class="line-2"></span>
-                                        </div>
-                                        <p class="author">by Ethan Cross</p>
-                                    </div>
-                                    <figure class="cardImg-4 cardImg">
-                                        <img src="./assets/abtPage-cardImg4.png" alt="" />
-                                    </figure>
-                                </div>
-                                <div class="card-bottom">
-                                    <div class="row align-items-center">
-                                        <div class="col-xl-6 col-12">
-                                            <div class="leftBottom-cntn">
-                                                <p class="nmbr">04</p>
-                                                <p class="bottom-para">Weightlifting 101</p>
-                                                <p class="bottom-para2">
-                                                    Learn Olympic and free weight techniques.
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-6 col-12">
-                                            <div class="bottom-button">
-                                                <a class="bottom-btn">
-                                                    Enroll Now
-                                                    <i class="fa-solid fa-arrow-right rgt-arw"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <div class="enrollment-card combat">
-                                <div class="card-bg">
-                                    <div class="topCard-cntn">
-                                        <p class="target-line">combat</p>
-                                        <div class="trnsfrm-line">
-                                            <span class="line-2"></span>
-                                            <span class="line-2"></span>
-                                            <span class="line-2"></span>
-                                        </div>
-                                        <p class="author">by Damian Brooks</p>
-                                    </div>
-                                    <figure class="cardImg-5 cardImg">
-                                        <img src="./assets/abtPage-cardImg5.png" alt="" />
-                                    </figure>
-                                </div>
-                                <div class="card-bottom">
-                                    <div class="row align-items-center">
-                                        <div class="col-xl-6 col-12">
-                                            <div class="leftBottom-cntn">
-                                                <p class="nmbr">05</p>
-                                                <p class="bottom-para">BoxFit Training</p>
-                                                <p class="bottom-para2">
-                                                    Boxing drills for strength and agility.
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-6 col-12">
-                                            <div class="bottom-button">
-                                                <a class="bottom-btn">
-                                                    Enroll Now
-                                                    <i class="fa-solid fa-arrow-right rgt-arw"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <div class="enrollment-card strength">
-                                <div class="card-bg">
-                                    <div class="topCard-cntn">
-                                        <p class="target-line">Strength</p>
-                                        <div class="trnsfrm-line">
-                                            <span class="line-2"></span>
-                                            <span class="line-2"></span>
-                                            <span class="line-2"></span>
-                                        </div>
-                                        <p class="author">by Ethan Cross</p>
-                                    </div>
-                                    <figure class="cardImg-1 cardImg">
-                                        <img src="./assets/abtPage-cardImg1.png" alt="" />
-                                    </figure>
-                                </div>
-                                <div class="card-bottom">
-                                    <div class="row align-items-center">
-                                        <div class="col-xl-6 col-12">
-                                            <div class="leftBottom-cntn">
-                                                <p class="nmbr">06</p>
-                                                <p class="bottom-para">Power Build Program</p>
-                                                <p class="bottom-para2">
-                                                    Focus on muscle growth and compound lifts.
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-6 col-12">
-                                            <div class="bottom-button">
-                                                <a class="bottom-btn">
-                                                    Enroll Now
-                                                    <i class="fa-solid fa-arrow-right rgt-arw"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <div class="enrollment-card calisthenics">
-                                <div class="card-bg">
-                                    <div class="topCard-cntn">
-                                        <p class="target-line">Calisthenics</p>
-                                        <div class="trnsfrm-line">
-                                            <span class="line-2"></span>
-                                            <span class="line-2"></span>
-                                            <span class="line-2"></span>
-                                        </div>
-                                        <p class="author">by samantha blaze</p>
-                                    </div>
-                                    <figure class="cardImg-7 cardImg">
-                                        <img src="./assets/abtPage-cardImg7.png" alt="" />
-                                    </figure>
-                                </div>
-                                <div class="card-bottom">
-                                    <div class="row align-items-center">
-                                        <div class="col-xl-6 col-12">
-                                            <div class="leftBottom-cntn">
-                                                <p class="nmbr">07</p>
-                                                <p class="bottom-para">Core Stability</p>
-                                                <p class="bottom-para2">
-                                                    Focus on muscle growth and compound lifts.
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-6 col-12">
-                                            <div class="bottom-button">
-                                                <a class="bottom-btn">
-                                                    Enroll Now
-                                                    <i class="fa-solid fa-arrow-right rgt-arw"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <div class="enrollment-card calisthenics">
-                                <div class="card-bg">
-                                    <div class="topCard-cntn">
-                                        <p class="target-line">calisthenics</p>
-                                        <div class="trnsfrm-line">
-                                            <span class="line-2"></span>
-                                            <span class="line-2"></span>
-                                            <span class="line-2"></span>
-                                        </div>
-                                        <p class="author">by samantha blaze</p>
-                                    </div>
-                                    <figure class="cardImg-8 cardImg">
-                                        <img src="./assets/abtPage-cardImg8.png" alt="" />
-                                    </figure>
-                                </div>
-                                <div class="card-bottom">
-                                    <div class="row align-items-center">
-                                        <div class="col-xl-6 col-12">
-                                            <div class="leftBottom-cntn">
-                                                <p class="nmbr">08</p>
-                                                <p class="bottom-para">Handstand Training</p>
-                                                <p class="bottom-para2">
-                                                    Master balance and shoulder strength.
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-6 col-12">
-                                            <div class="bottom-button">
-                                                <a class="bottom-btn">
-                                                    Enroll Now
-                                                    <i class="fa-solid fa-arrow-right rgt-arw"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <div class="enrollment-card personal">
-                                <div class="card-bg">
-                                    <div class="topCard-cntn">
-                                        <p class="target-line">personal</p>
-                                        <div class="trnsfrm-line">
-                                            <span class="line-2"></span>
-                                            <span class="line-2"></span>
-                                            <span class="line-2"></span>
-                                        </div>
-                                        <p class="author">by Ethan Cross</p>
-                                    </div>
-                                    <figure class="cardImg-1 cardImg">
-                                        <img src="./assets/abtPage-cardImg1.png" alt="" />
-                                    </figure>
-                                </div>
-                                <div class="card-bottom">
-                                    <div class="row align-items-center">
-                                        <div class="col-xl-6 col-12">
-                                            <div class="leftBottom-cntn">
-                                                <p class="nmbr">09</p>
-                                                <p class="bottom-para">Power Build Program</p>
-                                                <p class="bottom-para2">
-                                                    Focus on muscle growth and compound lifts.
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-6 col-12">
-                                            <div class="bottom-button">
-                                                <a class="bottom-btn">
-                                                    Enroll Now
-                                                    <i class="fa-solid fa-arrow-right rgt-arw"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <div class="enrollment-card personal">
-                                <div class="card-bg">
-                                    <div class="topCard-cntn">
-                                        <p class="target-line">personal</p>
-                                        <div class="trnsfrm-line">
-                                            <span class="line-2"></span>
-                                            <span class="line-2"></span>
-                                            <span class="line-2"></span>
-                                        </div>
-                                        <p class="author">by samantha blaze</p>
-                                    </div>
-                                    <figure class="cardImg-8 cardImg">
-                                        <img src="./assets/abtPage-cardImg8.png" alt="" />
-                                    </figure>
-                                </div>
-                                <div class="card-bottom">
-                                    <div class="row align-items-center">
-                                        <div class="col-xl-6 col-12">
-                                            <div class="leftBottom-cntn">
-                                                <p class="nmbr">10</p>
-                                                <p class="bottom-para">Handstand Training</p>
-                                                <p class="bottom-para2">
-                                                    Master balance and shoulder strength.
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-6 col-12">
-                                            <div class="bottom-button">
-                                                <a class="bottom-btn">
-                                                    Enroll Now
-                                                    <i class="fa-solid fa-arrow-right rgt-arw"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <div class="enrollment-card functional">
-                                <div class="card-bg">
-                                    <div class="topCard-cntn">
-                                        <p class="target-line">functional</p>
-                                        <div class="trnsfrm-line">
-                                            <span class="line-2"></span>
-                                            <span class="line-2"></span>
-                                            <span class="line-2"></span>
-                                        </div>
-                                        <p class="author">by Damian Brooks</p>
-                                    </div>
-                                    <figure class="cardImg-5 cardImg">
-                                        <img src="./assets/abtPage-cardImg5.png" alt="" />
-                                    </figure>
-                                </div>
-                                <div class="card-bottom">
-                                    <div class="row align-items-center">
-                                        <div class="col-xl-6 col-12">
-                                            <div class="leftBottom-cntn">
-                                                <p class="nmbr">11</p>
-                                                <p class="bottom-para">BoxFit Training</p>
-                                                <p class="bottom-para2">
-                                                    Boxing drills for strength and agility.
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-6 col-12">
-                                            <div class="bottom-button">
-                                                <a class="bottom-btn">
-                                                    Enroll Now
-                                                    <i class="fa-solid fa-arrow-right rgt-arw"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <div class="enrollment-card functional">
-                                <div class="card-bg">
-                                    <div class="topCard-cntn">
-                                        <p class="target-line strength">functional</p>
-                                        <div class="trnsfrm-line">
-                                            <span class="line-2"></span>
-                                            <span class="line-2"></span>
-                                            <span class="line-2"></span>
-                                        </div>
-                                        <p class="author">by marcus cole</p>
-                                    </div>
-                                    <figure class="cardImg-3 cardImg">
-                                        <img src="./assets/abtPage-cardImg3.png" alt="" />
-                                    </figure>
-                                </div>
-                                <div class="card-bottom">
-                                    <div class="row align-items-center">
-                                        <div class="col-xl-6 col-12">
-                                            <div class="leftBottom-cntn">
-                                                <p class="nmbr">12</p>
-                                                <p class="bottom-para">Cardio Blast</p>
-                                                <p class="bottom-para2">
-                                                    Treadmill, cycling, and jump rope sessions.
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-6 col-12">
-                                            <div class="bottom-button">
-                                                <a class="bottom-btn">
-                                                    Enroll Now
-                                                    <i class="fa-solid fa-arrow-right rgt-arw"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="rate-btn">
-                    <a href="" class="membership-btn"> Load more </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Us Section -->
-
-        <section class="contact-sec">
-            <div class="container abt-container">
-                <div class="row">
-                    <div class="col-12 col-xl-6 relative-col">
-                        <div class="intouch-cntn">
-                            <div class="abt-hdr">
-                                <h2 class="title-3 get-title">
-                                    get in touch
-                                    <div class="frame-line abt-line">
-                                        <img src="./assets/Frame line.png" alt="" />
-                                    </div>
-                                </h2>
-                            </div>
-                            <div class="mdl-cntn">
-                                <h3 class="title-5">Ready to Transform Your Body?</h3>
-                                <p class="para2 mdl-para">
-                                    Start your fitness journey today with expert-led programs
-                                    built for real results — from strength to wellness.
-                                </p>
-                                <ul class="kit-item">
-                                    <li class="kit-list">
-                                        <i class="fa-regular fa-circle-check check-list"></i>
-                                        Complimentary gym kit
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">activity</a></li>
+                                    <li><a class="dropdown-item" href="#">workouts</a></li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">progress tracking</a>
                                     </li>
-                                    <li class="kit-list">
-                                        <i class="fa-regular fa-circle-check check-list"></i>
-                                        Free session with certified trainer
+                                    <li>
+                                        <a class="dropdown-item" href="#">Workout History</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">Rest & Recovery Logs</a>
                                     </li>
                                 </ul>
-                            </div>
-                            <div class="bottom-cntn">
-                                <div class="amnt-box">
-                                    <span class="rs">rs</span>
-                                    <span class="amnt">19,999</span>
-                                </div>
-                                <p class="plan">OFF your membership plan.</p>
-                            </div>
-                            <div class="bottom-end">
-                                <a href="" class="membership-btn get-btn btn-2">
-                                    get started today
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./workout.html">Workouts</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Trainers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Testimonials</a>
+                            </li>
+                            <form class="search-group">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                <input placeholder="Search" type="search" class="input" />
+                            </form>
+                            <li class="cart-item">
+                                <a class="cart-link" href="#">
+                                    <img src="./assets/Cart.png" alt="" />
                                 </a>
-                                <p class="para2 tndc">
-                                    T&C: Offer valid for new enrollments only. Cannot be
-                                    combined with other discounts. Limited-time promotion
-                                    subject to availability.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-xl-6">
-                        <form action="" class="getInTouch-form">
-                            <div class="row">
-                                <div class="col-12 col-md-6">
-                                    <div class="input-container">
-                                        <label for="name" class="label-cntn">
-                                            <div class="black-lineBox">
-                                                <span class="line-2 blackLine"></span>
-                                                <span class="line-2 blackLine"></span>
-                                                <span class="line-2 blackLine"></span>
-                                            </div>
-                                            <span class="label-span">Your Full Name</span>
-                                        </label>
-                                        <input type="text" name="name" id="name" class="input-text" />
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-6">
-                                    <div class="input-container">
-                                        <label for="email" class="label-cntn">
-                                            <div class="black-lineBox">
-                                                <span class="line-2 blackLine"></span>
-                                                <span class="line-2 blackLine"></span>
-                                                <span class="line-2 blackLine"></span>
-                                            </div>
-                                            <span class="label-span">Email Address</span>
-                                        </label>
-                                        <input type="email" name="email" id="email" class="input-text" />
-                                    </div>
-                                </div>
-                                <div class="col-12 mt-4">
-                                    <div class="input-container">
-                                        <label for="message" class="label-cntn">
-                                            <div class="black-lineBox">
-                                                <span class="line-2 blackLine"></span>
-                                                <span class="line-2 blackLine"></span>
-                                                <span class="line-2 blackLine"></span>
-                                            </div>
-                                            <span class="label-span">message</span>
-                                        </label>
-                                        <textarea name="message" id="message" class="input-text msg-text"></textarea>
-                                    </div>
-                                    <div class="rate-btn">
-                                        <a href="" class="membership-btn get-btn">
-                                            get started today
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- goal section -->
-        <section class="goal-sec">
-            <div class="container abt-container">
-                <div class="row abt-row">
-                    <div class="col-xl-6 col-12">
-                        <div class="abt-hdr">
-                            <h2 class="title-3">
-                                How it works
-                                <div class="frame-line abt-line">
-                                    <img src="./assets/Frame line.png" alt="" />
-                                </div>
-                            </h2>
-                        </div>
-                    </div>
-                    <div class="col-xl-6 col-12">
-                        <div class="abtHdr-para">
-                            <p class="para abt-para">
-                                Real Stories. Real people. Real Transformations.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-6 col-xl-4 border-col">
-                        <div class="goal-cntn">
-                            <p class="nmbr goal-nmbr">01</p>
-                            <div class="bullseye">
-                                <img src="./assets/bullseye.png" alt="" />
-                            </div>
-                            <p class="goal-hdr">Goal Setting</p>
-                            <div class="ylw-line">
-                                <span class="line-2"></span>
-                                <span class="line-2"></span>
-                                <span class="line-2"></span>
-                            </div>
-                            <p class="para2">
-                                Define clear fitness goals tailored to your needs.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-6 col-xl-4 border-col">
-                        <div class="goal-cntn">
-                            <p class="nmbr goal-nmbr">02</p>
-                            <div class="bullseye">
-                                <img src="./assets/bullseye.png" alt="" />
-                            </div>
-                            <p class="goal-hdr">Structured Training</p>
-                            <div class="ylw-line">
-                                <span class="line-2"></span>
-                                <span class="line-2"></span>
-                                <span class="line-2"></span>
-                            </div>
-                            <p class="para2">
-                                Follow guided workouts built for steady progress.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-6 col-xl-4 border-col col-last">
-                        <div class="goal-cntn">
-                            <p class="nmbr goal-nmbr">03</p>
-                            <div class="bullseye">
-                                <img src="./assets/bullseye.png" alt="" />
-                            </div>
-                            <p class="goal-hdr">Goal Setting</p>
-                            <div class="ylw-line">
-                                <span class="line-2"></span>
-                                <span class="line-2"></span>
-                                <span class="line-2"></span>
-                            </div>
-                            <p class="para2">
-                                Define clear fitness goals tailored to your needs.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- BMI Calculator Section -->
-        <section class="calc-sec">
-            <div class="container abt-container">
-                <div class="abt-hdr">
-                    <h2 class="title-3">
-                        BMI Calculator
-                        <div class="frame-line abt-line">
-                            <img src="./assets/Frame line.png" alt="" />
-                        </div>
-                    </h2>
-                </div>
-                <div class="row align-items-center">
-                    <div class="col-xl-6 col-12">
-                        <div class="location-para">
-                            <p class="para3 cmn-para">Calculate Your</p>
-                            <p class="cmn-para yellow-para">BMI</p>
-                        </div>
-                        <p class="para2 bmi-para">
-                            It helps you understand whether you’re underweight, healthy, or
-                            need to improve your fitness level. Track your progress as you
-                            train and maintain the perfect balance between weight and
-                            wellness. Start now to set smarter goals for a stronger,
-                            healthier you.
-                        </p>
-                        <form action="" class="bmi-calc">
-                            <div class="row">
-                                <div class="col-12 col-md-6">
-                                    <div class="input-container bmi-container">
-                                        <label for="height" class="label-cntn">
-                                            <div class="ylw-line bmi-line">
-                                                <span class="line-2"></span>
-                                                <span class="line-2"></span>
-                                                <span class="line-2"></span>
-                                            </div>
-                                            <span class="label-span bmi-label">Height / cm</span>
-                                        </label>
-                                        <input type="number" name="height" id="height" class="input-text" />
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-6">
-                                    <div class="input-container bmi-container">
-                                        <label for="weight" class="label-cntn">
-                                            <div class="ylw-line bmi-line">
-                                                <span class="line-2"></span>
-                                                <span class="line-2"></span>
-                                                <span class="line-2"></span>
-                                            </div>
-                                            <span class="label-span bmi-label">weight / kg</span>
-                                        </label>
-                                        <input type="number" name="weight" id="weight" class="input-text" />
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-6">
-                                    <div class="input-container bmi-container">
-                                        <label for="age" class="label-cntn">
-                                            <div class="ylw-line bmi-line">
-                                                <span class="line-2"></span>
-                                                <span class="line-2"></span>
-                                                <span class="line-2"></span>
-                                            </div>
-                                            <span class="label-span bmi-label">Age of you</span>
-                                        </label>
-                                        <input type="number" name="age" id="age" class="input-text" />
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-6">
-                                    <div class="input-container bmi-container">
-                                        <label for="gender" class="label-cntn">
-                                            <div class="ylw-line bmi-line">
-                                                <span class="line-2"></span>
-                                                <span class="line-2"></span>
-                                                <span class="line-2"></span>
-                                            </div>
-                                            <span class="label-span bmi-label">Gender</span>
-                                        </label>
-                                        <input type="number" name="gender" id="gender" class="input-text" />
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-6">
-                                    <div class="input-container bmi-container">
-                                        <label for="age2" class="label-cntn">
-                                            <div class="ylw-line bmi-line">
-                                                <span class="line-2"></span>
-                                                <span class="line-2"></span>
-                                                <span class="line-2"></span>
-                                            </div>
-                                            <span class="label-span bmi-label">age of you</span>
-                                        </label>
-                                        <input type="number" name="age2" id="age2" class="input-text" />
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-6">
-                                    <div class="input-container bmi-container">
-                                        <label for="gender2" class="label-cntn">
-                                            <div class="ylw-line bmi-line">
-                                                <span class="line-2"></span>
-                                                <span class="line-2"></span>
-                                                <span class="line-2"></span>
-                                            </div>
-                                            <span class="label-span bmi-label">Gender</span>
-                                        </label>
-                                        <input type="number" name="gender2" id="gender2" class="input-text" />
-                                    </div>
-                                </div>
-                                <div class="bmi-btn">
-                                    <a href="" class="membership-btn bmi-btn">
-                                        Calculate BMI
-                                    </a>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="col-xl-6 col-12">
-                        <div class="bmi-img-wrpr">
-                            <img src="./assets/bmi-frame.png" alt="" />
-                            <div class="bmi-img-bg">
-                                <div class="bmi-img">
-                                    <img src="./assets/bmi-lady.png" alt="" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Sponsorship Section -->
-        <section class="spsh-sec">
-            <div class="container abt-container">
-                <div class="abt-hdr">
-                    <h2 class="title-3">
-                        sponsorship
-                        <div class="frame-line abt-line">
-                            <img src="./assets/Frame line.png" alt="" />
-                        </div>
-                    </h2>
-                </div>
-
-                <div class="sponsorhip-animation d-flex align-items-center">
-                    <div class="autoScroll-item nike" style="--i: 1">
-                        <img src="./assets/nike.png" alt="" />
-                    </div>
-                    <div class="autoScroll-item" style="--i: 2">
-                        <img src="./assets/hermes.png" alt="" />
-                    </div>
-                    <div class="autoScroll-item" style="--i: 3">
-                        <img src="./assets/adidas.png" alt="" />
-                    </div>
-                    <div class="autoScroll-item" style="--i: 4">
-                        <img src="./assets/X.png" alt="" />
-                    </div>
-                    <div class="autoScroll-item" style="--i: 5">
-                        <img src="./assets/fila.png" alt="" />
-                    </div>
-                    <div class="autoScroll-item" style="--i: 6">
-                        <img src="./assets/columbia.png" alt="" />
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer Section -->
-    <footer class="ftr-sec">
-        <div class="ftr-top">
-            <div class="container abt-container">
-                <div class="row ftr-row">
-                    <div class="col-xl-4 col-12">
-                        <div class="ftr-cntn">
-                            <a href="" class="ftrCntn-hdr">
-                                <i class="bi bi-c-circle"></i> 2025 Fitin.
-                                <br />
-                                <span>All rights reserved.</span>
-                            </a>
-                            <ul class="ftr-social">
-                                <li class="ftr-socialLink">
-                                    <a href="" class="social-media">
-                                        <span>Instagram</span>
-                                        <span class="ftrRight-arrow"><i class="fa-solid fa-arrow-right"></i></span>
-                                    </a>
-                                </li>
-                                <li class="ftr-socialLink">
-                                    <a href="" class="social-media">
-                                        <span>Facebook</span>
-                                        <span class="ftrRight-arrow"><i class="fa-solid fa-arrow-right"></i></span>
-                                    </a>
-                                </li>
-                                <li class="ftr-socialLink">
-                                    <a href="" class="social-media">
-                                        <span>Youtube</span>
-                                        <span class="ftrRight-arrow"><i class="fa-solid fa-arrow-right"></i></span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-xl-8 col-12">
-                        <div class="ftr-nav">
-                            <div class="ftr-logo">
-                                <a href="" class="ftr-brandLogo">
-                                    <img src="./assets/ftr-logo.png" alt="" />
-                                </a>
-                            </div>
-                            <ul class="ftrNav-bar">
-                                <li class="ftr-navLi">
-                                    <a href="./index.html" class="ftr-navLink">Home</a>
-                                </li>
-                                <li class="ftr-navLi">
-                                    <hr />
-                                </li>
-                                <li class="ftr-navLi">
-                                    <a href="./about.html" class="ftr-navLink">About Us</a>
-                                </li>
-                                <li class="ftr-navLi">
-                                    <hr />
-                                </li>
-                                <li class="ftr-navLi">
-                                    <a href="" class="ftr-navLink">Features</a>
-                                </li>
-                                <li class="ftr-navLi">
-                                    <hr />
-                                </li>
-                                <li class="ftr-navLi">
-                                    <a href="./workout.html" class="ftr-navLink">Workouts</a>
-                                </li>
-                                <li class="ftr-navLi">
-                                    <hr />
-                                </li>
-                                <li class="ftr-navLi">
-                                    <a href="" class="ftr-navLink">Trainer</a>
-                                </li>
-                                <li class="ftr-navLi">
-                                    <hr />
-                                </li>
-                                <li class="ftr-navLi">
-                                    <a href="" class="ftr-navLink">Testimonials</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="ftr-bottom">
-            <div class="container abt-container">
-                <div class="row ftr-row2">
-                    <div class="col-xl-6 col-12">
-                        <div class="ftrBtm-cntn">
-                            <div class="btm-hdr">Stay Updated</div>
-                            <p class="btm-para">
-                                event info straight to your inbox. Subscribe to get this tips,
-                                offers, and
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-xl-6 col-12">
-                        <form class="ftrInput-container">
-                            <input type="text" class="styled_input_bar" placeholder="" />
-                            <label class="ftrInput-label" for="styled_input_bar">Type your email</label>
-                            <button class="cssbuttons-io-button">
-                                Subscribe
-                                <div class="icon">
+                            </li>
+                        </ul>
+                        <div class="login-link">
+                            <a href="" class="login-io-button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Login/Create Account
+                                <div class="login-icon">
                                     <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M0 0h24v24H0z" fill="none"></path>
                                         <path
@@ -1585,13 +200,1494 @@
                                             fill="currentColor"></path>
                                     </svg>
                                 </div>
-                            </button>
-                        </form>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="login-box">
+                        <button type="button" class="modal-close ms-auto d-md-none" data-bs-dismiss="modal"
+                            aria-label="Close">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                        <div class="logBox-cntn">
+                            <div class="row">
+                                <div class="col-12 col-xl-6">
+                                    <div class="left-modal">
+                                        <div class="modal-line">
+                                            <span class="line-2"></span>
+                                            <span class="line-2"></span>
+                                            <span class="line-2"></span>
+                                        </div>
+                                        <h2 class="modal-title">create account</h2>
+                                        <p class="para2">
+                                            Lorem ipsum dolor sit amet consectetur. Enim et in tellus
+                                            at. Blandit etiam.
+                                        </p>
+                                        <form action="" class="modal-form">
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <div class="modal-inputBox">
+                                                        <label for="first-name" class="all-icon">
+                                                            <span class="user-icon">
+                                                                <i class="fa-solid fa-circle-user"></i>
+                                                            </span>
+                                                            <span class="form-name">First Name <sup>*</sup>
+                                                            </span>
+                                                        </label>
+                                                        <input type="text" id="first-name" class="modal-input" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-6 mb-3">
+                                                    <div class="modal-inputBox">
+                                                        <label for="last-name" class="all-icon">
+                                                            <span class="user-icon">
+                                                                <i class="fa-solid fa-circle-user"></i>
+                                                            </span>
+                                                            <span class="form-name">last Name <sup>*</sup>
+                                                            </span>
+                                                        </label>
+                                                        <input type="text" id="last-name" class="modal-input" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 mb-3">
+                                                    <div class="modal-inputBox">
+                                                        <label for="modal-email" class="all-icon">
+                                                            <span class="user-icon">
+                                                                <i class="fa-solid fa-envelope"></i>
+                                                            </span>
+                                                            <span class="form-name">email address <sup>*</sup>
+                                                            </span>
+                                                        </label>
+                                                        <input type="email" id="modal-email" class="modal-input" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-4 col-6 mb-3">
+                                                    <div class="modal-inputBox">
+                                                        <label for="modal-gender" class="all-icon">
+                                                            <span class="user-icon">
+                                                                <i class="fa-solid fa-circle-user"></i>
+                                                            </span>
+                                                            <span class="form-name">gender <sup>*</sup>
+                                                            </span>
+                                                        </label>
+                                                        <input type="text" id="modal-gender" class="modal-input" />
+                                                        <ul class="gender-dropdown">
+                                                            <li data-value="Male">Male</li>
+                                                            <li data-value="Female">Female</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-4 col-6 mb-3">
+                                                    <div class="modal-inputBox">
+                                                        <label for="modal-age" class="all-icon">
+                                                            <span class="user-icon">
+                                                                <i class="fa-solid fa-cake-candles"></i>
+                                                            </span>
+                                                            <span class="form-name">age <sup>*</sup> </span>
+                                                        </label>
+                                                        <input type="number" id="modal-age" class="modal-input" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-4 col-12 mb-3">
+                                                    <div class="modal-inputBox">
+                                                        <label for="modal-phone" class="all-icon">
+                                                            <span class="user-icon">
+                                                                <i class="fa-solid fa-phone"></i>
+                                                            </span>
+                                                            <span class="form-name">phone <sup>*</sup> </span>
+                                                        </label>
+                                                        <input type="number" id="modal-phone" class="modal-input" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-5 mb-3">
+                                                    <div class="modal-inputBox">
+                                                        <label for="modal-weight" class="all-icon">
+                                                            <span class="user-icon">
+                                                                <i class="fa-solid fa-clock"></i>
+                                                            </span>
+                                                            <span class="form-name">weight <sup>*</sup>
+                                                            </span>
+                                                        </label>
+                                                        <input type="number" id="modal-weight" class="modal-input" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-7 mb-3">
+                                                    <div class="modal-inputBox">
+                                                        <label for="modal-goal" class="all-icon">
+                                                            <span class="user-icon">
+                                                                <i class="fa-solid fa-circle-user"></i>
+                                                            </span>
+                                                            <span class="form-name">Goal <sup>*</sup> </span>
+                                                        </label>
+                                                        <input type="text" id="modal-goal" class="modal-input" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="modal-inputBox">
+                                                        <label for="modal-password" class="all-icon">
+                                                            <span class="user-icon">
+                                                                <i class="bi bi-shield-lock"></i>
+                                                            </span>
+                                                            <span class="form-name">password <sup>*</sup>
+                                                            </span>
+                                                        </label>
+                                                        <div class="password-wrapper">
+                                                            <input type="password" id="modal-password"
+                                                                class="modal-input" placeholder="" />
+                                                            <button type="button" class="toggle-password">
+                                                                <i class="fa-solid fa-eye"></i>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="form-check d-flex align-items-center">
+                                                        <input class="form-check-input" type="checkbox" value=""
+                                                            id="checkIndeterminate" />
+                                                        <label class="form-check-label" for="checkIndeterminate">
+                                                            I agree to the
+                                                            <a href="" class="condition">Terms & Privacy</a>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="modal-btn">
+                                                        <a href="" class="membership-btn modal-btnLabel">
+                                                            Create account
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <p class="modal-login">
+                                                        Already have an account ?
+                                                        <a href="" class="alrdy-acc">Login</a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-xl-6">
+                                    <div class="right-modal">
+                                        <div class="modal-logo text-end">
+                                            <img src="./assets/modalLogo.png" alt="" />
+                                        </div>
+                                        <div class="rightModal-bottom">
+                                            <p class="para2 modal-para">
+                                                Lorem ipsum dolor sit amet consectetur. Volutpat
+                                                sittortor. Tempus congue adipiscing aliquam cursus
+                                                turpis ultricies.
+                                            </p>
+                                            <div class="modalBottom-para">
+                                                <div class="row">
+                                                    <div class="col-sm-12 col-md-6">
+                                                        <p class="modal-para2">firstname lastname</p>
+                                                        <p class="para2 modal-para text-capitalize">
+                                                            designation
+                                                        </p>
+                                                    </div>
+                                                    <div class="col-sm-12 col-md-6">
+                                                        <div class="modalPara-box">
+                                                            <span class="modal-circle"></span>
+                                                            <p class="modal-para2">open ventures</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </footer>
+
+        <!-- Custom Cursor -->
+        <div class="cursor"></div>
+
+        <main>
+            <!-- Banner Section -->
+            <section class="bnr-sec">
+                <div class="container">
+                    <div class="hero-cntn">
+                        <h1 class="title-1">
+                            <span class="title1-span">About</span>
+                            Us
+                        </h1>
+                        <div class="breadcrumb">
+                            <ul class="breadcrumb-item">
+                                <li class="list-items">
+                                    <a href="./index.html" class="breadcrumb-link">Home</a>
+                                </li>
+                                <li class="square">
+                                    <span></span>
+                                </li>
+                                <li class="breadcrumb-link breadcrumb-active">About Us</li>
+                            </ul>
+                        </div>
+                        <div class="hero-line">
+                            <span class="yellow-line"></span>
+                            <span class="yellow-line"></span>
+                            <span class="yellow-line"></span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section class="abt-sec">
+                <div class="container abt-container">
+                    <div class="row abt-row">
+                        <div class="col-xl-6 col-12">
+                            <div class="abt-hdr" data-aos="fade-right">
+                                <h2 class="title-3">
+                                    Who We Are
+
+                                    <div class="frame-line abt-line">
+                                        <img src="./assets/Frame line.png" alt="" />
+                                    </div>
+                                </h2>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-12">
+                            <div class="abtHdr-para" data-aos="fade-left">
+                                <p class="para abt-para">
+                                    Empowering Every Body to Move Stronger, Live Better, and Go
+                                    Further
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row bottomAbt-row">
+                        <div class="col-xl-6 col-12">
+                            <div class="abt-cntn">
+                                <h3 class="title-4" data-aos="flip-left">
+                                    Nunc vivamus quisque laoreet a porta risus volutpat sit nibh
+                                    sociosqu cubilia. At adipiscing auctor ultricies velit libero
+                                    ligula imperdiet sodales tellus aliquam urna.
+                                </h3>
+                                <div class="abtPara-box">
+                                    <div class="row">
+                                        <div class="col-xl-6 col-12">
+                                            <ul class="left-list">
+                                                <li class="list-category" data-aos="fade-right" data-aos-offset="100">
+                                                    <i class="fa-regular fa-circle-check check-list"></i>
+                                                    Himenaeos pellentesque
+                                                </li>
+                                                <li class="list-category" data-aos="fade-right" data-aos-offset="100">
+                                                    <i class="fa-regular fa-circle-check check-list"></i>
+                                                    Elementum ridiculus
+                                                </li>
+                                                <li class="list-category" data-aos="fade-right" data-aos-offset="100">
+                                                    <i class="fa-regular fa-circle-check check-list"></i>
+                                                    Rutrum convallis
+                                                </li>
+                                                <li class="list-category" data-aos="fade-right" data-aos-offset="100">
+                                                    <i class="fa-regular fa-circle-check check-list"></i>
+                                                    Pellentesque maecenas
+                                                </li>
+                                                <li class="list-category" data-aos="fade-right" data-aos-offset="100">
+                                                    <i class="fa-regular fa-circle-check check-list"></i>
+                                                    Cubilia tincidunt
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-xl-6 col-12">
+                                            <ul class="right-list">
+                                                <li class="list-category" data-aos="fade-left" data-aos-offset="100">
+                                                    <i class="fa-regular fa-circle-check check-list"></i>
+                                                    Himenaeos pellentesque
+                                                </li>
+                                                <li class="list-category" data-aos="fade-left" data-aos-offset="100">
+                                                    <i class="fa-regular fa-circle-check check-list"></i>
+                                                    Elementum ridiculus
+                                                </li>
+                                                <li class="list-category" data-aos="fade-left" data-aos-offset="100">
+                                                    <i class="fa-regular fa-circle-check check-list"></i>
+                                                    Rutrum convallis
+                                                </li>
+                                                <li class="list-category" data-aos="fade-left" data-aos-offset="100">
+                                                    <i class="fa-regular fa-circle-check check-list"></i>
+                                                    Pellentesque maecenas
+                                                </li>
+                                                <li class="list-category" data-aos="fade-left" data-aos-offset="100">
+                                                    <i class="fa-regular fa-circle-check check-list"></i>
+                                                    Cubilia tincidunt
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customer-care" data-aos="zoom-in-up">
+                                    <a href="" class="cst-icon">
+                                        <img src="./assets/customer-care.png" alt="" />
+                                    </a>
+                                    <div class="cst-para">
+                                        <p class="support cst-support">CUSTOMER SUPPORT</p>
+                                        <p class="support cst-number">(888)4000-2424</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-12">
+                            <figure class="abt-img" data-aos="zoom-out-up" data-tilt>
+                                <img src="./assets/abt-builder.png" alt="" />
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Service Section -->
+            <section class="srvc-sec">
+                <div class="container abt-container">
+                    <div class="row">
+                        <div class="col-xl-6 col-12">
+                            <div class="abt-hdr srvc-hdr" data-aos="fade-left">
+                                <h2 class="title-3">
+                                    Services
+                                    <div class="frame-line abt-line">
+                                        <img src="./assets/Frame line.png" alt="" />
+                                    </div>
+                                </h2>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-12">
+                            <div class="swiper mySwiper3" data-aos="fade-right">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="swiper-cntn">
+                                            <h2 class="title-trnsfrm">Personal Training</h2>
+                                            <p class="slider-para">
+                                                Ultrices quam mattis posuere porttitor tellus rhoncus
+                                                tristique. Primis aliquam dignissim interdum vel
+                                                suscipit sodales.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="swiper-cntn">
+                                            <h2 class="title-trnsfrm">Personal Training</h2>
+                                            <p class="slider-para">
+                                                Ultrices quam mattis posuere porttitor tellus rhoncus
+                                                tristique. Primis aliquam dignissim interdum vel
+                                                suscipit sodales.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="swiper-cntn">
+                                            <h2 class="title-trnsfrm">Personal Training</h2>
+                                            <p class="slider-para">
+                                                Ultrices quam mattis posuere porttitor tellus rhoncus
+                                                tristique. Primis aliquam dignissim interdum vel
+                                                suscipit sodales.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="swiper-cntn">
+                                            <h2 class="title-trnsfrm">Personal Training</h2>
+                                            <p class="slider-para">
+                                                Ultrices quam mattis posuere porttitor tellus rhoncus
+                                                tristique. Primis aliquam dignissim interdum vel
+                                                suscipit sodales.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination pagination-2"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Workout Section -->
+            <section class="location-sec">
+                <div class="container abt-container">
+                    <div class="abt-hdr" data-aos="zoom-out-down">
+                        <h2 class="title-3">
+                            Workouts
+                            <div class="frame-line abt-line">
+                                <img src="./assets/Frame line.png" alt="" />
+                            </div>
+                        </h2>
+                    </div>
+                    <div class="location-para" data-aos="fade-left" data-aos-duration="1500">
+                        <p class="cmn-para">
+                            Your <span class="yellow-para">Fitness </span>
+                        </p>
+                        <p class="para3 cmn-para">&nbsp;Journey Starts Here:</p>
+                        <p class="cmn-para">
+                            Select a <span class="yellow-para">Category</span>
+                        </p>
+                    </div>
+                    <div class="row location-row">
+                        <div class="col-12 col-xl-2">
+                            <div class="location-para2 devider">
+                                <p class="contry-nmbr" data-aos="fade-down-left">
+                                    25
+                                    <span>+</span>
+                                </p>
+                                <span class="cntry" data-aos="fade-down-left">Country</span>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-xl-10">
+                            <div class="loaction-cntn" data-aos="fade-up-right">
+                                <p class="para2">
+                                    Our presence stretches across continents, connecting a
+                                    worldwide community of fitness enthusiasts. From bustling
+                                    metropolitan hubs to growing local neighborhoods, our fitness
+                                    centers deliver the same trusted quality and results-driven
+                                    training. Each location is equipped with expert coaches,
+                                    modern facilities, and a motivating environment tailored to
+                                    your goals. Whether you are traveling, relocating, or joining
+                                    us for the first time, you’ll always find a home for your
+                                    fitness journey with us. Together, we’re building a stronger,
+                                    healthier world—one city at a time.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper mySwiper4">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide btn-slideWidth">
+                                <button data-filter="*" class="button-slider">
+                                    <p class="btn-cntn">all</p>
+                                </button>
+                            </div>
+                            <div class="swiper-slide btn-slideWidth">
+                                <button data-filter=".strength" class="button-slider">
+                                    <p class="btn-cntn">Strength</p>
+                                </button>
+                            </div>
+                            <div class="swiper-slide btn-slideWidth">
+                                <button data-filter=".wellness" class="button-slider">
+                                    <p class="btn-cntn">Wellness</p>
+                                </button>
+                            </div>
+                            <div class="swiper-slide btn-slideWidth">
+                                <button data-filter=".cardio" class="button-slider">
+                                    <p class="btn-cntn">Cardio</p>
+                                </button>
+                            </div>
+                            <div class="swiper-slide btn-slideWidth">
+                                <button data-filter=".combat" class="button-slider">
+                                    <p class="btn-cntn">Combat</p>
+                                </button>
+                            </div>
+                            <div class="swiper-slide btn-slideWidth">
+                                <button data-filter=".calisthenics" class="button-slider">
+                                    <p class="btn-cntn">calisthenics</p>
+                                </button>
+                            </div>
+                            <div class="swiper-slide btn-slideWidth">
+                                <button data-filter=".personal" class="button-slider">
+                                    <p class="btn-cntn">personal</p>
+                                </button>
+                            </div>
+                            <div class="swiper-slide btn-slideWidth">
+                                <button data-filter=".functional" class="button-slider">
+                                    <p class="btn-cntn">functional</p>
+                                </button>
+                            </div>
+                            <div class="swiper-slide btn-slideWidth">
+                                <button data-filter=".endurance" class="button-slider">
+                                    <p class="btn-cntn">endurance</p>
+                                </button>
+                            </div>
+                            <div class="swiper-slide btn-slideWidth">
+                                <button data-filter=".power" class="button-slider">
+                                    <p class="btn-cntn">power</p>
+                                </button>
+                            </div>
+                            <div class="swiper-slide btn-slideWidth">
+                                <button data-filter=".mobility" class="button-slider">
+                                    <p class="btn-cntn">mobility</p>
+                                </button>
+                            </div>
+                            <div class="swiper-slide btn-slideWidth">
+                                <button data-filter=".agility" class="button-slider">
+                                    <p class="btn-cntn">agility</p>
+                                </button>
+                            </div>
+                            <div class="swiper-slide btn-slideWidth">
+                                <button data-filter=".recovery" class="button-slider">
+                                    <p class="btn-cntn">recovery</p>
+                                </button>
+                            </div>
+                            <div class="swiper-slide btn-slideWidth">
+                                <button data-filter=".dance" class="button-slider">
+                                    <p class="btn-cntn">dance</p>
+                                </button>
+                            </div>
+                            <div class="swiper-slide btn-slideWidth">
+                                <button data-filter=".zumba" class="button-slider">
+                                    <p class="btn-cntn">zumba</p>
+                                </button>
+                            </div>
+                            <div class="swiper-slide btn-slideWidth">
+                                <button data-filter=".detox" class="button-slider">
+                                    <p class="btn-cntn">detox</p>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid-card">
+                        <div class="row">
+                            <div class="col-12 col-md-6">
+                                <div class="enrollment-card strength">
+                                    <div class="card-bg">
+                                        <div class="topCard-cntn">
+                                            <p class="target-line">Strength</p>
+                                            <div class="trnsfrm-line">
+                                                <span class="line-2"></span>
+                                                <span class="line-2"></span>
+                                                <span class="line-2"></span>
+                                            </div>
+                                            <p class="author">by Ethan Cross</p>
+                                        </div>
+                                        <figure class="cardImg-1 cardImg">
+                                            <img src="./assets/abtPage-cardImg1.png" alt="" />
+                                        </figure>
+                                    </div>
+                                    <div class="card-bottom">
+                                        <div class="row align-items-center">
+                                            <div class="col-xl-6 col-12">
+                                                <div class="leftBottom-cntn">
+                                                    <p class="nmbr">01</p>
+                                                    <p class="bottom-para">Power Build Program</p>
+                                                    <p class="bottom-para2">
+                                                        Focus on muscle growth and compound lifts.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-6 col-12">
+                                                <div class="bottom-button">
+                                                    <a class="bottom-btn">
+                                                        Enroll Now
+                                                        <i class="fa-solid fa-arrow-right rgt-arw"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="enrollment-card wellness">
+                                    <div class="card-bg">
+                                        <div class="topCard-cntn">
+                                            <p class="target-line">Wellness</p>
+                                            <div class="trnsfrm-line">
+                                                <span class="line-2"></span>
+                                                <span class="line-2"></span>
+                                                <span class="line-2"></span>
+                                            </div>
+                                            <p class="author">by trent morgan</p>
+                                        </div>
+                                        <figure class="cardImg-2 cardImg">
+                                            <img src="./assets/abtPage-cardImg2.png" alt="" />
+                                        </figure>
+                                    </div>
+                                    <div class="card-bottom">
+                                        <div class="row align-items-center">
+                                            <div class="col-xl-6 col-12">
+                                                <div class="leftBottom-cntn">
+                                                    <p class="nmbr">02</p>
+                                                    <p class="bottom-para">Yoga Flow</p>
+                                                    <p class="bottom-para2">
+                                                        Improve flexibility and mindfulness.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-6 col-12">
+                                                <div class="bottom-button">
+                                                    <a class="bottom-btn">
+                                                        Enroll Now
+                                                        <i class="fa-solid fa-arrow-right rgt-arw"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="enrollment-card cardio">
+                                    <div class="card-bg">
+                                        <div class="topCard-cntn">
+                                            <p class="target-line strength">Cardio</p>
+                                            <div class="trnsfrm-line">
+                                                <span class="line-2"></span>
+                                                <span class="line-2"></span>
+                                                <span class="line-2"></span>
+                                            </div>
+                                            <p class="author">by marcus cole</p>
+                                        </div>
+                                        <figure class="cardImg-3 cardImg">
+                                            <img src="./assets/abtPage-cardImg3.png" alt="" />
+                                        </figure>
+                                    </div>
+                                    <div class="card-bottom">
+                                        <div class="row align-items-center">
+                                            <div class="col-xl-6 col-12">
+                                                <div class="leftBottom-cntn">
+                                                    <p class="nmbr">03</p>
+                                                    <p class="bottom-para">Cardio Blast</p>
+                                                    <p class="bottom-para2">
+                                                        Treadmill, cycling, and jump rope sessions.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-6 col-12">
+                                                <div class="bottom-button">
+                                                    <a class="bottom-btn">
+                                                        Enroll Now
+                                                        <i class="fa-solid fa-arrow-right rgt-arw"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="enrollment-card strength">
+                                    <div class="card-bg">
+                                        <div class="topCard-cntn">
+                                            <p class="target-line">Strength</p>
+                                            <div class="trnsfrm-line">
+                                                <span class="line-2"></span>
+                                                <span class="line-2"></span>
+                                                <span class="line-2"></span>
+                                            </div>
+                                            <p class="author">by Ethan Cross</p>
+                                        </div>
+                                        <figure class="cardImg-4 cardImg">
+                                            <img src="./assets/abtPage-cardImg4.png" alt="" />
+                                        </figure>
+                                    </div>
+                                    <div class="card-bottom">
+                                        <div class="row align-items-center">
+                                            <div class="col-xl-6 col-12">
+                                                <div class="leftBottom-cntn">
+                                                    <p class="nmbr">04</p>
+                                                    <p class="bottom-para">Weightlifting 101</p>
+                                                    <p class="bottom-para2">
+                                                        Learn Olympic and free weight techniques.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-6 col-12">
+                                                <div class="bottom-button">
+                                                    <a class="bottom-btn">
+                                                        Enroll Now
+                                                        <i class="fa-solid fa-arrow-right rgt-arw"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="enrollment-card combat">
+                                    <div class="card-bg">
+                                        <div class="topCard-cntn">
+                                            <p class="target-line">combat</p>
+                                            <div class="trnsfrm-line">
+                                                <span class="line-2"></span>
+                                                <span class="line-2"></span>
+                                                <span class="line-2"></span>
+                                            </div>
+                                            <p class="author">by Damian Brooks</p>
+                                        </div>
+                                        <figure class="cardImg-5 cardImg">
+                                            <img src="./assets/abtPage-cardImg5.png" alt="" />
+                                        </figure>
+                                    </div>
+                                    <div class="card-bottom">
+                                        <div class="row align-items-center">
+                                            <div class="col-xl-6 col-12">
+                                                <div class="leftBottom-cntn">
+                                                    <p class="nmbr">05</p>
+                                                    <p class="bottom-para">BoxFit Training</p>
+                                                    <p class="bottom-para2">
+                                                        Boxing drills for strength and agility.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-6 col-12">
+                                                <div class="bottom-button">
+                                                    <a class="bottom-btn">
+                                                        Enroll Now
+                                                        <i class="fa-solid fa-arrow-right rgt-arw"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="enrollment-card strength">
+                                    <div class="card-bg">
+                                        <div class="topCard-cntn">
+                                            <p class="target-line">Strength</p>
+                                            <div class="trnsfrm-line">
+                                                <span class="line-2"></span>
+                                                <span class="line-2"></span>
+                                                <span class="line-2"></span>
+                                            </div>
+                                            <p class="author">by Ethan Cross</p>
+                                        </div>
+                                        <figure class="cardImg-1 cardImg">
+                                            <img src="./assets/abtPage-cardImg1.png" alt="" />
+                                        </figure>
+                                    </div>
+                                    <div class="card-bottom">
+                                        <div class="row align-items-center">
+                                            <div class="col-xl-6 col-12">
+                                                <div class="leftBottom-cntn">
+                                                    <p class="nmbr">06</p>
+                                                    <p class="bottom-para">Power Build Program</p>
+                                                    <p class="bottom-para2">
+                                                        Focus on muscle growth and compound lifts.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-6 col-12">
+                                                <div class="bottom-button">
+                                                    <a class="bottom-btn">
+                                                        Enroll Now
+                                                        <i class="fa-solid fa-arrow-right rgt-arw"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="enrollment-card calisthenics">
+                                    <div class="card-bg">
+                                        <div class="topCard-cntn">
+                                            <p class="target-line">Calisthenics</p>
+                                            <div class="trnsfrm-line">
+                                                <span class="line-2"></span>
+                                                <span class="line-2"></span>
+                                                <span class="line-2"></span>
+                                            </div>
+                                            <p class="author">by samantha blaze</p>
+                                        </div>
+                                        <figure class="cardImg-7 cardImg">
+                                            <img src="./assets/abtPage-cardImg7.png" alt="" />
+                                        </figure>
+                                    </div>
+                                    <div class="card-bottom">
+                                        <div class="row align-items-center">
+                                            <div class="col-xl-6 col-12">
+                                                <div class="leftBottom-cntn">
+                                                    <p class="nmbr">07</p>
+                                                    <p class="bottom-para">Core Stability</p>
+                                                    <p class="bottom-para2">
+                                                        Focus on muscle growth and compound lifts.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-6 col-12">
+                                                <div class="bottom-button">
+                                                    <a class="bottom-btn">
+                                                        Enroll Now
+                                                        <i class="fa-solid fa-arrow-right rgt-arw"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="enrollment-card calisthenics">
+                                    <div class="card-bg">
+                                        <div class="topCard-cntn">
+                                            <p class="target-line">calisthenics</p>
+                                            <div class="trnsfrm-line">
+                                                <span class="line-2"></span>
+                                                <span class="line-2"></span>
+                                                <span class="line-2"></span>
+                                            </div>
+                                            <p class="author">by samantha blaze</p>
+                                        </div>
+                                        <figure class="cardImg-8 cardImg">
+                                            <img src="./assets/abtPage-cardImg8.png" alt="" />
+                                        </figure>
+                                    </div>
+                                    <div class="card-bottom">
+                                        <div class="row align-items-center">
+                                            <div class="col-xl-6 col-12">
+                                                <div class="leftBottom-cntn">
+                                                    <p class="nmbr">08</p>
+                                                    <p class="bottom-para">Handstand Training</p>
+                                                    <p class="bottom-para2">
+                                                        Master balance and shoulder strength.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-6 col-12">
+                                                <div class="bottom-button">
+                                                    <a class="bottom-btn">
+                                                        Enroll Now
+                                                        <i class="fa-solid fa-arrow-right rgt-arw"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="enrollment-card personal">
+                                    <div class="card-bg">
+                                        <div class="topCard-cntn">
+                                            <p class="target-line">personal</p>
+                                            <div class="trnsfrm-line">
+                                                <span class="line-2"></span>
+                                                <span class="line-2"></span>
+                                                <span class="line-2"></span>
+                                            </div>
+                                            <p class="author">by Ethan Cross</p>
+                                        </div>
+                                        <figure class="cardImg-1 cardImg">
+                                            <img src="./assets/abtPage-cardImg1.png" alt="" />
+                                        </figure>
+                                    </div>
+                                    <div class="card-bottom">
+                                        <div class="row align-items-center">
+                                            <div class="col-xl-6 col-12">
+                                                <div class="leftBottom-cntn">
+                                                    <p class="nmbr">09</p>
+                                                    <p class="bottom-para">Power Build Program</p>
+                                                    <p class="bottom-para2">
+                                                        Focus on muscle growth and compound lifts.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-6 col-12">
+                                                <div class="bottom-button">
+                                                    <a class="bottom-btn">
+                                                        Enroll Now
+                                                        <i class="fa-solid fa-arrow-right rgt-arw"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="enrollment-card personal">
+                                    <div class="card-bg">
+                                        <div class="topCard-cntn">
+                                            <p class="target-line">personal</p>
+                                            <div class="trnsfrm-line">
+                                                <span class="line-2"></span>
+                                                <span class="line-2"></span>
+                                                <span class="line-2"></span>
+                                            </div>
+                                            <p class="author">by samantha blaze</p>
+                                        </div>
+                                        <figure class="cardImg-8 cardImg">
+                                            <img src="./assets/abtPage-cardImg8.png" alt="" />
+                                        </figure>
+                                    </div>
+                                    <div class="card-bottom">
+                                        <div class="row align-items-center">
+                                            <div class="col-xl-6 col-12">
+                                                <div class="leftBottom-cntn">
+                                                    <p class="nmbr">10</p>
+                                                    <p class="bottom-para">Handstand Training</p>
+                                                    <p class="bottom-para2">
+                                                        Master balance and shoulder strength.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-6 col-12">
+                                                <div class="bottom-button">
+                                                    <a class="bottom-btn">
+                                                        Enroll Now
+                                                        <i class="fa-solid fa-arrow-right rgt-arw"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="enrollment-card functional">
+                                    <div class="card-bg">
+                                        <div class="topCard-cntn">
+                                            <p class="target-line">functional</p>
+                                            <div class="trnsfrm-line">
+                                                <span class="line-2"></span>
+                                                <span class="line-2"></span>
+                                                <span class="line-2"></span>
+                                            </div>
+                                            <p class="author">by Damian Brooks</p>
+                                        </div>
+                                        <figure class="cardImg-5 cardImg">
+                                            <img src="./assets/abtPage-cardImg5.png" alt="" />
+                                        </figure>
+                                    </div>
+                                    <div class="card-bottom">
+                                        <div class="row align-items-center">
+                                            <div class="col-xl-6 col-12">
+                                                <div class="leftBottom-cntn">
+                                                    <p class="nmbr">11</p>
+                                                    <p class="bottom-para">BoxFit Training</p>
+                                                    <p class="bottom-para2">
+                                                        Boxing drills for strength and agility.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-6 col-12">
+                                                <div class="bottom-button">
+                                                    <a class="bottom-btn">
+                                                        Enroll Now
+                                                        <i class="fa-solid fa-arrow-right rgt-arw"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="enrollment-card functional">
+                                    <div class="card-bg">
+                                        <div class="topCard-cntn">
+                                            <p class="target-line strength">functional</p>
+                                            <div class="trnsfrm-line">
+                                                <span class="line-2"></span>
+                                                <span class="line-2"></span>
+                                                <span class="line-2"></span>
+                                            </div>
+                                            <p class="author">by marcus cole</p>
+                                        </div>
+                                        <figure class="cardImg-3 cardImg">
+                                            <img src="./assets/abtPage-cardImg3.png" alt="" />
+                                        </figure>
+                                    </div>
+                                    <div class="card-bottom">
+                                        <div class="row align-items-center">
+                                            <div class="col-xl-6 col-12">
+                                                <div class="leftBottom-cntn">
+                                                    <p class="nmbr">12</p>
+                                                    <p class="bottom-para">Cardio Blast</p>
+                                                    <p class="bottom-para2">
+                                                        Treadmill, cycling, and jump rope sessions.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-6 col-12">
+                                                <div class="bottom-button">
+                                                    <a class="bottom-btn">
+                                                        Enroll Now
+                                                        <i class="fa-solid fa-arrow-right rgt-arw"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rate-btn">
+                        <a href="" class="membership-btn"> Load more </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Us Section -->
+
+            <section class="contact-sec">
+                <div class="container abt-container">
+                    <div class="row">
+                        <div class="col-12 col-xl-6 relative-col">
+                            <div class="intouch-cntn">
+                                <div class="abt-hdr">
+                                    <h2 class="title-3 get-title">
+                                        get in touch
+                                        <div class="frame-line abt-line">
+                                            <img src="./assets/Frame line.png" alt="" />
+                                        </div>
+                                    </h2>
+                                </div>
+                                <div class="mdl-cntn">
+                                    <h3 class="title-5">Ready to Transform Your Body?</h3>
+                                    <p class="para2 mdl-para">
+                                        Start your fitness journey today with expert-led programs
+                                        built for real results — from strength to wellness.
+                                    </p>
+                                    <ul class="kit-item">
+                                        <li class="kit-list">
+                                            <i class="fa-regular fa-circle-check check-list"></i>
+                                            Complimentary gym kit
+                                        </li>
+                                        <li class="kit-list">
+                                            <i class="fa-regular fa-circle-check check-list"></i>
+                                            Free session with certified trainer
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="bottom-cntn">
+                                    <div class="amnt-box">
+                                        <span class="rs">rs</span>
+                                        <span class="amnt">19,999</span>
+                                    </div>
+                                    <p class="plan">OFF your membership plan.</p>
+                                </div>
+                                <div class="bottom-end">
+                                    <a href="" class="membership-btn get-btn btn-2">
+                                        get started today
+                                    </a>
+                                    <p class="para2 tndc">
+                                        T&C: Offer valid for new enrollments only. Cannot be
+                                        combined with other discounts. Limited-time promotion
+                                        subject to availability.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-xl-6">
+                            <form action="" class="getInTouch-form">
+                                <div class="row">
+                                    <div class="col-12 col-md-6">
+                                        <div class="input-container">
+                                            <label for="name" class="label-cntn">
+                                                <div class="black-lineBox">
+                                                    <span class="line-2 blackLine"></span>
+                                                    <span class="line-2 blackLine"></span>
+                                                    <span class="line-2 blackLine"></span>
+                                                </div>
+                                                <span class="label-span">Your Full Name</span>
+                                            </label>
+                                            <input type="text" name="name" id="name" class="input-text" />
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <div class="input-container">
+                                            <label for="email" class="label-cntn">
+                                                <div class="black-lineBox">
+                                                    <span class="line-2 blackLine"></span>
+                                                    <span class="line-2 blackLine"></span>
+                                                    <span class="line-2 blackLine"></span>
+                                                </div>
+                                                <span class="label-span">Email Address</span>
+                                            </label>
+                                            <input type="email" name="email" id="email" class="input-text" />
+                                        </div>
+                                    </div>
+                                    <div class="col-12 mt-4">
+                                        <div class="input-container">
+                                            <label for="message" class="label-cntn">
+                                                <div class="black-lineBox">
+                                                    <span class="line-2 blackLine"></span>
+                                                    <span class="line-2 blackLine"></span>
+                                                    <span class="line-2 blackLine"></span>
+                                                </div>
+                                                <span class="label-span">message</span>
+                                            </label>
+                                            <textarea name="message" id="message"
+                                                class="input-text msg-text"></textarea>
+                                        </div>
+                                        <div class="rate-btn">
+                                            <a href="" class="membership-btn get-btn">
+                                                get started today
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- goal section -->
+            <section class="goal-sec">
+                <div class="container abt-container">
+                    <div class="row abt-row">
+                        <div class="col-xl-6 col-12">
+                            <div class="abt-hdr">
+                                <h2 class="title-3">
+                                    How it works
+                                    <div class="frame-line abt-line">
+                                        <img src="./assets/Frame line.png" alt="" />
+                                    </div>
+                                </h2>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-12">
+                            <div class="abtHdr-para">
+                                <p class="para abt-para">
+                                    Real Stories. Real people. Real Transformations.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 col-xl-4 border-col">
+                            <div class="goal-cntn">
+                                <p class="nmbr goal-nmbr">01</p>
+                                <div class="bullseye">
+                                    <img src="./assets/bullseye.png" alt="" />
+                                </div>
+                                <p class="goal-hdr">Goal Setting</p>
+                                <div class="ylw-line">
+                                    <span class="line-2"></span>
+                                    <span class="line-2"></span>
+                                    <span class="line-2"></span>
+                                </div>
+                                <p class="para2">
+                                    Define clear fitness goals tailored to your needs.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-6 col-xl-4 border-col">
+                            <div class="goal-cntn">
+                                <p class="nmbr goal-nmbr">02</p>
+                                <div class="bullseye">
+                                    <img src="./assets/bullseye.png" alt="" />
+                                </div>
+                                <p class="goal-hdr">Structured Training</p>
+                                <div class="ylw-line">
+                                    <span class="line-2"></span>
+                                    <span class="line-2"></span>
+                                    <span class="line-2"></span>
+                                </div>
+                                <p class="para2">
+                                    Follow guided workouts built for steady progress.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-6 col-xl-4 border-col col-last">
+                            <div class="goal-cntn">
+                                <p class="nmbr goal-nmbr">03</p>
+                                <div class="bullseye">
+                                    <img src="./assets/bullseye.png" alt="" />
+                                </div>
+                                <p class="goal-hdr">Goal Setting</p>
+                                <div class="ylw-line">
+                                    <span class="line-2"></span>
+                                    <span class="line-2"></span>
+                                    <span class="line-2"></span>
+                                </div>
+                                <p class="para2">
+                                    Define clear fitness goals tailored to your needs.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- BMI Calculator Section -->
+            <section class="calc-sec">
+                <div class="container abt-container">
+                    <div class="abt-hdr">
+                        <h2 class="title-3">
+                            BMI Calculator
+                            <div class="frame-line abt-line">
+                                <img src="./assets/Frame line.png" alt="" />
+                            </div>
+                        </h2>
+                    </div>
+                    <div class="row align-items-center">
+                        <div class="col-xl-6 col-12">
+                            <div class="location-para">
+                                <p class="para3 cmn-para">Calculate Your</p>
+                                <p class="cmn-para yellow-para">BMI</p>
+                            </div>
+                            <p class="para2 bmi-para">
+                                It helps you understand whether you’re underweight, healthy, or
+                                need to improve your fitness level. Track your progress as you
+                                train and maintain the perfect balance between weight and
+                                wellness. Start now to set smarter goals for a stronger,
+                                healthier you.
+                            </p>
+                            <form action="" class="bmi-calc">
+                                <div class="row">
+                                    <div class="col-12 col-md-6">
+                                        <div class="input-container bmi-container">
+                                            <label for="height" class="label-cntn">
+                                                <div class="ylw-line bmi-line">
+                                                    <span class="line-2"></span>
+                                                    <span class="line-2"></span>
+                                                    <span class="line-2"></span>
+                                                </div>
+                                                <span class="label-span bmi-label">Height / cm</span>
+                                            </label>
+                                            <input type="number" name="height" id="height" class="input-text" />
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <div class="input-container bmi-container">
+                                            <label for="weight" class="label-cntn">
+                                                <div class="ylw-line bmi-line">
+                                                    <span class="line-2"></span>
+                                                    <span class="line-2"></span>
+                                                    <span class="line-2"></span>
+                                                </div>
+                                                <span class="label-span bmi-label">weight / kg</span>
+                                            </label>
+                                            <input type="number" name="weight" id="weight" class="input-text" />
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <div class="input-container bmi-container">
+                                            <label for="age" class="label-cntn">
+                                                <div class="ylw-line bmi-line">
+                                                    <span class="line-2"></span>
+                                                    <span class="line-2"></span>
+                                                    <span class="line-2"></span>
+                                                </div>
+                                                <span class="label-span bmi-label">Age of you</span>
+                                            </label>
+                                            <input type="number" name="age" id="age" class="input-text" />
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <div class="input-container bmi-container">
+                                            <label for="gender" class="label-cntn">
+                                                <div class="ylw-line bmi-line">
+                                                    <span class="line-2"></span>
+                                                    <span class="line-2"></span>
+                                                    <span class="line-2"></span>
+                                                </div>
+                                                <span class="label-span bmi-label">Gender</span>
+                                            </label>
+                                            <input type="number" name="gender" id="gender" class="input-text" />
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <div class="input-container bmi-container">
+                                            <label for="age2" class="label-cntn">
+                                                <div class="ylw-line bmi-line">
+                                                    <span class="line-2"></span>
+                                                    <span class="line-2"></span>
+                                                    <span class="line-2"></span>
+                                                </div>
+                                                <span class="label-span bmi-label">age of you</span>
+                                            </label>
+                                            <input type="number" name="age2" id="age2" class="input-text" />
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <div class="input-container bmi-container">
+                                            <label for="gender2" class="label-cntn">
+                                                <div class="ylw-line bmi-line">
+                                                    <span class="line-2"></span>
+                                                    <span class="line-2"></span>
+                                                    <span class="line-2"></span>
+                                                </div>
+                                                <span class="label-span bmi-label">Gender</span>
+                                            </label>
+                                            <input type="number" name="gender2" id="gender2" class="input-text" />
+                                        </div>
+                                    </div>
+                                    <div class="bmi-btn">
+                                        <a href="" class="membership-btn bmi-btn">
+                                            Calculate BMI
+                                        </a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-xl-6 col-12">
+                            <div class="bmi-img-wrpr">
+                                <img src="./assets/bmi-frame.png" alt="" />
+                                <div class="bmi-img-bg">
+                                    <div class="bmi-img">
+                                        <img src="./assets/bmi-lady.png" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sponsorship Section -->
+            <section class="spsh-sec">
+                <div class="container abt-container">
+                    <div class="abt-hdr">
+                        <h2 class="title-3">
+                            sponsorship
+                            <div class="frame-line abt-line">
+                                <img src="./assets/Frame line.png" alt="" />
+                            </div>
+                        </h2>
+                    </div>
+
+                    <div class="sponsorhip-animation d-flex align-items-center">
+                        <div class="autoScroll-item nike" style="--i: 1">
+                            <img src="./assets/nike.png" alt="" />
+                        </div>
+                        <div class="autoScroll-item" style="--i: 2">
+                            <img src="./assets/hermes.png" alt="" />
+                        </div>
+                        <div class="autoScroll-item" style="--i: 3">
+                            <img src="./assets/adidas.png" alt="" />
+                        </div>
+                        <div class="autoScroll-item" style="--i: 4">
+                            <img src="./assets/X.png" alt="" />
+                        </div>
+                        <div class="autoScroll-item" style="--i: 5">
+                            <img src="./assets/fila.png" alt="" />
+                        </div>
+                        <div class="autoScroll-item" style="--i: 6">
+                            <img src="./assets/columbia.png" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer Section -->
+        <footer class="ftr-sec">
+            <div class="ftr-top">
+                <div class="container abt-container">
+                    <div class="row ftr-row">
+                        <div class="col-xl-4 col-12">
+                            <div class="ftr-cntn">
+                                <a href="" class="ftrCntn-hdr">
+                                    <i class="bi bi-c-circle"></i> 2025 Fitin.
+                                    <br />
+                                    <span>All rights reserved.</span>
+                                </a>
+                                <ul class="ftr-social">
+                                    <li class="ftr-socialLink">
+                                        <a href="" class="social-media">
+                                            <span>Instagram</span>
+                                            <span class="ftrRight-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+                                        </a>
+                                    </li>
+                                    <li class="ftr-socialLink">
+                                        <a href="" class="social-media">
+                                            <span>Facebook</span>
+                                            <span class="ftrRight-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+                                        </a>
+                                    </li>
+                                    <li class="ftr-socialLink">
+                                        <a href="" class="social-media">
+                                            <span>Youtube</span>
+                                            <span class="ftrRight-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xl-8 col-12">
+                            <div class="ftr-nav">
+                                <div class="ftr-logo">
+                                    <a href="" class="ftr-brandLogo">
+                                        <img src="./assets/ftr-logo.png" alt="" />
+                                    </a>
+                                </div>
+                                <ul class="ftrNav-bar">
+                                    <li class="ftr-navLi">
+                                        <a href="./index.html" class="ftr-navLink">Home</a>
+                                    </li>
+                                    <li class="ftr-navLi">
+                                        <hr />
+                                    </li>
+                                    <li class="ftr-navLi">
+                                        <a href="./about.html" class="ftr-navLink">About Us</a>
+                                    </li>
+                                    <li class="ftr-navLi">
+                                        <hr />
+                                    </li>
+                                    <li class="ftr-navLi">
+                                        <a href="" class="ftr-navLink">Features</a>
+                                    </li>
+                                    <li class="ftr-navLi">
+                                        <hr />
+                                    </li>
+                                    <li class="ftr-navLi">
+                                        <a href="./workout.html" class="ftr-navLink">Workouts</a>
+                                    </li>
+                                    <li class="ftr-navLi">
+                                        <hr />
+                                    </li>
+                                    <li class="ftr-navLi">
+                                        <a href="" class="ftr-navLink">Trainer</a>
+                                    </li>
+                                    <li class="ftr-navLi">
+                                        <hr />
+                                    </li>
+                                    <li class="ftr-navLi">
+                                        <a href="" class="ftr-navLink">Testimonials</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ftr-bottom">
+                <div class="container abt-container">
+                    <div class="row ftr-row2">
+                        <div class="col-xl-6 col-12">
+                            <div class="ftrBtm-cntn">
+                                <div class="btm-hdr">Stay Updated</div>
+                                <p class="btm-para">
+                                    event info straight to your inbox. Subscribe to get this tips,
+                                    offers, and
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-12">
+                            <form class="ftrInput-container">
+                                <input type="text" class="styled_input_bar" placeholder="" />
+                                <label class="ftrInput-label" for="styled_input_bar">Type your email</label>
+                                <button class="cssbuttons-io-button">
+                                    Subscribe
+                                    <div class="icon">
+                                        <svg height="24" width="24" viewBox="0 0 24 24"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0 0h24v24H0z" fill="none"></path>
+                                            <path
+                                                d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                                                fill="currentColor"></path>
+                                        </svg>
+                                    </div>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+
+
     <!-- Vanilla Tilt -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"
         integrity="sha512-wC/cunGGDjXSl9OHUH0RuqSyW4YNLlsPwhcLxwWW1CR4OeC2E1xpcdZz2DeQkEmums41laI+eGMw95IJ15SS3g=="

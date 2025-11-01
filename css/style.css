@@ -50,6 +50,109 @@ h3 {
     cursor: grabbing;
 }
 
+
+/* Loading Screen */
+#onload-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom,
+            rgba(242, 255, 0, .95) 0%,
+            rgba(0, 0, 0, .95) 100%);
+    z-index: 999;
+}
+
+.onload-hidden {
+    display: none;
+}
+
+.fade-out {
+    opacity: 0;
+}
+
+/* Loader Animation */
+
+.loadingMain-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.loader-animation {
+    width: 100%;
+}
+
+.trace-bg {
+    stroke: #333;
+    stroke-width: 1.8;
+    fill: none;
+}
+
+.trace-flow {
+    stroke-width: 1.8;
+    fill: none;
+    stroke-dasharray: 40 400;
+    stroke-dashoffset: 438;
+    filter: drop-shadow(0 0 6px currentColor);
+    animation: flow 3s cubic-bezier(0.5, 0, 0.9, 1) infinite;
+}
+
+.yellow {
+    stroke: #ffea00;
+    color: #ffea00;
+}
+
+.blue {
+    stroke: #00ccff;
+    color: #00ccff;
+}
+
+.green {
+    stroke: #00ff15;
+    color: #00ff15;
+}
+
+.purple {
+    stroke: #9900ff;
+    color: #9900ff;
+}
+
+.red {
+    stroke: #ff3300;
+    color: #ff3300;
+}
+
+@keyframes flow {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+/* Čip */
+.chip-body {
+    rx: 20;
+    ry: 20;
+}
+
+/* Text uvnitř čipu */
+.chip-text {
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Piny */
+.chip-pin {
+    stroke: #444;
+    stroke-width: 0.5;
+    filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.6));
+}
+
+
+
 /* Modal Section */
 
 .modal-content {
@@ -289,6 +392,29 @@ h3 {
     }
 }
 
+
+body.modal-open::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 100;
+    /* just below modal */
+}
+
+.modal-dialog {
+    max-height: calc(100vh - 3.5rem);
+    margin: 1.75rem auto;
+    overflow: auto;
+}
+
+.modal-content {
+    max-height: 100%;
+    overflow: auto;
+}
+
 /* Custom Cursor */
 .cursor {
     mix-blend-mode: difference;
@@ -302,7 +428,7 @@ h3 {
     left: 0;
     top: 0;
     transform: translate(calc(-50% + 15px), -50%);
-    z-index: 9999;
+    z-index: 999999;
 }
 
 .hover {
@@ -320,6 +446,7 @@ h3 {
 .hdr-container {
     max-width: 1840px;
 }
+
 
 .navbar-brand {
     max-width: 172px;
