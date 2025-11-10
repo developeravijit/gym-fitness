@@ -13,11 +13,14 @@ window.onload = function () {
   }, 2000);
 };
 
-
 document.addEventListener("DOMContentLoaded", () => {
+  // AOS Initialize
   AOS.init({
     duration: 1000,
   });
+
+  // Luxy Initialize
+  luxy.init();
   // First Slide
 
   let swiper = new Swiper(".swiper1", {
@@ -175,7 +178,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Workout Page dropdown list
 
-
   // Workout Page Card Filteration
   // Isotope JS Initialize
 
@@ -190,19 +192,17 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // Filter on dropdown radio change (/*input[name='category-radio']*?)
-    document
-      .querySelectorAll(".form-check-input")
-      .forEach((radio) => {
-        radio.addEventListener("change", function () {
-          const value = this.value; // expects classes like .strength, .wellness on cards
-          iso.arrange({ filter: "." + value });
+    document.querySelectorAll(".form-check-input").forEach((radio) => {
+      radio.addEventListener("change", function () {
+        const value = this.value; // expects classes like .strength, .wellness on cards
+        iso.arrange({ filter: "." + value });
 
-          // close dropdown (if you want it closed after choose)
-          document.querySelector(".dowpdown-list").classList.remove("active");
-          // reset arrow rotation
-          document.querySelector(".slc-icon").classList.remove("rotated");
-        });
+        // close dropdown (if you want it closed after choose)
+        document.querySelector(".dowpdown-list").classList.remove("active");
+        // reset arrow rotation
+        document.querySelector(".slc-icon").classList.remove("rotated");
       });
+    });
 
     // If you have other filter buttons, keep their active state logic
     document.querySelectorAll(".button-slider").forEach((btn) => {
@@ -401,65 +401,63 @@ document.querySelectorAll(".toggle-password").forEach((button) => {
   });
 });
 
-
 // When modal open page will not scroll
 
 // add this script after bootstrap.js (or in a DOMContentLoaded block)
 (function () {
-  const modal = document.getElementById('exampleModal');
+  const modal = document.getElementById("exampleModal");
   let scrollY = 0;
 
   function preventScroll(e) {
     // allow events that happen inside the modal content (so modal can scroll)
-    const modalContent = modal.querySelector('.modal-content');
+    const modalContent = modal.querySelector(".modal-content");
     if (modalContent && modalContent.contains(e.target)) return;
     e.preventDefault();
   }
 
-  modal.addEventListener('show.bs.modal', () => {
+  modal.addEventListener("show.bs.modal", () => {
     // save current scroll
     scrollY = window.scrollY || document.documentElement.scrollTop;
 
     // lock document scroll by fixing body
-    document.body.style.position = 'fixed';
+    document.body.style.position = "fixed";
     document.body.style.top = `-${scrollY}px`;
-    document.body.style.left = '0';
-    document.body.style.right = '0';
-    document.body.style.width = '100%';
+    document.body.style.left = "0";
+    document.body.style.right = "0";
+    document.body.style.width = "100%";
 
     // also ensure html doesn't scroll (safe-guard)
-    document.documentElement.style.overflow = 'hidden';
+    document.documentElement.style.overflow = "hidden";
 
     // block wheel/touchmove globally (but allow inside modal-content)
-    document.addEventListener('wheel', preventScroll, { passive: false });
-    document.addEventListener('touchmove', preventScroll, { passive: false });
+    document.addEventListener("wheel", preventScroll, { passive: false });
+    document.addEventListener("touchmove", preventScroll, { passive: false });
   });
 
-  modal.addEventListener('hidden.bs.modal', () => {
+  modal.addEventListener("hidden.bs.modal", () => {
     // restore body
-    document.body.style.position = '';
-    document.body.style.top = '';
-    document.body.style.left = '';
-    document.body.style.right = '';
-    document.body.style.width = '';
+    document.body.style.position = "";
+    document.body.style.top = "";
+    document.body.style.left = "";
+    document.body.style.right = "";
+    document.body.style.width = "";
 
-    document.documentElement.style.overflow = '';
+    document.documentElement.style.overflow = "";
 
     // remove global blockers
-    document.removeEventListener('wheel', preventScroll);
-    document.removeEventListener('touchmove', preventScroll);
+    document.removeEventListener("wheel", preventScroll);
+    document.removeEventListener("touchmove", preventScroll);
 
     // restore scroll position
     window.scrollTo(0, scrollY);
   });
 })();
 
-
 // When hamberger open body will not scroll
 
 (function () {
   // selector for your offcanvas
-  const offcanvas = document.getElementById('offcanvasScrolling');
+  const offcanvas = document.getElementById("offcanvasScrolling");
   if (!offcanvas) return;
 
   let scrollY = 0;
@@ -474,38 +472,46 @@ document.querySelectorAll(".toggle-password").forEach((button) => {
     e.preventDefault();
   }
 
-  offcanvas.addEventListener('show.bs.offcanvas', () => {
+  offcanvas.addEventListener("show.bs.offcanvas", () => {
     // save current scroll
     scrollY = window.scrollY || document.documentElement.scrollTop || 0;
 
     // lock body in place (preserve visual scroll position)
-    document.documentElement.style.scrollBehavior = 'auto'; // avoid smooth jump
-    document.body.style.position = 'fixed';
+    document.documentElement.style.scrollBehavior = "auto"; // avoid smooth jump
+    document.body.style.position = "fixed";
     document.body.style.top = `-${scrollY}px`;
-    document.body.style.left = '0';
-    document.body.style.right = '0';
-    document.body.style.width = '100%';
-    document.body.style.overflow = 'hidden';
+    document.body.style.left = "0";
+    document.body.style.right = "0";
+    document.body.style.width = "100%";
+    document.body.style.overflow = "hidden";
 
     // also prevent wheel/touchmove globally (passive:false so preventDefault works)
-    document.addEventListener('wheel', preventBgScroll, { passive: false, capture: true });
-    document.addEventListener('touchmove', preventBgScroll, { passive: false, capture: true });
+    document.addEventListener("wheel", preventBgScroll, {
+      passive: false,
+      capture: true,
+    });
+    document.addEventListener("touchmove", preventBgScroll, {
+      passive: false,
+      capture: true,
+    });
   });
 
-  offcanvas.addEventListener('hidden.bs.offcanvas', () => {
+  offcanvas.addEventListener("hidden.bs.offcanvas", () => {
     // restore body
-    document.body.style.position = '';
-    document.body.style.top = '';
-    document.body.style.left = '';
-    document.body.style.right = '';
-    document.body.style.width = '';
-    document.body.style.overflow = '';
+    document.body.style.position = "";
+    document.body.style.top = "";
+    document.body.style.left = "";
+    document.body.style.right = "";
+    document.body.style.width = "";
+    document.body.style.overflow = "";
 
-    document.documentElement.style.scrollBehavior = '';
+    document.documentElement.style.scrollBehavior = "";
 
     // remove blockers
-    document.removeEventListener('wheel', preventBgScroll, { capture: true });
-    document.removeEventListener('touchmove', preventBgScroll, { capture: true });
+    document.removeEventListener("wheel", preventBgScroll, { capture: true });
+    document.removeEventListener("touchmove", preventBgScroll, {
+      capture: true,
+    });
 
     // restore scroll pos
     window.scrollTo(0, scrollY);
@@ -513,29 +519,42 @@ document.querySelectorAll(".toggle-password").forEach((button) => {
 
   // Extra: if user opens offcanvas by toggling class manually (rare), handle body class too
   const observer = new MutationObserver(() => {
-    if (document.body.classList.contains('offcanvas-open')) {
+    if (document.body.classList.contains("offcanvas-open")) {
       // if somehow shown without events, ensure lock
       if (!document.body.style.position) {
         scrollY = window.scrollY || 0;
-        document.body.style.position = 'fixed';
+        document.body.style.position = "fixed";
         document.body.style.top = `-${scrollY}px`;
-        document.body.style.width = '100%';
-        document.body.style.overflow = 'hidden';
-        document.addEventListener('wheel', preventBgScroll, { passive: false, capture: true });
-        document.addEventListener('touchmove', preventBgScroll, { passive: false, capture: true });
+        document.body.style.width = "100%";
+        document.body.style.overflow = "hidden";
+        document.addEventListener("wheel", preventBgScroll, {
+          passive: false,
+          capture: true,
+        });
+        document.addEventListener("touchmove", preventBgScroll, {
+          passive: false,
+          capture: true,
+        });
       }
     } else {
       // ensure cleanup if class removed manually
       if (document.body.style.position) {
-        document.body.style.position = '';
-        document.body.style.top = '';
-        document.body.style.width = '';
-        document.body.style.overflow = '';
-        document.removeEventListener('wheel', preventBgScroll, { capture: true });
-        document.removeEventListener('touchmove', preventBgScroll, { capture: true });
+        document.body.style.position = "";
+        document.body.style.top = "";
+        document.body.style.width = "";
+        document.body.style.overflow = "";
+        document.removeEventListener("wheel", preventBgScroll, {
+          capture: true,
+        });
+        document.removeEventListener("touchmove", preventBgScroll, {
+          capture: true,
+        });
         window.scrollTo(0, scrollY);
       }
     }
   });
-  observer.observe(document.body, { attributes: true, attributeFilter: ['class'] });
+  observer.observe(document.body, {
+    attributes: true,
+    attributeFilter: ["class"],
+  });
 })();

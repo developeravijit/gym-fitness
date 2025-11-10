@@ -31,96 +31,218 @@
 </head>
 
 <body>
-
     <!-- Loader Section -->
     <div id="onload-loader">
-        <div class="loadingMain-container">
-            <div class="loader-animation">
-                <svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
-                    <defs>
-                        <linearGradient id="chipGradient" x1="0" y1="0" x2="0" y2="1">
-                            <stop offset="0%" stop-color="#2d2d2d"></stop>
-                            <stop offset="100%" stop-color="#0f0f0f"></stop>
-                        </linearGradient>
+        <div class="loading-bar">Loading</div>
 
-                        <linearGradient id="textGradient" x1="0" y1="0" x2="0" y2="1">
-                            <stop offset="0%" stop-color="#eeeeee"></stop>
-                            <stop offset="100%" stop-color="#888888"></stop>
-                        </linearGradient>
-
-                        <linearGradient id="pinGradient" x1="1" y1="0" x2="0" y2="0">
-                            <stop offset="0%" stop-color="#bbbbbb"></stop>
-                            <stop offset="50%" stop-color="#888888"></stop>
-                            <stop offset="100%" stop-color="#555555"></stop>
-                        </linearGradient>
-                    </defs>
-
-                    <g id="traces">
-                        <path d="M100 100 H200 V210 H326" class="trace-bg"></path>
-                        <path d="M100 100 H200 V210 H326" class="trace-flow purple"></path>
-
-                        <path d="M80 180 H180 V230 H326" class="trace-bg"></path>
-                        <path d="M80 180 H180 V230 H326" class="trace-flow blue"></path>
-
-                        <path d="M60 260 H150 V250 H326" class="trace-bg"></path>
-                        <path d="M60 260 H150 V250 H326" class="trace-flow yellow"></path>
-
-                        <path d="M100 350 H200 V270 H326" class="trace-bg"></path>
-                        <path d="M100 350 H200 V270 H326" class="trace-flow green"></path>
-
-                        <path d="M700 90 H560 V210 H474" class="trace-bg"></path>
-                        <path d="M700 90 H560 V210 H474" class="trace-flow blue"></path>
-
-                        <path d="M740 160 H580 V230 H474" class="trace-bg"></path>
-                        <path d="M740 160 H580 V230 H474" class="trace-flow green"></path>
-
-                        <path d="M720 250 H590 V250 H474" class="trace-bg"></path>
-                        <path d="M720 250 H590 V250 H474" class="trace-flow red"></path>
-
-                        <path d="M680 340 H570 V270 H474" class="trace-bg"></path>
-                        <path d="M680 340 H570 V270 H474" class="trace-flow yellow"></path>
-                    </g>
-
-                    <rect x="330" y="190" width="140" height="100" rx="20" ry="20" fill="url(#chipGradient)"
-                        stroke="#222" stroke-width="3" filter="drop-shadow(0 0 6px rgba(0,0,0,0.8))"></rect>
-
-                    <g>
-                        <rect x="322" y="205" width="8" height="10" fill="url(#pinGradient)" rx="2"></rect>
-                        <rect x="322" y="225" width="8" height="10" fill="url(#pinGradient)" rx="2"></rect>
-                        <rect x="322" y="245" width="8" height="10" fill="url(#pinGradient)" rx="2"></rect>
-                        <rect x="322" y="265" width="8" height="10" fill="url(#pinGradient)" rx="2"></rect>
-                    </g>
-
-                    <g>
-                        <rect x="470" y="205" width="8" height="10" fill="url(#pinGradient)" rx="2"></rect>
-                        <rect x="470" y="225" width="8" height="10" fill="url(#pinGradient)" rx="2"></rect>
-                        <rect x="470" y="245" width="8" height="10" fill="url(#pinGradient)" rx="2"></rect>
-                        <rect x="470" y="265" width="8" height="10" fill="url(#pinGradient)" rx="2"></rect>
-                    </g>
-
-                    <text x="400" y="240" font-family="Arial, sans-serif" font-size="22" fill="url(#textGradient)"
-                        text-anchor="middle" alignment-baseline="middle">
-                        Loading
-                    </text>
-
-                    <circle cx="100" cy="100" r="5" fill="black"></circle>
-                    <circle cx="80" cy="180" r="5" fill="black"></circle>
-                    <circle cx="60" cy="260" r="5" fill="black"></circle>
-                    <circle cx="100" cy="350" r="5" fill="black"></circle>
-
-                    <circle cx="700" cy="90" r="5" fill="black"></circle>
-                    <circle cx="740" cy="160" r="5" fill="black"></circle>
-                    <circle cx="720" cy="250" r="5" fill="black"></circle>
-                    <circle cx="680" cy="340" r="5" fill="black"></circle>
-                </svg>
+    </div>
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="login-box">
+                    <button type="button" class="modal-close ms-auto d-md-none" data-bs-dismiss="modal"
+                        aria-label="Close">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                    <div class="logBox-cntn">
+                        <div class="row">
+                            <div class="col-12 col-xl-6">
+                                <div class="left-modal">
+                                    <div class="modal-line">
+                                        <span class="line-2"></span>
+                                        <span class="line-2"></span>
+                                        <span class="line-2"></span>
+                                    </div>
+                                    <h2 class="modal-title">create account</h2>
+                                    <p class="para2">
+                                        Lorem ipsum dolor sit amet consectetur. Enim et in tellus
+                                        at. Blandit etiam.
+                                    </p>
+                                    <form action="" class="modal-form">
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <div class="modal-inputBox">
+                                                    <label for="first-name" class="all-icon">
+                                                        <span class="user-icon">
+                                                            <i class="fa-solid fa-circle-user"></i>
+                                                        </span>
+                                                        <span class="form-name">First Name <sup>*</sup>
+                                                        </span>
+                                                    </label>
+                                                    <input type="text" id="first-name" class="modal-input" />
+                                                </div>
+                                            </div>
+                                            <div class="col-6 mb-3">
+                                                <div class="modal-inputBox">
+                                                    <label for="last-name" class="all-icon">
+                                                        <span class="user-icon">
+                                                            <i class="fa-solid fa-circle-user"></i>
+                                                        </span>
+                                                        <span class="form-name">last Name <sup>*</sup>
+                                                        </span>
+                                                    </label>
+                                                    <input type="text" id="last-name" class="modal-input" />
+                                                </div>
+                                            </div>
+                                            <div class="col-12 mb-3">
+                                                <div class="modal-inputBox">
+                                                    <label for="modal-email" class="all-icon">
+                                                        <span class="user-icon">
+                                                            <i class="fa-solid fa-envelope"></i>
+                                                        </span>
+                                                        <span class="form-name">email address <sup>*</sup>
+                                                        </span>
+                                                    </label>
+                                                    <input type="email" id="modal-email" class="modal-input" />
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4 col-6 mb-3">
+                                                <div class="modal-inputBox">
+                                                    <label for="modal-gender" class="all-icon">
+                                                        <span class="user-icon">
+                                                            <i class="fa-solid fa-circle-user"></i>
+                                                        </span>
+                                                        <span class="form-name">gender <sup>*</sup>
+                                                        </span>
+                                                    </label>
+                                                    <input type="text" id="modal-gender" class="modal-input" />
+                                                    <ul class="gender-dropdown">
+                                                        <li data-value="Male">Male</li>
+                                                        <li data-value="Female">Female</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4 col-6 mb-3">
+                                                <div class="modal-inputBox">
+                                                    <label for="modal-age" class="all-icon">
+                                                        <span class="user-icon">
+                                                            <i class="fa-solid fa-cake-candles"></i>
+                                                        </span>
+                                                        <span class="form-name">age <sup>*</sup> </span>
+                                                    </label>
+                                                    <input type="number" id="modal-age" class="modal-input" />
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4 col-12 mb-3">
+                                                <div class="modal-inputBox">
+                                                    <label for="modal-phone" class="all-icon">
+                                                        <span class="user-icon">
+                                                            <i class="fa-solid fa-phone"></i>
+                                                        </span>
+                                                        <span class="form-name">phone <sup>*</sup> </span>
+                                                    </label>
+                                                    <input type="number" id="modal-phone" class="modal-input" />
+                                                </div>
+                                            </div>
+                                            <div class="col-5 mb-3">
+                                                <div class="modal-inputBox">
+                                                    <label for="modal-weight" class="all-icon">
+                                                        <span class="user-icon">
+                                                            <i class="fa-solid fa-clock"></i>
+                                                        </span>
+                                                        <span class="form-name">weight <sup>*</sup>
+                                                        </span>
+                                                    </label>
+                                                    <input type="number" id="modal-weight" class="modal-input" />
+                                                </div>
+                                            </div>
+                                            <div class="col-7 mb-3">
+                                                <div class="modal-inputBox">
+                                                    <label for="modal-goal" class="all-icon">
+                                                        <span class="user-icon">
+                                                            <i class="fa-solid fa-circle-user"></i>
+                                                        </span>
+                                                        <span class="form-name">Goal <sup>*</sup> </span>
+                                                    </label>
+                                                    <input type="text" id="modal-goal" class="modal-input" />
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="modal-inputBox">
+                                                    <label for="modal-password" class="all-icon">
+                                                        <span class="user-icon">
+                                                            <i class="bi bi-shield-lock"></i>
+                                                        </span>
+                                                        <span class="form-name">password <sup>*</sup>
+                                                        </span>
+                                                    </label>
+                                                    <div class="password-wrapper">
+                                                        <input type="password" id="modal-password" class="modal-input"
+                                                            placeholder="" />
+                                                        <button type="button" class="toggle-password">
+                                                            <i class="fa-solid fa-eye"></i>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="form-check d-flex align-items-center">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="checkIndeterminate" />
+                                                    <label class="form-check-label" for="checkIndeterminate">
+                                                        I agree to the
+                                                        <a href="" class="condition">Terms & Privacy</a>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="modal-btn">
+                                                    <a href="" class="membership-btn modal-btnLabel">
+                                                        Create account
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <p class="modal-login">
+                                                    Already have an account ?
+                                                    <a href="" class="alrdy-acc">Login</a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="col-12 col-xl-6">
+                                <div class="right-modal">
+                                    <div class="modal-logo text-end">
+                                        <img src="./assets/modalLogo.png" alt="" />
+                                    </div>
+                                    <div class="rightModal-bottom">
+                                        <p class="para2 modal-para">
+                                            Lorem ipsum dolor sit amet consectetur. Volutpat
+                                            sittortor. Tempus congue adipiscing aliquam cursus
+                                            turpis ultricies.
+                                        </p>
+                                        <div class="modalBottom-para">
+                                            <div class="row">
+                                                <div class="col-sm-12 col-md-6">
+                                                    <p class="modal-para2">firstname lastname</p>
+                                                    <p class="para2 modal-para text-capitalize">
+                                                        designation
+                                                    </p>
+                                                </div>
+                                                <div class="col-sm-12 col-md-6">
+                                                    <div class="modalPara-box">
+                                                        <span class="modal-circle"></span>
+                                                        <p class="modal-para2">open ventures</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-
     </div>
 
-    </div>
     <div id="onload-content" class="onload-hidden">
-
         <!-- Header Section -->
         <header class="hdr-sec">
             <nav class="navbar navbar-expand-xxl">
@@ -179,13 +301,13 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Testimonials</a>
                             </li>
-                            <li class="nav-item ">
-                                <a class="nav-link " href="#"><i class="fa-solid fa-magnifying-glass srchIcon"></i></a>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="fa-solid fa-magnifying-glass srchIcon"></i></a>
                             </li>
-                            <!-- <form class="search-group">
+                            <form class="search-group">
                                 <i class="fa-solid fa-magnifying-glass"></i>
-                                <input placeholder="Search" type="search" class="input" />
-                            </form> -->
+                                <input type="search" name="search" id="search" placeholder="Search" class="input">
+                            </form>
                             <li class="cart-item">
                                 <a class="cart-link" href="#">
                                     <img src="./assets/Cart.png" alt="" />
@@ -210,216 +332,9 @@
             </nav>
         </header>
 
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="login-box">
-                        <button type="button" class="modal-close ms-auto d-md-none" data-bs-dismiss="modal"
-                            aria-label="Close">
-                            <i class="fa-solid fa-xmark"></i>
-                        </button>
-                        <div class="logBox-cntn">
-                            <div class="row">
-                                <div class="col-12 col-xl-6">
-                                    <div class="left-modal">
-                                        <div class="modal-line">
-                                            <span class="line-2"></span>
-                                            <span class="line-2"></span>
-                                            <span class="line-2"></span>
-                                        </div>
-                                        <h2 class="modal-title">create account</h2>
-                                        <p class="para2">
-                                            Lorem ipsum dolor sit amet consectetur. Enim et in tellus
-                                            at. Blandit etiam.
-                                        </p>
-                                        <form action="" class="modal-form">
-                                            <div class="row">
-                                                <div class="col-6">
-                                                    <div class="modal-inputBox">
-                                                        <label for="first-name" class="all-icon">
-                                                            <span class="user-icon">
-                                                                <i class="fa-solid fa-circle-user"></i>
-                                                            </span>
-                                                            <span class="form-name">First Name <sup>*</sup>
-                                                            </span>
-                                                        </label>
-                                                        <input type="text" id="first-name" class="modal-input" />
-                                                    </div>
-                                                </div>
-                                                <div class="col-6 mb-3">
-                                                    <div class="modal-inputBox">
-                                                        <label for="last-name" class="all-icon">
-                                                            <span class="user-icon">
-                                                                <i class="fa-solid fa-circle-user"></i>
-                                                            </span>
-                                                            <span class="form-name">last Name <sup>*</sup>
-                                                            </span>
-                                                        </label>
-                                                        <input type="text" id="last-name" class="modal-input" />
-                                                    </div>
-                                                </div>
-                                                <div class="col-12 mb-3">
-                                                    <div class="modal-inputBox">
-                                                        <label for="modal-email" class="all-icon">
-                                                            <span class="user-icon">
-                                                                <i class="fa-solid fa-envelope"></i>
-                                                            </span>
-                                                            <span class="form-name">email address <sup>*</sup>
-                                                            </span>
-                                                        </label>
-                                                        <input type="email" id="modal-email" class="modal-input" />
-                                                    </div>
-                                                </div>
-                                                <div class="col-xl-4 col-6 mb-3">
-                                                    <div class="modal-inputBox">
-                                                        <label for="modal-gender" class="all-icon">
-                                                            <span class="user-icon">
-                                                                <i class="fa-solid fa-circle-user"></i>
-                                                            </span>
-                                                            <span class="form-name">gender <sup>*</sup>
-                                                            </span>
-                                                        </label>
-                                                        <input type="text" id="modal-gender" class="modal-input" />
-                                                        <ul class="gender-dropdown">
-                                                            <li data-value="Male">Male</li>
-                                                            <li data-value="Female">Female</li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div class="col-xl-4 col-6 mb-3">
-                                                    <div class="modal-inputBox">
-                                                        <label for="modal-age" class="all-icon">
-                                                            <span class="user-icon">
-                                                                <i class="fa-solid fa-cake-candles"></i>
-                                                            </span>
-                                                            <span class="form-name">age <sup>*</sup> </span>
-                                                        </label>
-                                                        <input type="number" id="modal-age" class="modal-input" />
-                                                    </div>
-                                                </div>
-                                                <div class="col-xl-4 col-12 mb-3">
-                                                    <div class="modal-inputBox">
-                                                        <label for="modal-phone" class="all-icon">
-                                                            <span class="user-icon">
-                                                                <i class="fa-solid fa-phone"></i>
-                                                            </span>
-                                                            <span class="form-name">phone <sup>*</sup> </span>
-                                                        </label>
-                                                        <input type="number" id="modal-phone" class="modal-input" />
-                                                    </div>
-                                                </div>
-                                                <div class="col-5 mb-3">
-                                                    <div class="modal-inputBox">
-                                                        <label for="modal-weight" class="all-icon">
-                                                            <span class="user-icon">
-                                                                <i class="fa-solid fa-clock"></i>
-                                                            </span>
-                                                            <span class="form-name">weight <sup>*</sup>
-                                                            </span>
-                                                        </label>
-                                                        <input type="number" id="modal-weight" class="modal-input" />
-                                                    </div>
-                                                </div>
-                                                <div class="col-7 mb-3">
-                                                    <div class="modal-inputBox">
-                                                        <label for="modal-goal" class="all-icon">
-                                                            <span class="user-icon">
-                                                                <i class="fa-solid fa-circle-user"></i>
-                                                            </span>
-                                                            <span class="form-name">Goal <sup>*</sup> </span>
-                                                        </label>
-                                                        <input type="text" id="modal-goal" class="modal-input" />
-                                                    </div>
-                                                </div>
-                                                <div class="col-12">
-                                                    <div class="modal-inputBox">
-                                                        <label for="modal-password" class="all-icon">
-                                                            <span class="user-icon">
-                                                                <i class="bi bi-shield-lock"></i>
-                                                            </span>
-                                                            <span class="form-name">password <sup>*</sup>
-                                                            </span>
-                                                        </label>
-                                                        <div class="password-wrapper">
-                                                            <input type="password" id="modal-password"
-                                                                class="modal-input" placeholder="" />
-                                                            <button type="button" class="toggle-password">
-                                                                <i class="fa-solid fa-eye"></i>
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-12">
-                                                    <div class="form-check d-flex align-items-center">
-                                                        <input class="form-check-input" type="checkbox" value=""
-                                                            id="checkIndeterminate" />
-                                                        <label class="form-check-label" for="checkIndeterminate">
-                                                            I agree to the
-                                                            <a href="" class="condition">Terms & Privacy</a>
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                                <div class="col-12">
-                                                    <div class="modal-btn">
-                                                        <a href="" class="membership-btn modal-btnLabel">
-                                                            Create account
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div class="col-12">
-                                                    <p class="modal-login">
-                                                        Already have an account ?
-                                                        <a href="" class="alrdy-acc">Login</a>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-xl-6">
-                                    <div class="right-modal">
-                                        <div class="modal-logo text-end">
-                                            <img src="./assets/modalLogo.png" alt="" />
-                                        </div>
-                                        <div class="rightModal-bottom">
-                                            <p class="para2 modal-para">
-                                                Lorem ipsum dolor sit amet consectetur. Volutpat
-                                                sittortor. Tempus congue adipiscing aliquam cursus
-                                                turpis ultricies.
-                                            </p>
-                                            <div class="modalBottom-para">
-                                                <div class="row">
-                                                    <div class="col-sm-12 col-md-6">
-                                                        <p class="modal-para2">firstname lastname</p>
-                                                        <p class="para2 modal-para text-capitalize">
-                                                            designation
-                                                        </p>
-                                                    </div>
-                                                    <div class="col-sm-12 col-md-6">
-                                                        <div class="modalPara-box">
-                                                            <span class="modal-circle"></span>
-                                                            <p class="modal-para2">open ventures</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Custom Cursor -->
-        <div class="cursor"></div>
-
         <main>
             <!-- Banner Section -->
-            <section class="bnr-sec">
+            <section class="bnr-sec luxy-el" data-speed-y="5000" data-offset="-50">
                 <div class="container hdr-container">
                     <div class="row bnr-row">
                         <div class="col-xl-4 col-12">
@@ -477,7 +392,7 @@
             </section>
 
             <!-- Fitness Card Section -->
-            <section class="fitnessCard-sec">
+            <section class="fitnessCard-sec luxy-el" data-speed-y="5000" data-offset="-50">
                 <div class="container card-container">
                     <div class="swiper swiper1">
                         <div class="swiper-wrapper">
@@ -575,7 +490,7 @@
             </section>
 
             <!-- About Section -->
-            <section class="abt-sec">
+            <section class="abt-sec luxy-el" data-speed-y="5000" data-offset="-50">
                 <div class="container abt-container">
                     <div class="row abt-row">
                         <div class="col-xl-6 col-12">
@@ -642,7 +557,7 @@
             </section>
 
             <!-- Service section -->
-            <section class="srvc-sec">
+            <section class="srvc-sec luxy-el" data-speed-y="5000" data-offset="-50">
                 <div class="container abt-container">
                     <div class="row">
                         <div class="col-12 col-xl-3">
@@ -685,7 +600,7 @@
             </section>
 
             <!-- Gym About Section -->
-            <section class="gymAbt-sec">
+            <section class="gymAbt-sec luxy-el" data-speed-y="5000" data-offset="-50">
                 <div class="container abt-container">
                     <div class="row abt-row">
                         <div class="col-xl-6 col-12">
@@ -798,7 +713,7 @@
             </section>
 
             <!-- Coach Section -->
-            <section class="coach-sec">
+            <section class="coach-sec luxy-el" data-speed-y="5000" data-offset="-50">
                 <div class="container abt-container">
                     <div class="row abt-row">
                         <div class="col-xl-6 col-12">
@@ -915,7 +830,7 @@
             </section>
 
             <!-- Plan Section -->
-            <section class="plan-sec">
+            <section class="plan-sec luxy-el" data-speed-y="5000" data-offset="-50">
                 <div class="container abt-container">
                     <div class="row abt-row">
                         <div class="col-xl-6 col-12">
@@ -959,7 +874,8 @@
                                         </div>
                                         <h2 class="title-2 rateCard-title">Basic</h2>
                                         <p class="para2">
-                                            Level up with advanced workouts and personalized guidance.
+                                            Level up with advanced workouts and personalized
+                                            guidance.
                                         </p>
                                         <p class="amount">$15 <sup>/month</sup></p>
                                         <ul class="rate-item">
@@ -1004,7 +920,8 @@
                                         </div>
                                         <h2 class="title-2 rateCard-title">Pro</h2>
                                         <p class="para2">
-                                            Level up with advanced workouts and personalized guidance.
+                                            Level up with advanced workouts and personalized
+                                            guidance.
                                         </p>
                                         <p class="amount">$30 <sup>/month</sup></p>
                                         <ul class="rate-item">
@@ -1083,7 +1000,7 @@
             </section>
 
             <!-- Location Section -->
-            <section class="location-sec">
+            <section class="location-sec luxy-el" data-speed-y="5000" data-offset="-50">
                 <div class="container abt-container">
                     <div class="abt-hdr location-hdr" data-aos="fade-left" data-aos-duration="1000">
                         <h2 class="title-3">
@@ -1117,14 +1034,15 @@
                                 <p class="para2">
                                     Our presence stretches across continents, connecting a
                                     worldwide community of fitness enthusiasts. From bustling
-                                    metropolitan hubs to growing local neighborhoods, our fitness
-                                    centers deliver the same trusted quality and results-driven
-                                    training. Each location is equipped with expert coaches,
-                                    modern facilities, and a motivating environment tailored to
-                                    your goals. Whether you are traveling, relocating, or joining
-                                    us for the first time, you’ll always find a home for your
-                                    fitness journey with us. Together, we’re building a stronger,
-                                    healthier world—one city at a time.
+                                    metropolitan hubs to growing local neighborhoods, our
+                                    fitness centers deliver the same trusted quality and
+                                    results-driven training. Each location is equipped with
+                                    expert coaches, modern facilities, and a motivating
+                                    environment tailored to your goals. Whether you are
+                                    traveling, relocating, or joining us for the first time,
+                                    you’ll always find a home for your fitness journey with us.
+                                    Together, we’re building a stronger, healthier world—one
+                                    city at a time.
                                 </p>
                             </div>
                         </div>
@@ -1136,7 +1054,7 @@
             </section>
 
             <!-- Transformation Section -->
-            <section class="trnsfrm-sec">
+            <section class="trnsfrm-sec luxy-el" data-speed-y="5000" data-offset="-50">
                 <div class="container abt-container">
                     <div class="trnsfrm-cntn">
                         <h2 class="title-trnsfrm" data-aos="fade-down-right" data-aos-duration="1000">
@@ -1152,8 +1070,8 @@
                         </div>
                         <div class="trnsfrm-box" data-aos="zoom-in" data-aos-duration="1000">
                             <p class="abt-para trnsfrm-para">
-                                Join a community that supports your goals with expert coaching,
-                                flexible programs and real results.
+                                Join a community that supports your goals with expert
+                                coaching, flexible programs and real results.
                             </p>
                         </div>
                     </div>
@@ -1165,7 +1083,7 @@
         </main>
 
         <!-- Footer Section -->
-        <footer class="ftr-sec">
+        <footer class="ftr-sec luxy-el" data-speed-y="5000" data-offset="-50">
             <div class="ftr-top">
                 <div class="container abt-container">
                     <div class="row ftr-row">
@@ -1252,8 +1170,8 @@
                             <div class="ftrBtm-cntn">
                                 <div class="btm-hdr">Stay Updated</div>
                                 <p class="btm-para">
-                                    event info straight to your inbox. Subscribe to get this tips,
-                                    offers, and
+                                    event info straight to your inbox. Subscribe to get this
+                                    tips, offers, and
                                 </p>
                             </div>
                         </div>
@@ -1281,8 +1199,8 @@
         </footer>
     </div>
 
-
-
+    <!-- Luxy JS -->
+    <script src="path/to/luxy.js" charset="utf-8"></script>
     <!-- Vanilla Tilt -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"
         integrity="sha512-wC/cunGGDjXSl9OHUH0RuqSyW4YNLlsPwhcLxwWW1CR4OeC2E1xpcdZz2DeQkEmums41laI+eGMw95IJ15SS3g=="
@@ -1297,6 +1215,9 @@
     <script src="./js/script.js"></script>
     <!-- AOS JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script charset="utf-8">
+        luxy.init();
+    </script>
 </body>
 
 </html>
