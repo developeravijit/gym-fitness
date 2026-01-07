@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Luxy Initialize
-  luxy.init();
+  // luxy.init();
   // First Slide
 
   let swiper = new Swiper(".swiper1", {
